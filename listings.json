@@ -1,0 +1,37 @@
+[
+  {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/assignments.html",
+    "items": [
+      "/3-generalization/labs/peoples-park/part-2.html",
+      "/2-summarizing-data/03-a-grammar-of-graphics/ws.pdf",
+      "/4-causation/labs/taste-test/part-1.pdf",
+      "/4-causation/labs/taste-test/part-2.pdf",
+      "/3-generalization/09-bootstrapping/ws.pdf",
+      "/2-summarizing-data/04-conditioning/ws.pdf",
+      "/5-prediction/labs/08-cancer/slides.html",
+      "/5-prediction/labs/08-cancer/part-1.pdf",
+      "/5-prediction/05-logistic-regression/ws.pdf",
+      "/5-prediction/02-improving-predictions/ps.pdf",
+      "/3-generalization/05-ev-se/ws.pdf",
+      "/3-generalization/10-hypothesis-tests/ws.pdf",
+      "/3-generalization/11-hypothesis-tests-2/ws.pdf",
+      "/2-summarizing-data/06-multiple-linear-regression/ws.pdf",
+      "/5-prediction/03-overfitting/ps.pdf",
+      "/3-generalization/03-probability-dsns/ws.pdf",
+      "/3-generalization/01-prob-foundations/ws.pdf",
+      "/3-generalization/02-computing-probs/ws.pdf",
+      "/3-generalization/04-random-variables/ws.pdf",
+      "/3-generalization/07-from-samps-to-pops/ws.pdf",
+      "/2-summarizing-data/01-summarizing-categorical-data/ws.pdf",
+      "/2-summarizing-data/05-summarizing-associations/ws.pdf",
+      "/2-summarizing-data/02-summarizing-numerical-data/ws.pdf",
+      "/1-questions-and-data/02-taxonomy-of-data/ws.pdf",
+      "/5-prediction/01-method-of-least-squares/ps.pdf",
+      "/3-generalization/12-wrong-by-design/ws.pdf"
+    ]
+  }
+]

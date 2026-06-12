@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jeremy Sanchez">
+
+<title>Syllabus – Stat 20</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-cdb398c975b12dc212be20c89e29b632.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+
+<meta property="og:title" content="Syllabus – Stat 20">
+<meta property="og:description" content="Course Goals: To introduce descriptive and inferential statistics, basic probability theory and prediction problems using both pen-and-paper and computational approaches (with the R language and particularly with the tidyverse library). In essence, STAT 20 is an introductory statistics course which also has a lens for data science.">
+<meta property="og:image" content="https://stat20.berkeley.edu/summer-2026/assets/stat20-hex.png">
+<meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:width" content="866">
+<meta name="twitter:title" content="Syllabus – Stat 20">
+<meta name="twitter:description" content="Course Goals: To introduce descriptive and inferential statistics, basic probability theory and prediction problems using both pen-and-paper and computational approaches (with the R language and particularly with the tidyverse library). In essence, STAT 20 is an introductory statistics course which also has a lens for data science.">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/summer-2026/assets/stat20-hex.png">
+<meta name="twitter:image-height" content="1000">
+<meta name="twitter:image-width" content="866">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="./assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./syllabus.html" aria-current="page"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./office-hours.html"> 
+<span class="menu-text">Office Hours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./notes.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://edstem.org/" title="" class="quarto-navigation-tool px-1" aria-label="Ed Discussion Forum"><i class="bi bi-chat-fill"></i></a>
+    <a href="https://www.gradescope.com/" title="" class="quarto-navigation-tool px-1" aria-label="Gradescope"><i class="bi bi-bar-chart-fill"></i></a>
+    <a href="https://stat20.datahub.berkeley.edu/" title="" class="quarto-navigation-tool px-1" aria-label="RStudio"><i class="bi bi-r-circle-fill"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-culture" id="toc-course-culture" class="nav-link active" data-scroll-target="#course-culture">Course Culture</a></li>
+  <li><a href="#websites-to-know" id="toc-websites-to-know" class="nav-link" data-scroll-target="#websites-to-know">Websites to know</a></li>
+  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a>
+  <ul>
+  <li><a href="#first-portion-of-class" id="toc-first-portion-of-class" class="nav-link" data-scroll-target="#first-portion-of-class">First portion of class</a></li>
+  <li><a href="#second-portion-of-class" id="toc-second-portion-of-class" class="nav-link" data-scroll-target="#second-portion-of-class">Second portion of class</a></li>
+  <li><a href="#traditional-format" id="toc-traditional-format" class="nav-link" data-scroll-target="#traditional-format">Traditional format</a></li>
+  </ul></li>
+  <li><a href="#assignments" id="toc-assignments" class="nav-link" data-scroll-target="#assignments">Assignments</a>
+  <ul>
+  <li><a href="#reading-questions" id="toc-reading-questions" class="nav-link" data-scroll-target="#reading-questions">Reading Questions</a></li>
+  <li><a href="#worksheets-and-portfolios" id="toc-worksheets-and-portfolios" class="nav-link" data-scroll-target="#worksheets-and-portfolios">Worksheets and Portfolios</a></li>
+  <li><a href="#labs" id="toc-labs" class="nav-link" data-scroll-target="#labs">Labs</a></li>
+  <li><a href="#quizzes" id="toc-quizzes" class="nav-link" data-scroll-target="#quizzes">Quizzes</a>
+  <ul class="collapse">
+  <li><a href="#individual-portion-25-minutes" id="toc-individual-portion-25-minutes" class="nav-link" data-scroll-target="#individual-portion-25-minutes">Individual Portion (25 minutes)</a></li>
+  <li><a href="#group-portion-15-minutes" id="toc-group-portion-15-minutes" class="nav-link" data-scroll-target="#group-portion-15-minutes">Group Portion (15 minutes)</a></li>
+  <li><a href="#how-is-your-final-quiz-score-calculated" id="toc-how-is-your-final-quiz-score-calculated" class="nav-link" data-scroll-target="#how-is-your-final-quiz-score-calculated">How is your final quiz score calculated?</a></li>
+  </ul></li>
+  <li><a href="#extra-credit" id="toc-extra-credit" class="nav-link" data-scroll-target="#extra-credit">Extra Credit</a></li>
+  <li><a href="#final" id="toc-final" class="nav-link" data-scroll-target="#final">Final</a></li>
+  <li><a href="#grade-calculator" id="toc-grade-calculator" class="nav-link" data-scroll-target="#grade-calculator">Grade calculator</a></li>
+  </ul></li>
+  <li><a href="#other-policies" id="toc-other-policies" class="nav-link" data-scroll-target="#other-policies">Other policies</a>
+  <ul>
+  <li><a href="#accomodations-for-students-with-disabilities" id="toc-accomodations-for-students-with-disabilities" class="nav-link" data-scroll-target="#accomodations-for-students-with-disabilities">Accomodations for students with disabilities</a></li>
+  <li><a href="#late-work-and-drops" id="toc-late-work-and-drops" class="nav-link" data-scroll-target="#late-work-and-drops">Late Work and Drops</a></li>
+  <li><a href="#collaboration-policy-academic-dishonesty" id="toc-collaboration-policy-academic-dishonesty" class="nav-link" data-scroll-target="#collaboration-policy-academic-dishonesty">Collaboration policy / academic dishonesty</a>
+  <ul class="collapse">
+  <li><a href="#labs-and-worksheets" id="toc-labs-and-worksheets" class="nav-link" data-scroll-target="#labs-and-worksheets">Labs and Worksheets</a></li>
+  <li><a href="#examinations-and-reading-questions" id="toc-examinations-and-reading-questions" class="nav-link" data-scroll-target="#examinations-and-reading-questions">Examinations and Reading Questions</a></li>
+  </ul></li>
+  <li><a href="#frequently-asked-questions" id="toc-frequently-asked-questions" class="nav-link" data-scroll-target="#frequently-asked-questions">Frequently Asked Questions</a></li>
+  <li><a href="#campus-resources" id="toc-campus-resources" class="nav-link" data-scroll-target="#campus-resources">Campus Resources</a></li>
+  </ul></li>
+  <li><a href="#thanks-for-reading" id="toc-thanks-for-reading" class="nav-link" data-scroll-target="#thanks-for-reading">Thanks for reading!</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Syllabus</h1>
+<p class="subtitle lead">Stat 20: Introduction to Probability and Statistics</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Instructor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jeremy Sanchez </p>
+          </div>
+  </div>
+    
+  
+    
+    <div>
+    <div class="quarto-title-meta-heading">Term</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/Summer 2026">Summer 2026</a>
+      </p>
+    </div>
+  </div>
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title"></div>
+    <span style="font-family: Cinzel, serif; font-size: 1.2em">Course Goals:</span> To introduce descriptive and inferential statistics, basic probability theory and prediction problems using both pen-and-paper and computational approaches (with the R language and particularly with the <code>tidyverse</code> library). In essence, STAT 20 is an introductory statistics course which also has a lens for data science.
+  </div>
+</div>
+
+
+</header>
+
+
+<section id="course-culture" class="level2">
+<h2 class="anchored" data-anchor-id="course-culture">Course Culture</h2>
+<ul>
+<li>This course is designed to teach students who have never done statistics or have done any type of computer programming before! <em>There are no stupid questions</em>, and we will not tolerate behavior which discourage students from asking questions. Everyone starts somewhere.</li>
+<li>Discrimination/harassment based on race, gender, ethnicity, sexual orientation, or anything else will not be tolerated.</li>
+<li>Academic dishonesty will also not be tolerated. We will take any violations of academic integrity to the Center for Student Conduct, in addition to any grade penalties that ensue. Repeat violations will result in failure. There is more on this later on the syllabus.</li>
+<li>Berkeley Honor Code:
+<ul>
+<li><blockquote class="blockquote">
+<p>As a member of the UC Berkeley community, I act with honesty, integrity, and respect for others.</p>
+</blockquote></li>
+</ul></li>
+</ul>
+</section>
+<section id="websites-to-know" class="level2">
+<h2 class="anchored" data-anchor-id="websites-to-know">Websites to know</h2>
+<ul>
+<li><p><strong>bCourses</strong>: Announcements will go out here.</p></li>
+<li><p><strong>Course website:</strong> All course materials, including readings and assignments, will be available at https://stat20.berkeley.edu/summer2026 <em>You do not need to buy any materials for our course!</em></p></li>
+<li><p><strong>RStudio</strong>: The computing platform you will use this semester. As a Berkeley student, you have your own version of RStudio waiting you for at: <a href="http://stat20.datahub.berkeley.edu">http://stat20.datahub.berkeley.edu</a>. Most students taking Stat 20 have no experience programming; we’ll teach you everything you need to know!</p></li>
+<li><p><strong>Ed</strong>: The class discussion forum. Here you may ask questions about course content, or, via the private feature, message myself and the staff about something personal. If you have a message you’d like only the instructor to see, email the instructor or use bCourses to contact the instructor.</p></li>
+<li><p><strong>Gradescope</strong>: You will turn in your assignments here.</p></li>
+</ul>
+</section>
+<section id="format" class="level2">
+<h2 class="anchored" data-anchor-id="format">Format</h2>
+<p>For the most part, STAT 20 operates in the <strong>flipped classroom</strong> format. This means that you will read about the topics in class the night before they are discussed, so that class time can be spent working on the class assignments and asking questions about the material to myself and the group tutors.</p>
+<section id="first-portion-of-class" class="level3">
+<h3 class="anchored" data-anchor-id="first-portion-of-class">First portion of class</h3>
+<p>You will test your knowledge of last night’s reading by answering a few <strong>reading questions</strong> on the PollEverywhere service.</p>
+</section>
+<section id="second-portion-of-class" class="level3">
+<h3 class="anchored" data-anchor-id="second-portion-of-class">Second portion of class</h3>
+<p>We will work on your <strong>portfolios</strong> and <strong>labs</strong> together.</p>
+</section>
+<section id="traditional-format" class="level3">
+<h3 class="anchored" data-anchor-id="traditional-format">Traditional format</h3>
+<p>The traditional, lecture-style format will be used for the probability unit, as I have found through experience that probability is difficult on the students when presented in the flipped format.</p>
+</section>
+</section>
+<section id="assignments" class="level2">
+<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Assignment</strong></th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reading Questions</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Portfolios</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Labs</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>Quizzes</td>
+<td>45</td>
+</tr>
+<tr class="odd">
+<td>Final</td>
+<td>33</td>
+</tr>
+<tr class="even">
+<td>Extra Credit</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td>101</td>
+</tr>
+</tbody>
+</table>
+<p>You can check the assignment schedule here.</p>
+<section id="reading-questions" class="level3">
+<h3 class="anchored" data-anchor-id="reading-questions">Reading Questions</h3>
+<ul>
+<li>How many: 17</li>
+<li>Deadline: completed during class.</li>
+<li>Weight: equally weighted.</li>
+<li>Drops: 3</li>
+</ul>
+<p>For most lecture topics, you will be asked to read the corresponding section from the course textbook the <em>night before</em> it is discussed in class (or over the weekend). You will then answer two or three short <strong>reading questions</strong> the next day in class for a small percentage of your grade. You may work with those sitting next to you. The questions are not meant to be difficult (you will have a very short time to answer them) and are just to check your understanding from the night before. We’ll go over each of them once you have finished answering.</p>
+</section>
+<section id="worksheets-and-portfolios" class="level3">
+<h3 class="anchored" data-anchor-id="worksheets-and-portfolios">Worksheets and Portfolios</h3>
+<ul>
+<li>How many: 7 (3-4 worksheets per assignment)</li>
+<li>Deadline: generally, <em>weekly</em> on Fridays at 5pm.</li>
+<li>Weight: equally weighted.</li>
+<li>Drops: 1</li>
+</ul>
+<p>Every week, you will be given a set of <strong>worksheets</strong>: one per each class day. A <strong>portfolio</strong> consists of all of the worksheets from a given week together. Each portfolio is of equal weight. You will turn in a given week’s portfolio at once. You will not be graded on accuracy, as the problems are meant to be practice for you. Give each worksheet in the portfolio an honest attempt and you will receive full credit for the whole portfolio. We will be spending class time on the worksheets. There will be printed copies in class as well as the digital version online for tablet users. To turn in your portfolio on Gradescope, you may either scan your written worksheet or submit the digital version.</p>
+</section>
+<section id="labs" class="level3">
+<h3 class="anchored" data-anchor-id="labs">Labs</h3>
+<ul>
+<li>How many: 4</li>
+<li>Deadline: generally, <em>biweekly</em> on Fridays at 5pm.</li>
+<li>Weight: The first lab is worth 10 percent of the total lab grade. The next three labs are each worth 30 percent of the total lab grade.</li>
+<li>Drops: 1</li>
+</ul>
+<p>Every two weeks, you will turn in a project which focuses on a specific dataset; these projects are called <strong>labs.</strong> There are two parts to the lab: a written part and a coding part. We will also give you class time to work on the lab. I cannot release solutions to the labs; however, you may certainly come to office hours and ask about any points you missed.</p>
+<p>We will be sending out an Ed post about how to format your lab submissions on Gradescope, and we’ll also go over how to format the submissions within the first week. <strong>Please read this post/pay close attention in class</strong>, as you will lose points if your work is incorrectly formatted. The first lab is primarily meant to walk you through this process.</p>
+</section>
+<section id="quizzes" class="level3">
+<h3 class="anchored" data-anchor-id="quizzes">Quizzes</h3>
+<ul>
+<li>How many: 3</li>
+<li>When: every two weeks.</li>
+<li>Weight: equally weighted.</li>
+<li>Drops: 1</li>
+</ul>
+<p><strong>Quizzes</strong> are 40-minute, in-person examinations that cover the previous two weeks of material. The quizzes have a fun format which is detailed below.</p>
+<section id="individual-portion-25-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="individual-portion-25-minutes">Individual Portion (25 minutes)</h4>
+<p>You will take the quiz on your own.</p>
+</section>
+<section id="group-portion-15-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="group-portion-15-minutes">Group Portion (15 minutes)</h4>
+<p>You will retake the quiz in a group of size 2 or 3. The group is of your choosing. The goal is for you to learn from each other’s mistakes.</p>
+</section>
+<section id="how-is-your-final-quiz-score-calculated" class="level4">
+<h4 class="anchored" data-anchor-id="how-is-your-final-quiz-score-calculated">How is your final quiz score calculated?</h4>
+<p>The final quiz score is the <em>average</em> of the individual and group portions. Make sure to pick a group that you trust.</p>
+</section>
+</section>
+<section id="extra-credit" class="level3">
+<h3 class="anchored" data-anchor-id="extra-credit">Extra Credit</h3>
+<p>You’ll have an opportunity to earn some extra credit during the final week of the course. Stay tuned for more details :)</p>
+</section>
+<section id="final" class="level3">
+<h3 class="anchored" data-anchor-id="final">Final</h3>
+<p>You will have a cumulative, final exam on <strong>Thursday, August 14th</strong> during class-time. This is a date you will want to mark on your calendar.</p>
+</section>
+<section id="grade-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="grade-calculator">Grade calculator</h3>
+<p>A grade calculator for the course is <a href="https://docs.google.com/spreadsheets/d/1l1kLnomLmvWOTJlMHWE8X5a0iX4UzdBPCFVJXzsrE8g/edit?gid=0#gid=0">here</a>. Feel free to make a copy and put in your own grades! The calculator does not have drops, but you can feel free to alter the copied spreadsheet to add them. We use the standard grading bins. In the event that the bins change, they will only change to help, not to hurt, students. Consult <a href="https://https://berkeleytime.com">Berkeleytime</a> for previous grading distributions, and <em>do not ask group tutors about grading (they do not grade your assignments).</em></p>
+</section>
+</section>
+<section id="other-policies" class="level2">
+<h2 class="anchored" data-anchor-id="other-policies">Other policies</h2>
+<section id="accomodations-for-students-with-disabilities" class="level3">
+<h3 class="anchored" data-anchor-id="accomodations-for-students-with-disabilities">Accomodations for students with disabilities</h3>
+<p>Stat 20 is a course that is designed to allow all students to succeed. If you have letters of accommodation from the Disabled Students’ Program, please share them with me and we will work out the necessary arrangements. This includes extensions on assignments or anything else!</p>
+</section>
+<section id="late-work-and-drops" class="level3">
+<h3 class="anchored" data-anchor-id="late-work-and-drops">Late Work and Drops</h3>
+<ul>
+<li>One day late: 30% off your total score.</li>
+<li>Past one day late: no credit.</li>
+</ul>
+<p><em>If you need to request a extension on a Lab</em>, please send a message on private Ed with at least <em>one day</em> before the deadline to spare. All Lab extensions will be two days by default. If you have a serious emergency (such as a visit to the ER) that prevented you from filling out the form on time, let me know via e-mail. For Lab extensions longer than three days, such as in cases of long-term illness or emergencies, come to office hours or set up an office hour by appointment with me or e-mail me.</p>
+<p>Within a given assignment category, a drop(s) will be automatically applied to the lowest-scoring assignment(s).</p>
+</section>
+<section id="collaboration-policy-academic-dishonesty" class="level3">
+<h3 class="anchored" data-anchor-id="collaboration-policy-academic-dishonesty">Collaboration policy / academic dishonesty</h3>
+<p>These are policies that are most important, but note that we reserve the right to identify punish other dishonest behaviors (the list is not exhaustive).</p>
+<section id="labs-and-worksheets" class="level4">
+<h4 class="anchored" data-anchor-id="labs-and-worksheets">Labs and Worksheets</h4>
+<ul>
+<li><p>You may collaborate with your fellow students on Worksheets and Labs, but:</p>
+<ul>
+<li>you must turn in your own work.</li>
+<li>you must cite those that you worked with at the beginning of your document in writing or otherwise.</li>
+</ul></li>
+<li><p>You may complete Labs using <strong>only code that we have taught you in the course</strong>.</p></li>
+<li><p>You shall not leave a representation of your assignment (the text, a screenshot) where students (current and future) can access it. Examples of this include websites like CourseHero, on a group text chain, over discord/slack, or in a file passed onto future students.</p></li>
+<li><p>You shall not use past solutions to an assignment.</p></li>
+<li><p>You shall not use generative AI to answer Lab questions.</p></li>
+</ul>
+</section>
+<section id="examinations-and-reading-questions" class="level4">
+<h4 class="anchored" data-anchor-id="examinations-and-reading-questions">Examinations and Reading Questions</h4>
+<ul>
+<li>Quizzes: During the group portion of a Quiz, you shall not collaborate with those outside your Quiz group. The individual portion of the Quiz is entirely your own work.</li>
+<li>Reading Questions: you shall not collaborate with those not at your table.</li>
+<li>Final: The final is entirely your own work.</li>
+</ul>
+</section>
+</section>
+<section id="frequently-asked-questions" class="level3">
+<h3 class="anchored" data-anchor-id="frequently-asked-questions">Frequently Asked Questions</h3>
+<ol type="1">
+<li><p>What should I do if I’m on the waitlist?</p>
+<p>Attend as if you were a student and submit all assignments on time, and you should get in! Also, talk to me on the first day of class so you can be added to the course Ed and Gradescope.</p></li>
+<li><p>Are class sessions recorded?</p>
+<p>They will not be. The online textbook is the main source material for the course, and any materials used during the class session, such as slides and other items, will be posted to the course website.</p></li>
+<li><p>Is attendance required?</p>
+<p>Strictly speaking, no. However, it will be difficult to succeed in this course if you are not regularly attending class. If you can’t attend due to a religious observance, athletic competition, or something similarly important, don’t worry. Just reach out to us via private Ed or e-mail, and we can let you know what to keep tabs on during the time you’re away.</p></li>
+<li><p>Stat 20 does not allow students to enroll with time conflicts.</p></li>
+<li><p>What if I join the class late?</p>
+<p>If you join the class within the first two weeks, read the syllabus and textbook, and take a look at Gradescope to get a sense of any assignments that may have already passed. Another good idea is to visit office hours. The first two weeks of material are very important, so you must be able to make up assignments.</p>
+<p>If you want to join after two weeks of the semester have passed, you will have to take STAT 20 in a subsequent semester.</p></li>
+</ol>
+</section>
+<section id="campus-resources" class="level3">
+<h3 class="anchored" data-anchor-id="campus-resources">Campus Resources</h3>
+<p>It can be very tough to be a student at this school! There are applications to clubs and grade requirements to declare majors, which are two things I did not have to experience as an undergrad. Some of you are navigating other challenges, like being a parent or commuting long distances from home to campus. There’s also that pervasive impostor syndrome. I’ve learned these things from my students during my time so far here teaching, and if you have any other things you’d like to share with me about your experiences or if you just need someone to talk to about your academic struggles or your future path, I can be there for you.</p>
+<p>With regards to reports of sexual misconduct/violence/assault, you may speak with us as well, but know that we will need to report our discussion to the Title IX officer. This is detailed below.</p>
+<blockquote class="blockquote">
+<p><em>As UC employees, I and the tutors are “Responsible Employees” and are therefore required to report incidents of sexual violence, sexual harassment, or other conduct prohibited by University policy to the Title IX officer. We cannot keep reports of sexual harassment or sexual violence confidential, but the Title IX officer will consider requests for confidentiality. Note that there are confidential resources available to you through UCB’s PATH to Care Center, which serves survivors of sexual violence and sexual harassment; call their 24/7 Care Line at 510-643-2005.</em></p>
+</blockquote>
+<p>Below are some campus resources that may be helpful for you:</p>
+<ul>
+<li><a href="https://supportal.berkeley.edu">Berkeley Supportal- great place to start</a></li>
+<li><a href="https://dsp.berkeley.edu">Disabled Students’ Program</a></li>
+<li><a href="https://uhs.berkeley.edu">University Health Services</a></li>
+<li><a href="https://care.berkeley.edu">UCB Path to Care</a></li>
+<li><a href="https://slc.berkeley.edu/home">Student Learning Center</a></li>
+<li><a href="https://internationaloffice.berkeley.edu">Berkeley International Office</a></li>
+<li><a href="https://studentaffairs.berkeley.edu/ombuds-office-for-students-postdoctoral-appointees/">Ombuds Office for Students and Postdoctoral Appointees</a></li>
+<li><a href="https://cejce.berkeley.edu/geneq">Gender Equity Resource Center</a></li>
+<li><a href="https://cejce.berkeley.edu">Center for Educational Justice &amp; Community Engagement</a></li>
+<li><a href="https://uhs.berkeley.edu/caps">UHS Counseling and Psychological Services (CAPS)</a></li>
+<li><a href="https://evcp.berkeley.edu/programs-resources/academic-accommodations-hub">Campus Academic Accommodations Hub</a></li>
+<li><a href="https://advocate.berkeley.edu">ASUC Student Advocate’s Office</a></li>
+<li><a href="https://basicneeds.berkeley.edu/home">Basic Needs Center</a></li>
+<li><a href="https://asuc.org/wp-content/uploads/2018/02/Mental-Health-Resources.pdf">ASUC Mental Health Resources Guide</a></li>
+</ul>
+</section>
+</section>
+<section id="thanks-for-reading" class="level2">
+<h2 class="anchored" data-anchor-id="thanks-for-reading">Thanks for reading!</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/summer-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./license.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

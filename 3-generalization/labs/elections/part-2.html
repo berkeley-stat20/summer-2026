@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Elections – Stat 20</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cdb398c975b12dc212be20c89e29b632.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Elections – Stat 20">
+<meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
+<meta property="og:image" content="https://stat20.berkeley.edu/summer-2026/3-generalization/labs/elections/assets/stat20-hex.png">
+<meta property="og:site_name" content="Stat 20">
+<meta name="twitter:title" content="Elections – Stat 20">
+<meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/summer-2026/3-generalization/labs/elections/assets/stat20-hex.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../office-hours.html"> 
+<span class="menu-text">Office Hours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../notes.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://edstem.org/" title="" class="quarto-navigation-tool px-1" aria-label="Ed Discussion Forum"><i class="bi bi-chat-fill"></i></a>
+    <a href="https://www.gradescope.com/" title="" class="quarto-navigation-tool px-1" aria-label="Gradescope"><i class="bi bi-bar-chart-fill"></i></a>
+    <a href="https://stat20.datahub.berkeley.edu/" title="" class="quarto-navigation-tool px-1" aria-label="RStudio"><i class="bi bi-r-circle-fill"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Elections</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="part-ii-computing-on-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="part-ii-computing-on-the-data">Part II: Computing on the Data</h2>
+<p>You can access the data from the 2009 Iran election in the <code>iran</code> data frame inside the <code>stat20data</code> package.</p>
+<section id="question-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
+<p>What is the empirical distribution of the vote counts for Ahmadinejad? Answer with:</p>
+<ul>
+<li>a plot (label your axes and provide a title),</li>
+<li>numerical summaries of center and spread,</li>
+<li>and a written interpretation.</li>
+</ul>
+</section>
+<section id="question-2" class="level4">
+<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
+<p>Create two vectors:</p>
+<ul>
+<li><p>one with the range of values that the Benford’s Law probability distribution can take</p></li>
+<li><p>and the second with the corresponding probabilities for each value.</p></li>
+</ul>
+</section>
+<section id="question-3" class="level4">
+<h4 class="anchored" data-anchor-id="question-3">Question 3</h4>
+<p>What might 366 draws (the amount of rows in the <code>iran</code> dataframe) from <span class="math inline">\(X \sim Benford()\)</span> look like? Find out by sampling from the <span class="math inline">\(Benford\)</span> probability distribution. Create a plot of the resulting empirical distribution that you collect. Label your axes and title your plot <em>Benford’s Law Simulation</em>.</p>
+</section>
+<section id="question-4" class="level4">
+<h4 class="anchored" data-anchor-id="question-4">Question 4</h4>
+<p>What do the first digit empirical distributions look like for the four candidates in the Iranian presidential election?</p>
+<ul>
+<li>Make one plot for each distribution and title them by candidate name.</li>
+<li>Combine the four plots into a single visualization using the <code>patchwork</code> library.</li>
+</ul>
+<p>Inside the <code>stat20data</code> package there is a function called <code>get_first()</code> that pulls off the first digit of every element in a vector. This will be helpful when creating your plots.</p>
+</section>
+<section id="question-5" class="level4">
+<h4 class="anchored" data-anchor-id="question-5">Question 5</h4>
+<p>How do the observed first digit distributions of <strong>Question 4</strong> compare to the one you created in <strong>Question 3</strong> by sampling from Benford’s Law? Which candidate has a first-digit distribution that is:</p>
+<ul>
+<li>most similar to</li>
+<li>most different</li>
+</ul>
+<p>from the sampled one?</p>
+<!--
+### Question 6
+
+Below are two visualizations using data from the last two presidential elections in California. The last two Democratic candidates for president were Joe Biden in 2020 and Hillary Clinton in 2016.
+
+
+::: {.cell layout-align="center"}
+::: {.cell-output-display}
+![](part-2_files/figure-html/unnamed-chunk-1-1.png){fig-align='center' width=672}
+:::
+:::
+
+
+Based on these results and the results from **Question 5**, to what extent to you believe the 2009 Iranian election was fraudulent? Explain in three to four sentences. 
+
+---
+
+### US Elections
+
+The [OpenElections](http://www.openelections.net) project obtains and standardizes precinct-level results from US elections, including the 2020 US Presidential Election. They host datasets containing these results on [Github](https://github.com/openelections). 
+
+You will be analyzing results from *Mississippi* in **Questions 6-9**. Make sure you have loaded in the `tidyverse` library before running the following code, which will bring the dataset into your environment.
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+miss <- read_csv("https://raw.githubusercontent.com/openelections/openelections-data-ms/master/2020/20201103__ms__general__precinct.csv")
+```
+:::
+
+
+---
+
+### Question 6
+
+What is the unit of observation in the `miss` data frame? What are the dimensions?
+
+### Question 7
+
+Create a `ggplot` of the distribution of the first digit of votes for Joseph Biden by precinct. 
+
+### Question 8
+
+How does the election data you chose appear to fit Benford's distribution as compared to the data from the 2009 Iran election?
+
+### Question 9
+
+Based on the results of **Question 8**, what might you conclude about the utility of Benford's law in detecting election fraud? Explain in one to two sentences.
+
+-->
+<!--
+
+This week's lab is a *mini-lab* containing only one part and done in a qmd file. The data for this lab can be found in the `iran` data frame in the `stat20data` package. Run `?iran` at the console to learn more about the columns.
+
+On June 12 2009, the Republic of Iran held an election where President Mahmoud Ahmadinejad sought re-election against three challengers. One of the challengers, Mir-Hossein Mousavi was thought to have a good chance at defeating the incumbent. When it was announced that Ahmadinejad had won handily, there were widespread allegations of election fraud. There are many methods, both quantitative and qualitative, to detect election fraud. In this lab we will critique just one proposed method.
+
+#### Question 1
+
+What is the unit of observation in the `iran` data frame?
+
+
+#### Question 2
+
+What is the empirical distribution of the vote counts for Ahmadinejad? Answer with a plot, numerical summaries of center and spread, and a written interpretation.
+
+#### Question 3
+
+One model for the probability distribution of first digits is the discrete uniform distribution. Let $X$ be the first digit of the vote count for Ahmadinejad in a randomly selected city.
+
+$$X \sim Uniform(1, 9)$$
+
+We've started creating the distribution table for $X$ as a data frame by creating a column containing the possible values $x$. Complete the table by mutating and saving a column called `prob` with the corresponding probabilities. Use that table to visualize the distribution and color the bars with gold to make clear this is a probability distribution, not an empirical distribution.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+fd_unif <- data.frame(first_digit = seq(1, 9))
+```
+:::
+
+
+#### Question 4
+
+What is the expected value of $X \sim Unif(1, 9)$? Answer this question by mutating a new column in `fd_unif` and taking its sum, as in the notes.
+
+
+#### Question 5
+
+What is the variance of $X \sim Unif(1, 9)$? Answer this question by again mutating a new column in `fd_unif` and taking its sum, as in the notes.
+
+#### Question 6
+
+A second model for the probability distribution of first digits is Benford's Law.
+
+$$X \sim Benford()$$
+
+Benford's Law is a distribution without any parameters: it always takes values on the integers from 1 to 9 and the probability of each is $\log_{10} \left(1 + 1/x\right)$ where $x$ is the integer.
+
+Repeat question 3 but using Benford's Law and the dataframe `fd_benford`. As a check that your table represents a valid probability distribution, verify that the sum of `prob` is 1. (Hint: read the documentation to `log()` carefully.)
+
+Will this distribution have a expected value that is higher, lower, or the same as the Uniform distribution?
+
+
+::: {.cell}
+
+```{.r .cell-code}
+fd_benford <- data.frame(first_digit = seq(1, 9))
+```
+:::
+
+
+
+#### Question 7
+
+Using the methods from Questions 4 and 5, calculate the expected value and the variance of Benford's Law.
+
+#### Question 8
+
+What might a sample of 366 draws from $X \sim Benford()$ look like?
+
+To answer this, use `fd_benford` as your box with every row a ticket. You can simulate the process of drawing a ticket out of a box by sampling rows from the data frame with `slice_sample()`. To use this function you must specify the number of rows (`n`), whether or not to sample with replacement (`replace`), and which column contains the probability of each ticket (`weight_by`).
+
+Create a plot of the resulting empirical distribution of first digits.
+
+
+::: {.cell}
+
+```{.r .cell-code}
+fd_benford %>%
+  slice_sample(n = ___,
+               replace = ___,
+               weight_by = ___)
+```
+:::
+
+
+
+#### Question 9
+
+What do the first digit empirical distributions look like for the four candidates in the Iranian presidential election?
+
+Inside the `stat20data` package there is a function called `get_first()` that pulls off the first digit of every element in a vector. Piece all four plots together into one single plot using the `patchwork` library (search for "patchwork" in the search bar at the top right of the course website for an example of its use).
+
+
+::: {.cell}
+
+```{.r .cell-code}
+penguins %>%
+  mutate(first_digit = get_first(bill_length_mm)) %>%
+  select(bill_length_mm, first_digit)
+```
+:::
+
+
+
+#### Question 10
+
+How do the observed first digit distributions compare to those simulated from Benford's Law? Which candidate has a first-digit distribution most similar to and most different from the simulated ones?
+
+-->
+</section>
+<section id="us-elections" class="level3">
+<h3 class="anchored" data-anchor-id="us-elections">US Elections</h3>
+<p>The <a href="http://www.openelections.net">OpenElections</a> project obtains and standardizes precinct-level results from US elections, including the 2020 and 2024 (for many states) US Presidential Elections. To access the data, visit OpenElections’ GitHub page (<a href="https://github.com/openelections">https://github.com/openelections</a>) and click on the tab labeled “Repositories”. From there, scroll down until you find the repository for Georgia. It will be called <code>openelections-data-ga</code>. Select the <code>2020</code> folder and find the file <code>20201103__ga__general.csv</code>. Some notes: <!--From there, scroll down and click on a link to a data repository for the state of your choosing (the repository for Oregon, for example, is called `openelections-data-or`.). Select the `2020` folder and find a file that ends in `.csv`. Some notes:
+
+- Each state uses a different format, so click through a couple states' repositories until you find one that will allow you to study voting patterns at the precinct-level.
+--> - To read the csv file into R, you will need to point R to the raw version of the data set. To view the raw csv you will either click the button that says “Raw” at the top right of the data frame on GitHub or click the link that says “View Raw Data”. When you are looking at the raw csv file, the url in your browser is the one you can use to access the file from within R. - There may be strange extra rows in your data, such as a row tallying total overall votes. Visually inspect the data to see if anything jumps out and be sure to take this into consideration when doing your analysis.</p>
+<section id="question-6" class="level4">
+<h4 class="anchored" data-anchor-id="question-6">Question 6</h4>
+<!--What state did you choose to study?-->
+<p>What is the unit of observation in your state’s data frame? What are the dimensions?</p>
+</section>
+<section id="question-7" class="level4">
+<h4 class="anchored" data-anchor-id="question-7">Question 7</h4>
+<p>Use this data to create a plot of the state’s first digit distribution by precinct. Use the number of votes cast for Joseph Biden in each precinct.</p>
+</section>
+<section id="question-8" class="level4">
+<h4 class="anchored" data-anchor-id="question-8">Question 8</h4>
+<p>Does the 2020 election in Georgia appear to fit Benford’s distribution better or worse than the Iran election?</p>
+</section>
+<section id="question-9" class="level4">
+<h4 class="anchored" data-anchor-id="question-9">Question 9</h4>
+<p>Take this opportunity to explore the US elections data provided by Open Elections and construct a data visualization of your choosing. This plot could deal with vote totals for different candidates or different parties, the types of offices, how candidates appear on the ballots, how one state compares to another state, how a state or precinct has changed over time … you have lots of options here!</p>
+<p>Once you have a plot, make two claims: a summary claim and a generalization. Do you think your generalization claim is well-supported here?</p>
+</section>
+<section id="question-10" class="level4">
+<h4 class="anchored" data-anchor-id="question-10">Question 10</h4>
+<p>Now go back to the Georgia repo (<code>openelections-data-ga</code>), and go to the folder <code>2024</code>. Go to the file <code>20241105__ga__general__precinct-level.csv</code>, and do the same plot that you did for 2020 in Question 7, that is, a plot of the state’s first digit distribution by precinct, using the number of votes cast for the Democratic candidate in each precinct. Compare the 2020 and 2024 plots, and comment on what you observe.</p>
+</section>
+<section id="last-question" class="level4">
+<h4 class="anchored" data-anchor-id="last-question">Last Question</h4>
+<p>Will you ensure that your submission to Gradescope…</p>
+<ol type="1">
+<li>is of a pdf generated from a qmd file,</li>
+<li>has all of your code visible to readers,</li>
+<li>and assigns each of the questions to all pages that show your work for that question?</li>
+</ol>
+<p>(This one is easy! Just answer “yes” or “no”)</p>
+<hr style="border: 2px solid #000000;">
+</section>
+</section>
+<section id="more-about-benfords-law" class="level3">
+<h3 class="anchored" data-anchor-id="more-about-benfords-law">More about Benford’s Law:</h3>
+<p>If you would like to read (or listen to) more about Benford’s Law, and also the 2020 elections, check out these links:</p>
+<ul>
+<li>Radiolab podcast episode <a href="https://radiolab.org/podcast/breaking-benford">“Breaking Benford”</a></li>
+<li><a href="https://hill.math.gatech.edu/About2020.php">Ted Hill</a> is Professor Emeritus of Mathematics at Georgia Institute of Technology, and widely regarded as one of the foremost authorities on Benford’s Law. If you go to the linked page (click on his name above), and click on “Academics” there is a list of publications about Benford’s Law. For example, this <a href="https://hill.math.gatech.edu/publications/PAPER%20PDFS/TheFirstDigitPhenomenonAmericanScientist1996.pdf">article</a> that was published in the magazine <a href="https://www.americanscientist.org/">American Scientist</a>.</li>
+<li>From the Wall Street Journal: <a href="https://www.wsj.com/articles/can-accounting-tool-detect-election-fraud-11607077800"><em>Can an Accounting Tool Detect Election Fraud?</em></a></li>
+<li>An explanatory <a href="https://www.iflscience.com/-64172">article</a> from IFLScience</li>
+<li>Another nice article explaining this strange phenomenon: <a href="https://hill.math.gatech.edu/ARTICLES/The%20Power%20of%20One.pdf">“The Power of One”</a></li>
+<li>Finally, a <a href="https://web.williams.edu/Mathematics/sjmiller/public_html/benfordresources/KossoskyMiller_FinalBenfordAnalysis.pdf">Benford’s Law analysis</a> of the 2020 Presidential Election data by two experts: Alex Kossovsky and Steven Miller.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/stat20\.berkeley\.edu\/summer-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../license.html">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
