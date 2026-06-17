@@ -2,398 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/index.html</loc>
-    <lastmod>2026-06-16T14:37:03.423Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/05-logistic-regression/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.062Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/01-method-of-least-squares/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.027Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/01-method-of-least-squares/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.027Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.164Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/02-improving-predictions/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/03-overfitting/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.040Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/labs/08-cancer/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.164Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/tutorials.html</loc>
-    <lastmod>2026-06-16T14:37:03.423Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.423Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/syllabus.html</loc>
-    <lastmod>2026-06-16T14:37:03.423Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/08-confidence-intervals/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.902Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/07-from-samps-to-pops/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.900Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/10-hypothesis-tests/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/12-wrong-by-design/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.949Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/11-hypothesis-tests-2/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.931Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/09-bootstrapping/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/03-probability-dsns/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.887Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/02-computing-probs/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.881Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/04-random-variables/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.890Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/05-ev-se/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.895Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/01-prob-foundations/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.869Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/01-prob-foundations/tutorial.html</loc>
-    <lastmod>2026-06-16T14:37:02.869Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/06-normal-approx/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/labs/peoples-park/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/labs/peoples-park/part-2.html</loc>
-    <lastmod>2026-06-16T14:37:02.973Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/labs/elections/learning-objectives.html</loc>
-    <lastmod>2026-06-16T14:37:02.958Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/1-questions-and-data/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.697Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/1-questions-and-data/01-understanding-the-world/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.611Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/1-questions-and-data/02-taxonomy-of-data/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.669Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/1-questions-and-data/labs/unvotes/part-2.html</loc>
-    <lastmod>2026-06-16T14:37:02.697Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.923Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/office-hours.html</loc>
-    <lastmod>2026-06-16T14:37:03.423Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/assets/final-exam-slide.html</loc>
-    <lastmod>2026-06-16T14:37:03.416Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/05-summarizing-associations/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.797Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/03-a-grammar-of-graphics/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/03-a-grammar-of-graphics/tutorial.html</loc>
-    <lastmod>2026-06-16T14:37:02.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/04-conditioning/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.795Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/04-conditioning/tutorial.html</loc>
-    <lastmod>2026-06-16T14:37:02.795Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/01-summarizing-categorical-data/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.744Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/01-summarizing-categorical-data/tutorial.html</loc>
-    <lastmod>2026-06-16T14:37:02.744Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/06-multiple-linear-regression/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.802Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/02-summarizing-numerical-data/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.754Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/labs/flights/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.851Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/labs/flights/part-2.html</loc>
-    <lastmod>2026-06-16T14:37:02.851Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.374Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/docs/index.html</loc>
-    <lastmod>2026-06-16T14:37:03.422Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/docs/scheduled-docs.html</loc>
-    <lastmod>2026-06-16T14:37:03.422Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/docs/assignments.html</loc>
-    <lastmod>2026-06-16T14:37:03.418Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/4-causation/01-defining-causality/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.997Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/4-causation/02-experiments/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.001Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.377Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/4-causation/04-time/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.007Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.976Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/4-causation/03-matching/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.003Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.971Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/4-causation/labs/taste-test/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.014Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.983Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/assignments.html</loc>
-    <lastmod>2026-06-16T14:37:03.418Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.377Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/4-causation/03-matching/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.003Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.971Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/4-causation/04-time/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.007Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/4-causation/02-experiments/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.001Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/4-causation/01-defining-causality/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.997Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/4-causation/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.014Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.976Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/docs/website.html</loc>
-    <lastmod>2026-06-16T14:37:03.422Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/docs/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.422Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/labs/class-survey/part-2.html</loc>
-    <lastmod>2026-06-16T14:37:02.844Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.815Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/labs/class-survey/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.844Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/02-summarizing-numerical-data/tutorial.html</loc>
-    <lastmod>2026-06-16T14:37:02.755Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/02-summarizing-numerical-data/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.754Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/06-multiple-linear-regression/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.802Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/01-summarizing-categorical-data/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.743Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/04-conditioning/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.795Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/03-a-grammar-of-graphics/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/05-summarizing-associations/tutorial.html</loc>
-    <lastmod>2026-06-16T14:37:02.797Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/05-summarizing-associations/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.797Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/2-summarizing-data/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.851Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.815Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/assets/quiz-slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.416Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.374Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/license.html</loc>
-    <lastmod>2026-06-16T14:37:03.423Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/1-questions-and-data/02-taxonomy-of-data/tutorial.html</loc>
-    <lastmod>2026-06-16T14:37:02.669Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/1-questions-and-data/02-taxonomy-of-data/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.669Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/1-questions-and-data/01-understanding-the-world/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.612Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/CONTRIBUTING.html</loc>
-    <lastmod>2026-06-16T14:37:03.164Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.120Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/labs/elections/part-2.html</loc>
-    <lastmod>2026-06-16T14:37:02.958Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.924Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/labs/elections/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.958Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/06-normal-approx/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/01-prob-foundations/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.869Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/05-ev-se/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.895Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/04-random-variables/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.890Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/02-computing-probs/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.881Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/03-probability-dsns/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.887Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/09-bootstrapping/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/11-hypothesis-tests-2/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.931Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/12-wrong-by-design/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.949Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/10-hypothesis-tests/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/07-from-samps-to-pops/notes.html</loc>
-    <lastmod>2026-06-16T14:37:02.900Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/3-generalization/08-confidence-intervals/slides.html</loc>
-    <lastmod>2026-06-16T14:37:02.903Z</lastmod>
+    <lastmod>2026-06-17T21:55:26.924Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/glossary-defs.html</loc>
-    <lastmod>2026-06-16T14:37:03.422Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/summer-2026/glossary-fns.html</loc>
-    <lastmod>2026-06-16T14:37:03.423Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/labs/07-baseball/part-2.html</loc>
-    <lastmod>2026-06-16T14:37:03.143Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/labs/07-baseball/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.143Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/03-overfitting/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.040Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/02-improving-predictions/slides.html</loc>
-    <lastmod>2026-06-16T14:37:03.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stat20.berkeley.edu/summer-2026/5-prediction/05-logistic-regression/notes.html</loc>
-    <lastmod>2026-06-16T14:37:03.061Z</lastmod>
+    <lastmod>2026-06-17T21:55:27.381Z</lastmod>
   </url>
 </urlset>

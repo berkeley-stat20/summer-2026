@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-course-name','listing-semester','listing-site-url','listing-website','listing-format','listing-execute','listing-language','listing-drafts','listing-title','listing-code-fold','listing-sidebar','listing-resources','listing-path','listing-outputHref','listing-date','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-type','listing-sub-type','listing-href','listing-unit','listing-topic','listing-display-date','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-project","listing-course-name","listing-semester","listing-site-url","listing-website","listing-format","listing-execute","listing-language","listing-drafts","listing-title","listing-code-fold","listing-sidebar","listing-resources","listing-path","listing-outputHref","listing-date","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-type","listing-sub-type","listing-href","listing-unit","listing-topic","listing-display-date","listing-draft"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -108,10 +108,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-course-name','listing-semester','listing-site-url','listing-website','listing-format','listing-execute','listing-language','listing-drafts','listing-title','listing-subtitle','listing-path','listing-outputHref','listing-date','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-type','listing-href','listing-unit','listing-topic','listing-display-date','listing-draft','listing-title-prefix','listing-sub-type','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      page: 25,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-project","listing-course-name","listing-semester","listing-site-url","listing-website","listing-format","listing-execute","listing-language","listing-drafts","listing-title","listing-subtitle","listing-path","listing-outputHref","listing-date","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-type","listing-href","listing-unit","listing-topic","listing-display-date","listing-draft","listing-title-prefix","listing-sub-type","listing-image"],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -269,20 +268,6 @@ window.Quarto = {
 
 <div class="grid text-center list">
 
-<div class="g-col-12 g-col-sm-6 g-col-md-4">
-<div class="card hovercard">
-<img src="" class="card-img-top" loading="lazy" style="border-radius: 40%;" fig-alt="People's Park logo">
-<div class="card-body">
-<span class="card-title listing-title" style="font-weight: bold;">Lab 1: People's Park</span><br>
-
-  
-    <a href="./3-generalization/labs/peoples-park/part-2.html" class="badge Part-II-badge">Part II</a>
-  
-
-</div>
-</div>
-</div>
-
 </div>
 
 <div class="listing-no-matching d-none">No matching items</div>
@@ -293,89 +278,8 @@ window.Quarto = {
 <p>Worksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.</p>
 <div id="listing-ws-listing" class="quarto-listing quarto-listing-container-custom">
 <ul>
-<li>
-<a href="./1-questions-and-data/02-taxonomy-of-data/ws.pdf">WS: Taxonomy of Data</a>
-</li>
-<li>
-<a href="./2-summarizing-data/01-summarizing-categorical-data/ws.pdf">WS: Summarizing Categorical Data</a>
-</li>
-<li>
-<a href="./2-summarizing-data/02-summarizing-numerical-data/ws.pdf">WS: Summarizing Numerical Data</a>
-</li>
-<li>
-<a href="./2-summarizing-data/03-a-grammar-of-graphics/ws.pdf">WS: A Grammar of Graphics</a>
-</li>
-<li>
-<a href="./2-summarizing-data/04-conditioning/ws.pdf">WS: Conditioning</a>
-</li>
-<li>
-<a href="./2-summarizing-data/05-summarizing-associations/ws.pdf">WS: Summarizing Numerical Associations</a>
-</li>
-<li>
-<a href="./2-summarizing-data/06-multiple-linear-regression/ws.pdf">WS: Multiple Linear Regression</a>
-</li>
-<li>
-<a href="./3-generalization/01-prob-foundations/ws.pdf">WS: Probability Foundations</a>
-</li>
-<li>
-<a href="./3-generalization/02-computing-probs/ws.pdf">WS: Probability Foundations II</a>
-</li>
-<li>
-<a href="./3-generalization/03-probability-dsns/ws.pdf">WS: Probability Distributions</a>
-</li>
-<li>
-<a href="./3-generalization/04-random-variables/ws.pdf">WS: Random Variables</a>
-</li>
-<li>
-<a href="./3-generalization/05-ev-se/ws.pdf">WS: Expected Value and Variance</a>
-</li>
-<li>
-<a href="./3-generalization/02-computing-probs/ws.pdf">WS: Probability Foundations II</a>
-</li>
-<li>
-<a href="./3-generalization/07-from-samps-to-pops/ws.pdf">WS: Sampling Distributions</a>
-</li>
-<li>
-<a href="./3-generalization/09-bootstrapping/ws.pdf">WS: Bootstrapping</a>
-</li>
-<li>
-<a href="./3-generalization/10-hypothesis-tests/ws.pdf">WS: Hypothesis Testing</a>
-</li>
-<li>
-<a href="./3-generalization/11-hypothesis-tests-2/ws.pdf">WS: Hypothesis Tests II</a>
-</li>
-<li>
-<a href="./3-generalization/12-wrong-by-design/ws.pdf">WS: Wrong by Design</a>
-</li>
-<li>
-<a href="./4-causation/labs/taste-test/part-1.pdf">WS: A Matter of Taste</a>
-</li>
-<li>
-<a href="./4-causation/labs/taste-test/part-2.pdf">WS: A Matter of Taste</a>
-</li>
-<li>
-<a href="./5-prediction/01-method-of-least-squares/ps.pdf">WS: The Method of Least Squares</a>
-</li>
-<li>
-<a href="./5-prediction/02-improving-predictions/ps.pdf">WS: Evaluating and Improving Predictions</a>
-</li>
-<li>
-<a href="./5-prediction/labs/08-cancer/slides.html">WS: Diagnosing Cancer</a>
-</li>
-<li>
-<a href="./5-prediction/labs/08-cancer/part-1.pdf">WS: Diagnosing Cancer</a>
-</li>
-<li>
-<a href="./5-prediction/03-overfitting/ps.pdf">WS: Overfitting</a>
-</li>
-<li>
-<a href="./5-prediction/05-logistic-regression/ws.pdf">WS: Diagnosing Cancer</a>
-</li>
 </ul>
 <div class="listing-no-matching d-none">No matching items</div>
-<nav id="ws-listing-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
 </div>
 
 
