@@ -39,7 +39,7 @@
     "href": "syllabus.html#websites-to-know",
     "title": "Syllabus",
     "section": "Websites to know",
-    "text": "Websites to know\n\nbCourses: Announcements will go out here.\nCourse website: All course materials, including readings and assignments, will be available at https://stat20.berkeley.edu/summer2026 You do not need to buy any materials for our course!\nRStudio: The computing platform you will use this semester. As a Berkeley student, you have your own version of RStudio waiting you for at: http://stat20.datahub.berkeley.edu. Most students taking Stat 20 have no experience programming; we’ll teach you everything you need to know!\nEd: The class discussion forum. Here you may ask questions about course content, or, via the private feature, message myself and the staff about something personal. If you have a message you’d like only the instructor to see, email the instructor or use bCourses to contact the instructor.\nGradescope: You will turn in your assignments here."
+    "text": "Websites to know\n\nbCourses: Announcements will go out here.\nCourse website: All course materials, including readings and assignments, will be available at https://stat20.berkeley.edu/summer2026/ You do not need to buy any materials for our course!\nRStudio: The computing platform you will use this semester. As a Berkeley student, you have your own version of RStudio waiting you for at: http://stat20.datahub.berkeley.edu. Most students taking Stat 20 have no experience programming; we’ll teach you everything you need to know!\nEd: The class discussion forum. Here you may ask questions about course content, or, via the private feature, message myself and the staff about something personal. If you have a message you’d like only the instructor to see, email the instructor or use bCourses to contact the instructor.\nGradescope: You will turn in your assignments here."
   },
   {
     "objectID": "syllabus.html#format",
@@ -60,14 +60,14 @@
     "href": "syllabus.html#assignment-schedule-1",
     "title": "Syllabus",
     "section": "Assignment Schedule",
-    "text": "Assignment Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nStart of Week\nLab Released\nEnd of Week\nAssignments Due\n\n\n\n\n1\nMon, Jun 22\nLab 1 Released, Lab 2 Released\nFri, Jun 26\nPortfolio 1 Due, Lab 1 Due\n\n\n2\nMon, Jun 29\n\nFri, Jul 03\nPortfolio 2 Due, Lab 2 Due, Quiz 1\n\n\n3\nMon, Jul 06\n\nFri, Jul 10\nPortfolio 3 Due\n\n\n4\nMon, Jul 13\n\nFri, Jul 17\nPortfolio 4 Due, Quiz 2\n\n\n5\nMon, Jul 20\nLab 3 Released\nFri, Jul 24\nPortfolio 5 Due\n\n\n6\nMon, Jul 27\n\nFri, Jul 31\nPortfolio 6 Due, Lab 3 Due, Quiz 3\n\n\n7\nMon, Aug 03\nLab 4 Released\nFri, Aug 07\nPortfolio 7 Due\n\n\n8\nMon, Aug 10\nReview Week\nThu, Aug 13\nLab 4 Due, Final Exam Thur August 13\n\n\n\n\n\n\nGrade calculator\nA grade calculator for the course is here. Feel free to make a copy and put in your own grades! The calculator does not have drops, but you can feel free to alter the copied spreadsheet to add them. We use the standard grading bins. In the event that the bins change, they will only change to help, not to hurt, students. Consult Berkeleytime for previous grading distributions, and do not ask group tutors about grading (they do not grade your assignments)."
+    "text": "Assignment Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nStart of Week\nLab Released\nThursday\nEnd of Week\nAssignments Due\n\n\n\n\n1\nMon, Jun 22\nLab 1 Released, Lab 2 Released\nJun 25\nFri, Jun 26\nPortfolio 1 Due, Lab 1 Due\n\n\n2\nMon, Jun 29\n\nJul 02: Quiz 1\nFri, Jul 03\nPortfolio 2 Due, Lab 2 Due\n\n\n3\nMon, Jul 06\n\nJul 09\nFri, Jul 10\nPortfolio 3 Due\n\n\n4\nMon, Jul 13\n\nJul 16: Quiz 2\nFri, Jul 17\nPortfolio 4 Due\n\n\n5\nMon, Jul 20\nLab 3 Released\nJul 23\nFri, Jul 24\nPortfolio 5 Due\n\n\n6\nMon, Jul 27\n\nJul 30: Quiz 3\nFri, Jul 31\nPortfolio 6 Due, Lab 3 Due\n\n\n7\nMon, Aug 03\nLab 4 Released\nAug 06\nFri, Aug 07\nPortfolio 7 Due\n\n\n8\nMon, Aug 10\nReview Week\nAug 13: Final Exam\nFri, Aug 14\nLab 4 Due\n\n\n\n\n\n\nGrade calculator\nA grade calculator for the course is here. Feel free to make a copy and put in your own grades! The calculator does not have drops, but you can feel free to alter the copied spreadsheet to add them. We use the standard grading bins. In the event that the bins change, they will only change to help, not to hurt, students. Consult Berkeleytime for previous grading distributions, and do not ask group tutors about grading (they do not grade your assignments)."
   },
   {
     "objectID": "syllabus.html#other-policies",
     "href": "syllabus.html#other-policies",
     "title": "Syllabus",
     "section": "Other policies",
-    "text": "Other policies\n\nAccomodations for students with disabilities\nStat 20 is a course that is designed to allow all students to succeed. If you have letters of accommodation from the Disabled Students’ Program, please share them with me and we will work out the necessary arrangements. This includes extensions on assignments or anything else!\n\n\nLate Work and Drops\n\nOne day late: 30% off your total score.\nPast one day late: no credit.\n\nIf you need to request a extension on a Lab, please send a message on private Ed with at least one day before the deadline to spare. All Lab extensions will be two days by default. If you have a serious emergency (such as a visit to the ER) that prevented you from filling out the form on time, let me know via e-mail. For Lab extensions longer than three days, such as in cases of long-term illness or emergencies, come to office hours or set up an office hour by appointment with me or e-mail me.\nWithin a given assignment category, a drop(s) will be automatically applied to the lowest-scoring assignment(s).\n\n\nCollaboration policy / academic dishonesty\nThese are policies that are most important, but note that we reserve the right to identify punish other dishonest behaviors (the list is not exhaustive).\n\nLabs and Worksheets\n\nYou may collaborate with your fellow students on Worksheets and Labs, but:\n\nyou must turn in your own work.\nyou must cite those that you worked with at the beginning of your document in writing or otherwise.\n\nYou may complete Labs using only code that we have taught you in the course.\nYou shall not leave a representation of your assignment (the text, a screenshot) where students (current and future) can access it. Examples of this include websites like CourseHero, on a group text chain, over discord/slack, or in a file passed onto future students.\nYou shall not use past solutions to an assignment.\n\n\n\nExaminations and Reading Questions\n\nQuizzes: During the group portion of a Quiz, you shall not collaborate with those outside your Quiz group. The individual portion of the Quiz is entirely your own work.\nFinal: The final is entirely your own work.\n\n\n\n\nGenerative AI Policy\nIn today’s world, no class can really operate without considering the impact of generative AI, it is a pervasive reality that we must consider how to use, and not abuse.\nWhen leaving this course, my hope is that all students build a general understanding of the course content for themselves that helps them later in life. The best way to do this is to do the assignments and lab problems yourself as much as possible and not rely on outside sources. Outsourcing your problem solving and cognition skills to another entity will limit your ability to learn the concepts in the course yourself and carry them with you once the course has ended.\nFor worksheets, which are done in pen and pencil in class and can be taken home and worked on, YOU ARE NOT ALLOWED TO CONSULT ANY AI MODELS. These are meant to build your understanding, and it’s best to do them yourselves. You will work with peers in class on these as previously discussed.\nWhen it comes to coding in the lab reports, it is unrealistic to think students will not use some generative AI in coding, as this is how modern coding is done. You ARE allowed to consult generative AI for SMALL and GENERAL coding questions, for example:\n\nHow does the filter function work in tidyverse?\nWhat is the syntax for geom_col in ggplot?\nHow can I find the largest element in a array?\n\nYou ARE NOT allowed to:\n\nPaste entire lab questions into a generative AI\nUse any specific numbers or data from your problem in a query\nCopy paste AI generated code into your assignments.\n\nAll code in submitted lab reports must be typed by hand by the student.\nSo it is OKAY to think of generative AI as a “better google search”, it can bring information to your finger tips that you need in that moment, but make sure you are able to do it yourself as well. I would recommend, before you ask an AI how a function works, use the built in “?” command in R. For example, type\n? geom_col\nin your R stduio console before you ask AI for help and see if you can figure out the syntax yourself. Another great tool to solve ggplot problems on your own is the ggplot cheatsheet.\n\n\nFrequently Asked Questions\n\nWhat should I do if I’m on the waitlist?\nAttend as if you were a student and submit all assignments on time, and you should get in! Also, talk to me on the first day of class so you can be added to the course Ed and Gradescope.\nAre class sessions recorded?\nThey will not be. The online textbook is the main source material for the course, and any materials used during the class session, such as slides and other items, will be posted to the course website.\nIs attendance required?\nStrictly speaking, no. However, it will be difficult to succeed in this course if you are not regularly attending class. If you can’t attend due to a religious observance, athletic competition, or something similarly important, don’t worry. Just reach out to us via private Ed or e-mail, and we can let you know what to keep tabs on during the time you’re away.\nStat 20 does not allow students to enroll with time conflicts.\nWhat if I join the class late?\nIf you join the class within the first two weeks, read the syllabus and textbook, and take a look at Gradescope to get a sense of any assignments that may have already passed. Another good idea is to visit office hours. The first two weeks of material are very important, so you must be able to make up assignments.\nIf you want to join after two weeks of the semester have passed, you will have to take STAT 20 in a subsequent semester.\n\n\n\nCampus Resources\nIt can be very tough to be a student at this school! Some of you are navigating other challenges, like being a parent or commuting long distances from home to campus. There’s also that pervasive impostor syndrome. If you have other issues that impact your ability to participate in class, or have any other things you’d like to share about your experiences or if you just need someone to talk to about your academic struggles or your future path, feel free to contact the course instructor.\nWith regards to reports of sexual misconduct/violence/assault, you may speak with us as well, but know that we will need to report our discussion to the Title IX officer. This is detailed below.\n\nAs UC employees, I and the tutors are “Responsible Employees” and are therefore required to report incidents of sexual violence, sexual harassment, or other conduct prohibited by University policy to the Title IX officer. We cannot keep reports of sexual harassment or sexual violence confidential, but the Title IX officer will consider requests for confidentiality. Note that there are confidential resources available to you through UCB’s PATH to Care Center, which serves survivors of sexual violence and sexual harassment; call their 24/7 Care Line at 510-643-2005.\n\nBelow are some campus resources that may be helpful for you:\n\nBerkeley Supportal- great place to start\nDisabled Students’ Program\nUniversity Health Services\nUCB Path to Care\nStudent Learning Center\nBerkeley International Office\nOmbuds Office for Students and Postdoctoral Appointees\nGender Equity Resource Center\nCenter for Educational Justice & Community Engagement\nUHS Counseling and Psychological Services (CAPS)\nCampus Academic Accommodations Hub\nASUC Student Advocate’s Office\nBasic Needs Center\nASUC Mental Health Resources Guide"
+    "text": "Other policies\n\nAccomodations for students with disabilities\nStat 20 is a course that is designed to allow all students to succeed. If you have letters of accommodation from the Disabled Students’ Program, please share them with me and we will work out the necessary arrangements. This includes extensions on assignments or anything else!\n\n\nLate Work and Drops\n\nOne day late: 30% off your total score.\nPast one day late: no credit.\n\nIf you need to request a extension on a Lab, please send a message on private Ed with at least one day before the deadline to spare. All Lab extensions will be two days by default. If you have a serious emergency (such as a visit to the ER) that prevented you from filling out the form on time, let me know via e-mail. For Lab extensions longer than three days, such as in cases of long-term illness or emergencies, come to office hours or set up an office hour by appointment with me or e-mail me.\nWithin a given assignment category, a drop(s) will be automatically applied to the lowest-scoring assignment(s).\n\n\nCollaboration policy / academic dishonesty\nThese are policies that are most important, but note that we reserve the right to identify punish other dishonest behaviors (the list is not exhaustive).\n\nLabs and Worksheets\n\nYou may collaborate with your fellow students on Worksheets and Labs, but:\n\nyou must turn in your own work.\nyou must cite those that you worked with at the beginning of your document in writing or otherwise.\n\nYou may complete Labs using only code that we have taught you in the course.\nYou shall not leave a representation of your assignment (the text, a screenshot) where students (current and future) can access it. Examples of this include websites like CourseHero, on a group text chain, over discord/slack, or in a file passed onto future students.\nYou shall not use past solutions to an assignment.\n\n\n\nExaminations and Reading Questions\n\nQuizzes: During the group portion of a Quiz, you shall not collaborate with those outside your Quiz group. The individual portion of the Quiz is entirely your own work.\nFinal: The final is entirely your own work.\n\n\n\n\nGenerative AI Policy\nIn today’s world, no class can really operate without considering the impact of generative AI, it is a pervasive reality that we must consider how to use, and not abuse.\nWhen leaving this course, my hope is that all students build a general understanding of the course content for themselves that helps them later in life. The best way to do this is to do the assignments and lab problems yourself as much as possible and not rely on outside sources. Outsourcing your problem solving and cognition skills to another entity will limit your ability to learn the concepts in the course yourself and carry them with you once the course has ended.\nFor worksheets, which are done in pen and pencil in class and can be taken home and worked on, YOU ARE NOT ALLOWED TO CONSULT ANY AI MODELS. These are meant to build your understanding, and it’s best to do them yourselves. You will work with peers in class on these as previously discussed.\nWhen it comes to coding in the lab reports, it is unrealistic to think students will not use some generative AI in coding, as this is how modern coding is done. You ARE allowed to consult generative AI for SMALL and GENERAL coding questions, for example:\n\nHow does the filter function work in tidyverse?\nWhat is the syntax for geom_col in ggplot?\nHow can I find the largest element in a array?\n\nYou ARE NOT allowed to:\n\nPaste entire lab questions into a generative AI\nUse any specific numbers or data from your problem in a query\nCopy paste AI generated code into your assignments.\n\nAll code in submitted lab reports must be typed by hand by the student.\nSo it is OKAY to think of generative AI as a “better google search”, it can bring information to your finger tips that you need in that moment, but make sure you are able to do it yourself as well. I would recommend, before you ask an AI how a function works, use the built in “?” command in R. For example, type\n? geom_col\nin your RStudio console before you ask AI for help and see if you can figure out the syntax yourself. Another great tool to solve ggplot problems on your own is the ggplot cheatsheet.\n\n\nFrequently Asked Questions\n\nWhat should I do if I’m on the waitlist?\nAttend as if you were a student and submit all assignments on time, and you should get in! Also, talk to me on the first day of class so you can be added to the course Ed and Gradescope.\nAre class sessions recorded?\nThey will not be. The online textbook is the main source material for the course, and any materials used during the class session, such as slides and other items, will be posted to the course website.\nIs attendance required?\nStrictly speaking, no. However, it will be difficult to succeed in this course if you are not regularly attending class. If you can’t attend due to a religious observance, athletic competition, or something similarly important, don’t worry. Just reach out to us via private Ed or e-mail, and we can let you know what to keep tabs on during the time you’re away.\nStat 20 does not allow students to enroll with time conflicts.\nWhat if I join the class late?\nIf you join the class within the first two weeks, read the syllabus and textbook, and take a look at Gradescope to get a sense of any assignments that may have already passed. Another good idea is to visit office hours. The first two weeks of material are very important, so you must be able to make up assignments.\nIf you want to join after two weeks of the semester have passed, you will have to take STAT 20 in a subsequent semester.\n\n\n\nCampus Resources\nIt can be very tough to be a student at this school! Some of you are navigating other challenges, like being a parent or commuting long distances from home to campus. There’s also that pervasive impostor syndrome. If you have other issues that impact your ability to participate in class, or have any other things you’d like to share about your experiences or if you just need someone to talk to about your academic struggles or your future path, feel free to contact the course instructor.\nWith regards to reports of sexual misconduct/violence/assault, you may speak with us as well, but know that we will need to report our discussion to the Title IX officer. This is detailed below.\n\nAs UC employees, I and the tutors are “Responsible Employees” and are therefore required to report incidents of sexual violence, sexual harassment, or other conduct prohibited by University policy to the Title IX officer. We cannot keep reports of sexual harassment or sexual violence confidential, but the Title IX officer will consider requests for confidentiality. Note that there are confidential resources available to you through UCB’s PATH to Care Center, which serves survivors of sexual violence and sexual harassment; call their 24/7 Care Line at 510-643-2005.\n\nBelow are some campus resources that may be helpful for you:\n\nBerkeley Supportal- great place to start\nDisabled Students’ Program\nUniversity Health Services\nUCB Path to Care\nStudent Learning Center\nBerkeley International Office\nOmbuds Office for Students and Postdoctoral Appointees\nGender Equity Resource Center\nCenter for Educational Justice & Community Engagement\nUHS Counseling and Psychological Services (CAPS)\nCampus Academic Accommodations Hub\nASUC Student Advocate’s Office\nBasic Needs Center\nASUC Mental Health Resources Guide"
   },
   {
     "objectID": "syllabus.html#thanks-for-reading",
@@ -213,6 +213,55 @@
     "title": "Final Exam",
     "section": "",
     "text": "Before the exam begins\n\n🧹 Clear your desk of everything except a pen/pencil, your cheat sheet, and your ID.\n🧢 Remove hats, hoods, and sunglasses.\n📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period. All items should be on the floor not on nearby seats.\nSpread out as much as possible. We may reseat you to space people out.\nWhen you get an exam, do not begin.\n\n\nDuring the exam\n\n✅ All answers must be marked on the answer sheet.\n👀 If a proctor sees your eyes wandering to other students’ work, you will be reseated. If it happens again, it is considered academic misconduct.\nIf you need to use the bathroom, bring phone and exam materials to the front of the class.\n⌛ When you are done with this exam, please bring your exam, answer sheet, and cheat sheet to a proctor at the front of the class.\n\n\nGood luck! 🍀\n\n\n\n−+\n90:00\n\n\n\n\n\n\n−+\n90:00"
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "In this tutorial we’ll grow your R toolbox to visualize categorical data but first, a very general skill: how to ask for help."
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html#libraries",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html#libraries",
+    "title": "Summarizing Categorical Data",
+    "section": "Libraries",
+    "text": "Libraries\n\n\n\nThe tidyverse library, which contains many useful packages for data science\n\n\nIn Taxonomy of Data, we learned about a few different functions that can be used on vectors, such as mean(). We also learned about a function called data.frame(), which allowed us to bring vectors together as part of a new structure called a data frame, with each of the vectors used as columns.\nWhile the base functionality provided by R is powerful, developers often seek to find more efficient ways to complete tasks. In doing so, they push the power of R forward. R has a vast ecosystem of libraries that add new functions. Any installed library can be loaded with the library() function. Here, we will load the tidyverse library, one of the core external libraries that we will be using this semester.\n\nlibrary(tidyverse)\n\nTo use these functions within this library (or any other library), you will need to run the above line of code each time you start an RStudio session!\nThe tidyverse library has many different packages which contain smaller pieces of functionality. Today, our focus is to summarize categorical data, and one avenue we have explored already is a visual summary; a bar chart. Let’s explore how the plots shown earlier in this set of notes were made. We will use ggplot2, tidyverse’s resident visualization package.\nFirst, we should load the penguins data into our environment. The penguins data is actually located in a special library made just for this course called stat20data. This library hosts the datasets which will be the subjects of your labs. Therefore, we need to load this library first.\n\nlibrary(stat20data)\n\nThen, we can load in the penguins data by using the aptly named data function.\n\ndata(penguins)\n\nOnce you do this, you will see the penguins dataset, in all of its glory, appear in the environment pane at the top right of your RStudio session (you may need to click in the area once or twice).\n\n\n\n\n\nYou can click the blue dropdown arrow to see each variable in the dataset, or for a more traditional view, you can click the white spreadsheet icon to the right:\n\n\n\n\n\nNow, we’re ready to write some ggplot2 code and make our first visualization of the year! We will create the exact stacked, normalized bar chart you saw earlier in the notes."
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html#a-first-visualization-with-ggplot2",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html#a-first-visualization-with-ggplot2",
+    "title": "Summarizing Categorical Data",
+    "section": "A first visualization with ggplot2",
+    "text": "A first visualization with ggplot2\nThe main function within the ggplot2 package is, well, ggplot().\n\nggplot(data = penguins)\n\n\n\n\n\n\n\n\nThe ggplot() function takes as its first argument a data frame (the data argument). By itself, there’s not much to look at; it just creates a blank canvas.\nLet’s now indicate how we want to map our variables to each area of the plot. For now, let’s just focus on the species of penguin; we’ll handle the island later.\nWe had species of penguin on the horizontal (x) axis. This piece of information (which is known as an aesthetic attribute of the plot), goes into a second argument called mapping and within a function called aes().\n\nggplot(data = penguins, \n       mapping = aes(x = species))\n\n\n\n\n\n\n\n\nNow we’re getting somewhere. We can see the x axis has been set up with labels for the species of penguins.\nAll that is left is to actually put the observations on the plot. We do this by declaring what geometry we want and adding this information to our existing code. We can add this information via a new layer, which can be added on by using the + syntax and taking a newline.\n\nggplot(data = penguins, \n       mapping = aes(x = species)) +\n  geom_bar()\n\n\n\n\n\n\n\n\nThe layer we added was a geometry layer corresponding to the bar chart, called geom_bar().\nNote that the bars are not colored like before, but are just gray. This is because we are missing the island variable! Island was represented by coloring in (filling) the bars for us according to the conditional proportions of penguins within a specific species belonging to a specific island. We can include this by adding to our aes() function in the original layer.\n\nggplot(data = penguins, \n       mapping = aes(x = species, \n                     fill = island)) +\n  geom_bar()\n\n\n\n\n\n\n\n\nAlmost there! Note that what we have right now is just a stacked bar chart. There’s one more fix that we need to apply. Note that geom_bar() can be thought of as a function as well. One of its arguments, position, will help us solve this issue1. position defaults to a stacked bar chart, but we can fix this by supplying it with \"fill\"!\n\nggplot(data = penguins, \n       mapping = aes(x = species, \n                     fill = island)) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\nA side-by-side (dodged) bar chart can be produced by replacing \"fill\" with \"dodge\". To recover the original, stacked bar chart, use \"stack\"!\nThere we have it!"
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html#footnotes",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html#footnotes",
+    "title": "Summarizing Categorical Data",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis argument is generally not important for the other plots we create in this course, which is why in the initial piece of code featuring geom_bar(), it was not specified at all.↩︎"
+  },
+  {
+    "objectID": "2-summarizing-data/labs/flights/slides.html#section",
+    "href": "2-summarizing-data/labs/flights/slides.html#section",
+    "title": "Lab: Flights",
+    "section": "",
+    "text": "This headline is a good introduction to the impact that the pandemic had on flights and on SFO in particular."
+  },
+  {
+    "objectID": "2-summarizing-data/labs/flights/slides.html#section-1",
+    "href": "2-summarizing-data/labs/flights/slides.html#section-1",
+    "title": "Lab: Flights",
+    "section": "",
+    "text": "The Bureau of Transportation Statistics is the federal agency that collects and hosts this data for public download.\nAs a side note, if students are interested in pulling down more recent data, this data was pulled using the allflights R package, which they can download and install in RStudio."
+  },
+  {
+    "objectID": "2-summarizing-data/labs/flights/slides.html#section-2",
+    "href": "2-summarizing-data/labs/flights/slides.html#section-2",
+    "title": "Lab: Flights",
+    "section": "",
+    "text": "The goal of the “Think before you compute” design of these labs is that the students should be able to do their thinking without the distractions of technology. If you project this data frame, that should be sufficient for them to answer all of the questions in Part I.\n\n\n  \n    −\n    +\n \n 25:00"
   },
   {
     "objectID": "docs/index.html",
@@ -464,21 +513,21 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\n\nLab 2: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\n\nLab 2: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#worksheets",
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nNo matching items"
   },
   {
     "objectID": "4-causation/03-matching/notes.html",
@@ -656,6 +705,54 @@
     "text": "You can access the real data from the Stat 20 Class Survey by adding the following line of code to a code cell at the top of your Quarto document. The function glimpse() gives you a peek at the data, that is, the dimensions of the data frame, the variables and the first few values for each variable.\n\nlibrary(tidyverse)\nclass_survey &lt;- read_csv(\"https://tinyurl.com/class-survey-sp25\")\nglimpse(class_survey)\n\nTo complete the following questions, you will need to find the columns in the class_survey data frame associated with each variable mentioned.\n\n\nDo students prefer to spend time at the beach or in the mountains?\nConstruct a plot that answers this question and calculate a measure of a typical observation (mean, median, or mode, as appropriate). Then use the plot and this summary to answer the original question in a sentence.\n\n\n\nIs there an association between students’ favorite season and terrain preference (beach or mountains)?\nConstruct a plot that answers this question. Use this plot to answer the question in one sentence.\n\n\n\nHow much coding experience do students have? (numerical scale)\nConstruct a plot that answers this question and calculate a measure of a typical observation (mean, median, or mode, as appropriate). Then use the plot and this summary to answer the original question in a sentence.\n\n\n\nWhat is the relationship between students’ optimism for cryptocurrency and their skepticism of the effect of technology on interpersonal relationships?\nConstruct a plot that answers this question. Use this plot to answer the question in one sentence.\n\nSix variables appear in the survey data frame that were derived from the original prof_label question: is_artist, is_humanist, is_nat_sci, is_soc_sci, is_comp_sci and is_entrepreneur. The is_artist variable is TRUE for those students who most identified as an artist and FALSE otherwise. The other five variables are defined similarly.\nFor the following four questions, please answer with a plot and a sentence or two written response given the structure in the plot.\n\n\n\nIs there an relationship between students most identifying as an entrepreneur and their optimism for cryptocurrency?\n\n\n\nIs there an relationship between students most identifying as a humanist and their optimism for cryptocurrency?\n\n\n\nPropose your own question involving one of the is_ variables and numerical variable of your choice. Construct a plot that addresses the question, calculate a measure of center for the two groups separately (e.g. comparing those who identify as artists with those who do not), then use them to answer your questions in one or two sentences.\n\n\n\nThis last one is a full choose-your-own adventure: propose your own question involving two or three variables and answer it using a plot with a written interpretation.\n\n\n\nWill you ensure that your submission to Gradescope…\n\nis of a pdf generated from a qmd file,\nhas all of your code visible to readers,\nand assigns each of the questions to all pages that show your work for that question?\n\n(This one is easy! Just answer “yes” or “no”)"
   },
   {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/notes.html",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/notes.html",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "The tools for calculating numerical summaries and graphical summaries can be cleanly divided between tools developed for categorical data and tools for numerical data. We’ll discuss each in turn, starting with categorical data.\nWhen Dr. Gorman collected data near Palmer Station, Antarctica, she recorded a total of eight variables on 333 penguins, 10 rows of which are presented here in a data frame.\nThe first two of these you’ll recognize as nominal categorical variables. The species of each penguin can take one of three levels: Adelie, Chinstrap, or Gentoo; and the island on which they were found can also take three levels: Biscoe, Dream, or Torgersen.",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarizing Categorical Data"
+    ]
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/notes.html#summary",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/notes.html#summary",
+    "title": "Summarizing Categorical Data",
+    "section": "Summary",
+    "text": "Summary\nA wise statistician once said, “In statistics, most of what we do is add things up. Sometimes we divide. The challenging part is deciding what to add and divide.” This captures the deceptive simplicity of summarizing categorical data. Categorical summaries involve counts of categories or proportions. Those proportions can be joint proportions, marginal proportions, or conditional proportions. Those counts and proportions are commonly displayed in contingency tables or in bar charts. Subtle choices of which proportion to present results in the telling of dramatically different stories.\nContinue on to the tutorial portion of the notes",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarizing Categorical Data"
+    ]
+  },
+  {
+    "objectID": "2-summarizing-data/notes.html",
+    "href": "2-summarizing-data/notes.html",
+    "title": "Summarization",
+    "section": "",
+    "text": "In spring of 2022, the New York Times ran the following story1.\n“Consumer Prices” refers to the Consumer Price Index2, a weighted average of the prices of thousands of everyday consumer goods: sports equipment, soft drinks, sneakers, internet service, etc. An increase in that index is thought to correspond to rising inflation.\nLook carefully at the line plot. Which of the following four claims does it support?\nIn truth, this plot could be consistent with all these claims. They are, in turn, a summary, a prediction, a generalization, and a causal claim. This newspaper headline falls squarely in the first category, a summary, which seeks only to describe the data set that is on hand.\nAlthough 8.3% seems like a simple enough number, it is actually summarizing a vast data set of thousands of prices. The process of describing a data set invariably involves summarizing it, either with numerical summaries like 8.3% or with graphical summaries like the line plot show above.\nIn this unit, we will learn to critique and construct descriptive claims made with data. Although they sound elementary, descriptive claims are the most common form of claim made using data. They have the power to move, if not mountains, at least markets.",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarization"
+    ]
+  },
+  {
+    "objectID": "2-summarizing-data/notes.html#footnotes",
+    "href": "2-summarizing-data/notes.html#footnotes",
+    "title": "Summarization",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSmialek, Jeanna (2022, May 11). Consumer Prices are Still Climbing Rapidly. The New York Times. https://www.nytimes.com/2022/05/11/business/economy/april-2022-cpi.html↩︎\nTo learn more, check out the Wikipedia page on the CPI in the US and the exhaustive description of how the data is collected at the US Bureau of Labor Statistics↩︎",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarization"
+    ]
+  },
+  {
     "objectID": "assets/quiz-slides.html#individual-quiz",
     "href": "assets/quiz-slides.html#individual-quiz",
     "title": "Quiz",
@@ -766,6 +863,209 @@
     "title": "The Taxonomy of Data",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThe googlesheets4 package, which reads spreadsheet data into R was authored by Jenny Bryan, a developer at Posit: :https://googlesheets4.tidyverse.org/.↩︎\nThe statistics office of the province of British Columbia maintains a public R package with all of their data: https://bcgov.github.io/bcdata/↩︎\nDr. Christopher Paciorek in the Department of Statistics at UC Berkeley maintains a package to fit a very broad class of statistical models called Bayesian Models: https://r-nimble.org/.↩︎\nSimon Couch wrote the stacks package for model ensembling while an undergraduate https://stacks.tidymodels.org/index.html.↩︎\nR is an unusual language in that the data frame has been for decades a core structure of the language. The analogous structure in Python is the data frame found in the Pandas library.↩︎\nR monster artwork by @allison_horst.↩︎"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#agenda",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#agenda",
+    "title": "Taxonomy of Data",
+    "section": "Agenda",
+    "text": "Agenda\n\nConcept Questions: Taxonomy of Data\nBreak\nWorksheet: Taxonomy of Data\nBreak\nR Workshop\nAppendix"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#polling-software-poll-everywhere",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#polling-software-poll-everywhere",
+    "title": "Taxonomy of Data",
+    "section": "Polling Software, Poll Everywhere",
+    "text": "Polling Software, Poll Everywhere\n\nWe will submit out answers to the multiple choice questions online!\n\n\nAnswer at pollev.com.\n\n\nEnter username curtismcdonald770\nQuestions will activate shortly"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#not-counting-the-course_num-how-many-variables-are-being-recorded-here",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#not-counting-the-course_num-how-many-variables-are-being-recorded-here",
+    "title": "Taxonomy of Data",
+    "section": "Not counting the course_num, how many variables are being recorded here?",
+    "text": "Not counting the course_num, how many variables are being recorded here?\n\n\nA. 3\nB. 4\nC. 5\nD. 6\nE. 7\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-type-of-variable-is-the-number-of-students",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-type-of-variable-is-the-number-of-students",
+    "title": "Taxonomy of Data",
+    "section": "What type of variable is the number of students?",
+    "text": "What type of variable is the number of students?\n\n\nA. categorical, ordinal\nB. categorical, nominal\nC. numerical, discrete\nD. numerical, continuous\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-is-the-most-specific-term-that-can-be-given-to-this-data-structure",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-is-the-most-specific-term-that-can-be-given-to-this-data-structure",
+    "title": "Taxonomy of Data",
+    "section": "What is the most specific term that can be given to this data structure?",
+    "text": "What is the most specific term that can be given to this data structure?\n\n\nA. spreadsheet\nB. table\nC. contingency table\nD. data frame\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-is-the-statistics-term-used-for-a-property-of-an-object-that-can-be-measured-and-recorded",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-is-the-statistics-term-used-for-a-property-of-an-object-that-can-be-measured-and-recorded",
+    "title": "Taxonomy of Data",
+    "section": "What is the statistics term used for a property of an object that can be measured and recorded?",
+    "text": "What is the statistics term used for a property of an object that can be measured and recorded?\n\nA. data\nB. variable\nC. constant\nD. observational unit\n\n\n  \n    −\n    +\n \n 00:20"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#which-of-the-following-best-describes-the-distinction-between-r-and-rstudio",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#which-of-the-following-best-describes-the-distinction-between-r-and-rstudio",
+    "title": "Taxonomy of Data",
+    "section": "Which of the following best describes the distinction between R and RStudio?",
+    "text": "Which of the following best describes the distinction between R and RStudio?\n\nA. They are synonyms for the same thing.\nB. R is the language; RStudio is the tool we’ll use to run and write code.\nC. RStudio is the newer edition of the R language.\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#how-do-you-save-the-output-of-an-r-command-into-your-environment",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#how-do-you-save-the-output-of-an-r-command-into-your-environment",
+    "title": "Taxonomy of Data",
+    "section": "How do you save the output of an R command into your Environment?",
+    "text": "How do you save the output of an R command into your Environment?\n\nA. Wrap the command in parentheses ().\nB. Wrap the commend in curly braces {}.\nC. Use the assignment arrow and provide a name for your output to the environment.\nD. Drag and drop the command into your environment.\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#the-atomic-building-block-of-the-r-language-is-the",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#the-atomic-building-block-of-the-r-language-is-the",
+    "title": "Taxonomy of Data",
+    "section": "The atomic building block of the R language is the …",
+    "text": "The atomic building block of the R language is the …\n\nA. vector\nB. variable\nC. numeric\nD. factor\nE. data frame\n\n\n  \n    −\n    +\n \n 00:20"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#a-note-on-variables",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#a-note-on-variables",
+    "title": "Taxonomy of Data",
+    "section": "A note on variables",
+    "text": "A note on variables\n\nDepending on how a variable is recorded, it can take different types!"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-type-of-variable-is-age-part-1",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-type-of-variable-is-age-part-1",
+    "title": "Taxonomy of Data",
+    "section": "What type of variable is age? (Part 1)",
+    "text": "What type of variable is age? (Part 1)\n\n\nAge groups of television audiences/demographics\n\n\n\n\nAnswer at pollev.com.\n\n\n  \n    −\n    +\n \n 00:15\n \n\nThis one is categorical ordinal (25-34 etc)"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-type-of-variable-is-age-part-2",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#what-type-of-variable-is-age-part-2",
+    "title": "Taxonomy of Data",
+    "section": "What type of variable is age? (Part 2)",
+    "text": "What type of variable is age? (Part 2)\n\n\nAges of patients at a doctor’s office, as they might fill out on an intake form\n\n\n\n\nAnswer at pollev.com.\n\n\n  \n    −\n    +\n \n 00:15\n \n\nThis one is numerical discrete"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#working-in-a-qmd-file",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#working-in-a-qmd-file",
+    "title": "Taxonomy of Data",
+    "section": "Working in a qmd file",
+    "text": "Working in a qmd file\nWorking in a new .qmd file allows you to save your code for later."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#demo",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#demo",
+    "title": "Taxonomy of Data",
+    "section": "Demo",
+    "text": "Demo\n\nCreate a new qmd file from the RStudio menu, name it, and save it.\nInsert a new code cell.\nWrite your code into the cell.\nRender the document."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#coding-tutorial-taxonomy-of-data",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#coding-tutorial-taxonomy-of-data",
+    "title": "Taxonomy of Data",
+    "section": "Coding tutorial: Taxonomy of Data",
+    "text": "Coding tutorial: Taxonomy of Data\n\nDownload the taxonomy-tutorial.qmd file in the Files section of Canvas.\nClick the “Upload” button in the bottom right corner of RStudio and upload the file.\n\n\n  \n    −\n    +\n \n 25:00"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-1",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-1",
+    "title": "Taxonomy of Data",
+    "section": "Educated Guess 1",
+    "text": "Educated Guess 1\n\nWhat will happen here?\n\n\nAnswer at pollev.com/&lt;name&gt;\n\n\n\n\n1 + \"one\"\n\n\n  \n    −\n    +\n \n 00:30\n \n\n\n“one” is a string with no link at all to the number 1\nwithout that link, without two objects that are recognized for their numerical value, + doesn’t work."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-2",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-2",
+    "title": "Taxonomy of Data",
+    "section": "Educated Guess 2",
+    "text": "Educated Guess 2\n\nWhat will happen here?\n\n\nAnswer at pollev.com/&lt;name&gt;\n\n\n\n\na &lt;- c(1, 2, 3, 4)\nsqrt(log(a))\n\n\n  \n    −\n    +\n \n 01:00\n \n\nTalking points - a is a vector of length four - log and sqrt are functions that will return vectors of length four - they’re nested and will be evaluated from the inside out"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-3",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-3",
+    "title": "Taxonomy of Data",
+    "section": "Educated Guess 3",
+    "text": "Educated Guess 3\n\nWhat will happen here?\n\n\nAnswer at pollev.com/&lt;name&gt;\n\n\n\n\na &lt;- 1 + 2\na + 1\n\n\n  \n    −\n    +\n \n 01:00\n \n\n\na is a not a string, it’s the name of an object that’s a number\nto overwrite a with a + 1 requires re-assigning it to a: a &lt;- a + 1 (in some languages, a + 1 would change the value of a)\na &lt;- a + 1 is a good time to mention that while a = a + 1 works in R and they might see it online, its convention to use &lt;- for many reasons including that mathematically the statement with = is confusing."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-4",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#educated-guess-4",
+    "title": "Taxonomy of Data",
+    "section": "Educated Guess 4",
+    "text": "Educated Guess 4\n\nWhat will happen here?\n\n\nAnswer at pollev.com/&lt;name&gt;\n\n\n\n\na &lt;- c(1, 3.14, \"seven\")\nclass(a)\n\n\n  \n    −\n    +\n \n 01:00\n \n\n\nthe definition of a vector requires every element to be of the same type\nbased on their reading, there are three classes that they’re familiar with: numeric, factor, and character\nthere’s no way to translate “seven” into 7, so instead 1 and 3.14 must be translated into strings\nthey will likely encounter this when looking at a data set in R (or other languages) and finding that vectors with what looked like numbers are stored as strings. This usually happens because there’s a single errant character that the language doesn’t know how to parse as a number."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#theres-no-escape-from-the-shoebill..",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#theres-no-escape-from-the-shoebill..",
+    "title": "Taxonomy of Data",
+    "section": "There’s no escape from the shoebill..",
+    "text": "There’s no escape from the shoebill.."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#images-as-data",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#images-as-data",
+    "title": "Taxonomy of Data",
+    "section": "Images as data",
+    "text": "Images as data\n\n\n\nImages are composed of pixels (this image is 1520 by 1012)\nThe color in each pixel is in RGB\n\nEach band takes a value from 0-255\nThis image is data with 1520 x 1012 x 3 values."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#grayscale",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#grayscale",
+    "title": "Taxonomy of Data",
+    "section": "Grayscale",
+    "text": "Grayscale\n\n\n\nGrayscale images have only one band\n0 is black, 255 is white\nThis image is data with 1520 x 1012 x 1 values."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#grayscale-1",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#grayscale-1",
+    "title": "Taxonomy of Data",
+    "section": "Grayscale",
+    "text": "Grayscale\n\n\nTo simplify, assume our photos are 8 x 8 grayscale images."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#images-in-a-data-frame",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#images-in-a-data-frame",
+    "title": "Taxonomy of Data",
+    "section": "Images in a Data Frame",
+    "text": "Images in a Data Frame\nConsider the following images which are our data:\n\n\n\n\n\n\n\n\nLet’s simplify them to 8 x 8 grayscale images"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#images-in-a-data-frame-1",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#images-in-a-data-frame-1",
+    "title": "Taxonomy of Data",
+    "section": "Images in a Data Frame",
+    "text": "Images in a Data Frame\n\n\n\n\n\n\n\n\n\nIf you were to put the data from these (8 x 8 grayscale) images into a data frame, what would the dimensions of that data frame be in rows x columns?\n\n\nHere, the 3 images are our observations, and each pixel value is a variable, so the data frame will be 3 x 64."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#functions-on-vectors",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#functions-on-vectors",
+    "title": "Taxonomy of Data",
+    "section": "Functions on vectors",
+    "text": "Functions on vectors\nA vector is the simplest structure used in R to store data. It can be created using the function c().\n\nmy_vector &lt;- c(1, 3, 4)\nmy_vector\n\n[1] 1 3 4\n\n\n\nA function operates on an R object and produces output. R has many of the mathematical functions that you would expect.\n\nsum(my_vector)\n\n[1] 8"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#your-turn",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#your-turn",
+    "title": "Taxonomy of Data",
+    "section": "Your Turn",
+    "text": "Your Turn\n\n\nCreate a vector named vec with the even integers between 1 and 10 as well as the number 99 (six elements total).\nFind the sum of that vector.\nFind the max of that vector.\nTake the mean of that vector and round it to the nearest integer.\n\n\nThese should all be solved with R code. If you don’t know the name of a function to use, you could hazard a guess by looking for a help file (e.g. ?sum) or google it.\n\nvec &lt;- c(2, 4, 6, 8, 10, 99) sum(vec) max(vec) ?round round(mean(vec))"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#building-a-data-frame",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#building-a-data-frame",
+    "title": "Taxonomy of Data",
+    "section": "Building a data frame",
+    "text": "Building a data frame\nYou can combine vectors into a data frame using data.frame()1\n\nbill_depth_mm &lt;- c(15.0, 17.1, 18.7, 18.9)\nbill_length_mm &lt;- c(47.5, 40.2, 39.0, 35.3)\nspecies &lt;- c(\"Gentoo\", \"Adelie\", \"Adelie\", \"Adelie\")\n\n\n\n\n\npenguins_df &lt;- data.frame(bill_depth_mm, bill_length_mm, species)\npenguins_df\n\n  bill_depth_mm bill_length_mm species\n1          15.0           47.5  Gentoo\n2          17.1           40.2  Adelie\n3          18.7           39.0  Adelie\n4          18.9           35.3  Adelie\n\n\n\nYou can also use the tibble() function from the tidyverse package. Make sure you load the library first with library(tidyverse)!"
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/slides.html#your-turn-1",
+    "href": "1-questions-and-data/02-taxonomy-of-data/slides.html#your-turn-1",
+    "title": "Taxonomy of Data",
+    "section": "Your Turn",
+    "text": "Your Turn\n\n\nCreate a new .qmd file, name it, and save it.\nInsert a new code cell.\nCreate three vectors, name, hometown, and sibs_and_pets that contain observations on those variables from 6 people in this class.\nCombine them into a data frame called my_classmates."
   },
   {
     "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#agenda",
