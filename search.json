@@ -690,7 +690,7 @@
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nNo matching items"
   },
   {
     "objectID": "4-causation/03-matching/notes.html",
@@ -880,6 +880,125 @@
     "title": "Summarizing Numerical Data",
     "section": "Summary",
     "text": "Summary\nA summary of a summaries…this better be brief! Summaries of numerical data - graphical and numerical - often involve choices of what information to include and what information to omit. These choices involve a degree of judgement and knowledge of the criteria that were used to construct the commonly used statistics and graphics."
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#agenda",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#agenda",
+    "title": "Summarizing Numerical Data",
+    "section": "Agenda",
+    "text": "Agenda\n\nAnnouncements\nReading Questions\nBreak\nWorksheet: Summarizing Numerical Data\nR Workshop: Summarizing Numerical Data\nAppendix: More practice!"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#announcements",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#announcements",
+    "title": "Summarizing Numerical Data",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 1 and Portfolio 1 are due tomorrow at 8pm."
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#which-of-the-following-plot-types-for-numerical-variables-maintain-all-of-the-information-found-in-the-original-data-set",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#which-of-the-following-plot-types-for-numerical-variables-maintain-all-of-the-information-found-in-the-original-data-set",
+    "title": "Summarizing Numerical Data",
+    "section": "Which of the following plot types for numerical variables maintain all of the information found in the original data set?",
+    "text": "Which of the following plot types for numerical variables maintain all of the information found in the original data set?\n\nA. dot plot\nB. histogram\nC. violin plot\nD. box plot\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#if-you-wish-to-see-less-detail-in-your-histogram-and-perform-more-aggregation-which-of-the-following-is-the-best-course-of-action",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#if-you-wish-to-see-less-detail-in-your-histogram-and-perform-more-aggregation-which-of-the-following-is-the-best-course-of-action",
+    "title": "Summarizing Numerical Data",
+    "section": "If you wish to see less detail in your histogram and perform more aggregation, which of the following is the best course of action?",
+    "text": "If you wish to see less detail in your histogram and perform more aggregation, which of the following is the best course of action?\n\nA. switch to a dot plot\nB. switch to a bar chart\nC. instead of presenting the histogram, display the original data frame with the raw data\nD. increase the bin width of the histogram\nE. decrease the bin width of the histogram\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#which-word-best-describes-a-distribution-with-a-long-tail-stretching-out-to-the-left",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#which-word-best-describes-a-distribution-with-a-long-tail-stretching-out-to-the-left",
+    "title": "Summarizing Numerical Data",
+    "section": "Which word best describes a distribution with a long tail stretching out to the left?",
+    "text": "Which word best describes a distribution with a long tail stretching out to the left?\n\nA. bimodal\nB. unimodal\nC. left skewed\nD. right skewed\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#how-many-more-columns-will-the-output-from-the-second-line-of-code-have-than-the-first",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#how-many-more-columns-will-the-output-from-the-second-line-of-code-have-than-the-first",
+    "title": "Summarizing Numerical Data",
+    "section": "How many more columns will the output from the second line of code have than the first?",
+    "text": "How many more columns will the output from the second line of code have than the first?\n\nsummarise(penguins, \n          body_mass_median = median(body_mass_g),\n          body_mass_IQR = IQR(body_mass_g))\n\n\ngrouped_penguins &lt;- group_by(penguins, species)\n\nsummarise(grouped_penguins, \n          body_mass_median = median(body_mass_g),\n          body_mass_IQR = IQR(body_mass_g))\n\n\nA. None\nB. 1\nC. 2\nD. 3\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#before-making-a-violin-plot-using-ggplot2-how-can-we-determine-the-order-of-the-violins",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#before-making-a-violin-plot-using-ggplot2-how-can-we-determine-the-order-of-the-violins",
+    "title": "Summarizing Numerical Data",
+    "section": "Before making a violin plot using ggplot2, how can we determine the order of the violins?",
+    "text": "Before making a violin plot using ggplot2, how can we determine the order of the violins?\n\nA. By using select().\nB. By using mutate() with factor().\nC. By using group_by() and summarize().\nD. By using data.frame().\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#mean-median-mode-which-is-best",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#mean-median-mode-which-is-best",
+    "title": "Summarizing Numerical Data",
+    "section": "Mean, median, mode: which is best?",
+    "text": "Mean, median, mode: which is best?\n\n\nIt depends on the nature of your data and what you seek to capture in your summary.\n\n\n\n\nGet out your worksheet. You’ll be watching a 3 minute video that discusses characteristics of a typical human. Note which numerical summaries are used and what for."
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section",
+    "title": "Summarizing Numerical Data",
+    "section": "",
+    "text": "After the video, you can write on the board each of mean, median, mode and have students list measures that were reported. There are many modes because lots of the data that they collect is categorical."
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#describing-shape",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#describing-shape",
+    "title": "Summarizing Numerical Data",
+    "section": "Describing Shape",
+    "text": "Describing Shape\n\nWhich of these variables do you expect to be uniformly distributed?\n\nbill length of Gentoo penguins\nsalaries of a random sample of people from California\nhouse sale prices in San Francisco\nbirthdays of classmates (day of the month)\n\nPlease vote at pollev.com.\n\n\n  \n    −\n    +\n \n 01:00\n \n\nCorrect answer: 4.T\nThis lends itself very well to boardwork: you can ask a student to tell you how to draw the distribution birthdays. Topics to bring up:\n\nBarchart shows more information than a histgram (which would aggregate)\nFor discrete numerical, barchart is fine as long as the number of categories isn’t too great.\nBirthdays isn’t quite uniform: you would expect 29, 30, 31 to have fewer since not all months have those dayes.\n\nYou can continue the same approach to drawing the remaining three distribution: 1) bimodal (separated out by species) and symmetric (as demonstrated on the next slide) 2) unimodal and heavily right skewed 3) unimodal and right skewed."
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-1",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-1",
+    "title": "Summarizing Numerical Data",
+    "section": "",
+    "text": "-Which of these plots is more informative here? Which would you choose?"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#general-advice---measures-of-center",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#general-advice---measures-of-center",
+    "title": "Summarizing Numerical Data",
+    "section": "General Advice - Measures of Center",
+    "text": "General Advice - Measures of Center\n\n\nMeans are often a good default for symmetric data.\n\n\n\n\nMeans are sensitive to very large and small values, so can be deceptive on skewed data. &gt; Use a median\n\n\n\n\nModes are often the only option for categorical data.\n\n\n\nBut there are other notions of typical… what about a maximum?"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-2",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-2",
+    "title": "Summarizing Numerical Data",
+    "section": "",
+    "text": "This is an interesting example of when we don’t use a measure of central tendency to characterize the distribution. The answer to, “What will the temperature be tomorrow?” is generally answered not with an average but with a max. This is a good question to put to students: why do we characterize daily temperatures by their max?"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-4",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-4",
+    "title": "Summarizing Numerical Data",
+    "section": "",
+    "text": "This is a nice but not necessary example of an excellent visualization of summary statistics. Every dot is a max temp on a day of the year over a 40 year span. The annotations of the PWN heat dome are very effective in showing by how much they are the max of a distribution of maxes."
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-5",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-5",
+    "title": "Summarizing Numerical Data",
+    "section": "",
+    "text": "Why are measures of spread so important? Consider the following question.\n\n\n\nThere are two new food delivery services that open in Berkeley: Oski Eats and Cal Cravings. A friend of yours that took Stat 20 collected data on each and noted that Oski Eats has a mean delivery time of 29 minutes and Cal Cravings a mean delivery time of 27 minutes. Which would would you rather order from?\n\n\nThis starts off as a softball, so you probably don’t want to give too much time or bother with a poll. Simply ask students why they voted for Cal Cravings and then give them a bit more information…"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#one-possible-reality",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#one-possible-reality",
+    "title": "Summarizing Numerical Data",
+    "section": "One possible reality",
+    "text": "One possible reality"
+  },
+  {
+    "objectID": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-6",
+    "href": "2-summarizing-data/02-summarizing-numerical-data/slides.html#section-6",
+    "title": "Summarizing Numerical Data",
+    "section": "",
+    "text": "Which would would you rather order from?\n\n\n  \n    −\n    +\n \n 01:00\n \n\nNow you can ask students to make a good argument for both options. Cal Cravings is shorter on average but is very variable; its good for the gamblers. For students who value predictability, Oski Eats is better because of its smaller spread."
   },
   {
     "objectID": "2-summarizing-data/01-summarizing-categorical-data/notes.html",
