@@ -215,6 +215,54 @@
     "text": "Before the exam begins\n\n🧹 Clear your desk of everything except a pen/pencil, your cheat sheet, and your ID.\n🧢 Remove hats, hoods, and sunglasses.\n📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period. All items should be on the floor not on nearby seats.\nSpread out as much as possible. We may reseat you to space people out.\nWhen you get an exam, do not begin.\n\n\nDuring the exam\n\n✅ All answers must be marked on the answer sheet.\n👀 If a proctor sees your eyes wandering to other students’ work, you will be reseated. If it happens again, it is considered academic misconduct.\nIf you need to use the bathroom, bring phone and exam materials to the front of the class.\n⌛ When you are done with this exam, please bring your exam, answer sheet, and cheat sheet to a proctor at the front of the class.\n\n\nGood luck! 🍀\n\n\n\n−+\n90:00\n\n\n\n\n\n\n−+\n90:00"
   },
   {
+    "objectID": "2-summarizing-data/05-summarizing-associations/notes.html",
+    "href": "2-summarizing-data/05-summarizing-associations/notes.html",
+    "title": "Summarizing Numerical Associations",
+    "section": "",
+    "text": "Which of the following plots do you think depicts the relationship between the high school graduation rate and the poverty rate among the 50 US states?\nIf you guessed the plot on the left, you are correct 🎉.\nStates with higher poverty rates tend to have lower graduation rates. This is a prime example of two variables that are associated. In a previous set of notes we defined association between two categorical variables, but lets replace that with a more general definition that can apply here.\nYou can detect associations in scatter plots by scanning from left to right along the x-axis and determining whether or not the conditional distribution of the y-variable is changing or not. In the figure to the left below, when you look first to the states with low poverty rates (in the blue box), you find that the conditional distribution of the graduation rate (represented by the blue density curve along the right side of the scatter plot) is high: most of those states have graduation rates between 85% and 90%. When you scan to the right in that scatter plot, and condition on having a high poverty rate (the states in the red box), the conditional distribution shifts downwards. Those states have graduations rates in the low 80%s.\nThe plot on the right, by contrast, exhibits no association between poverty rate and graduation rate. When we compare the low poverty states with the high poverty states, their conditional distributions of Graduation rate are essentially the same.\nSo we can use the simple scatter plot to determine whether or not two numerical variables are associated, but sometimes a graphic isn’t enough. In these notes we’ll move from graphical summaries to numerical summaries and construct two different approaches to capturing these associations in numbers: the correlation coefficient and the simple linear model.",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarizing Numerical Associations"
+    ]
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/notes.html#the-correlation-coefficient",
+    "href": "2-summarizing-data/05-summarizing-associations/notes.html#the-correlation-coefficient",
+    "title": "Summarizing Numerical Associations",
+    "section": "The Correlation Coefficient",
+    "text": "The Correlation Coefficient\nLet’s set out to engineer our first numerical summary in the same manner that we have previously, by laying out the properties that we’d like our summary to have.\nWe are trying to capture the way two variables ``move’’ together, we will call them x and y. When x gets bigger, y can either:\na) get bigger as well\nb) get smaller\nc) be basically unaffected by the change in x.\nSo, if x and y seem to move together, we want our statistic to be positive. If they move in opposite directions, we want it to be negative. If they seem to be unrelated, we want it to be 0. We will also ask our statistic to be scale invariant, so if x and y are both spread out but move together, or not that spread out but move together, we would want the same value (it does not depend on spread, just the association).\nConsider first if our variables are centered at (0,0). Then we can think of the 2 dimensional space as cut into 4 regions depending on if x and y are positive or negative, (0 is the center).\n\n\n\n\n\n\n\n\n\nIn this plot, we see that x and y seem to move together. When x is positive, y is positive, and when x is negative, y is negative. Notice that since they seem to share the same sign, if I multiplied the x and y values they would usually be positive. In this case, we would want a positive value out of our statistic.\nConsider a different plot,\n\n\n\n\n\n\n\n\n\nNow, when x is positive y seems to be negative, and when x is negative y seems to be positive. If we multiplied x and y here, we would usually get a negative value. In this case, we would want a negative value in our statistic.\nSo it would seem, perhaps a good statistic is to multiply all the x values by their y values, call this \\(r_{\\text{temp}}\\) since we are not done building it yet,\n\\[r_{\\text{temp}} = \\frac{1}{n-1}\\sum_{i=1}^{n}(x_{i})(y_{i})\\] This works fine if x and y are mean 0, but consider if the data is not centered at 0, but still seems to have this kind of relationship.\n\n\n\n\n\n\n\n\n\nHere, the data is not centered at 0, but it has the same relationship seem in the previous plot where increasing x seems to decrease y. So we would like our statistic to be independent of where the “center” of our values are, we only want to know how they seem to move together. So, we subtract the mean of x and y and multiply the distance of x from it’s mean an y from it’s mean. This moves the ``cross hairs’’ of out plot to be then center of the variables,\n\\[r_{\\text{temp}} = \\frac{1}{n-1}\\sum_{i=1}^{n}(x_{i}-\\bar{x})(y_{i}-\\bar{y})\\] Finally, we don’t want the spread to impact things, so we divide x by its standard deviation (root of variance), and y by its standard deviation,\n\\[r_{\\text{temp}} =\\frac{1}{n-1}\\sum_{i=1}^n \\left( \\frac{x_i - \\bar{x}}{s_x} \\right) \\left( \\frac{y_i - \\bar{y}}{s_y} \\right)\\] This object is then called the correlation coefficient, and it is the statistic we are after. Conveniently, it is always between -1 and 1.\n\nCorrelation coefficient, \\(r\\)\n\nThe correlation coefficient, \\(r\\), between two variables \\(x\\) and \\(y\\) is \\[r = \\frac{1}{n-1}\\sum_{i=1}^n \\left( \\frac{x_i - \\bar{x}}{s_x} \\right) \\left( \\frac{y_i - \\bar{y}}{s_y} \\right)\\]\n\n\n\n\nSeveral different statistics have been proposed for measuring association. This is the most common and is more specifically called the Pearson correlation.\n\nExample: Poverty and Graduation rate\nThe data frame used to create the scatter plot above on the left looks like this.\n\nselect(poverty, Graduates, Poverty)\n\n# A tibble: 51 × 2\n   Graduates Poverty\n       &lt;dbl&gt;   &lt;dbl&gt;\n 1      79.9    14.6\n 2      90.6     8.3\n 3      83.8    13.3\n 4      80.9    18  \n 5      81.1    12.8\n 6      88.7     9.4\n 7      87.5     7.8\n 8      88.7     8.1\n 9      86      16.8\n10      84.7    12.1\n# ℹ 41 more rows\n\n\nSince it is a data frame, we can use the summarize() function to calculate our summary statistic.\n\npoverty |&gt;\n  summarize(r = cor(Poverty, Graduates))\n\n# A tibble: 1 × 1\n       r\n   &lt;dbl&gt;\n1 -0.747\n\n\nThe value of -0.747 tells us that the linear association between these variables is negative and reasonably strong. This is our first example of a bivariate summary statistic: there are two variables that we put inside the cor() function to compute our statistic.\nLet’s repeat this calculation for the data frame that created the shapeless scatter plot with no association, poverty_shuffled.\n\npoverty_shuffled |&gt;\n  summarize(r = cor(Poverty, Graduates))\n\n# A tibble: 1 × 1\n        r\n    &lt;dbl&gt;\n1 -0.0546\n\n\nAs expected, that scatter plot yields a correlation coefficient very close to zero because the points are scattered across all four quadrants of the plot.",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarizing Numerical Associations"
+    ]
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/notes.html#the-simple-linear-model",
+    "href": "2-summarizing-data/05-summarizing-associations/notes.html#the-simple-linear-model",
+    "title": "Summarizing Numerical Associations",
+    "section": "The Simple Linear Model",
+    "text": "The Simple Linear Model\nAnother approach to summarizing the linear association is to just … draw a line.\n\n\n\n\n\nThis line serves both as a graphical summary and also as a numerical summary. After all, every line that you draw on a scatter plot is defined by two numbers: the slope and the y-intercept. This line is called a simple linear model.\n\nSimple Linear Model\n\nAn expression for a possible value of the \\(y\\) variable, \\(\\hat{y}\\), as a linear function of the \\(x\\) variable with slope \\(b_1\\) and y-intercept \\(b_0\\). \\[\\hat{y} = b_0 + b_1x\\]\n\n\nTherefore, a simple linear model captures the linear relationship of two variables in not one but two summary statistics, \\(b_0\\) and \\(b_1\\).\nFor the line above, we can do our best to eye-ball these. The line appears to rise -2 percentage points for every 2.5 that it runs, so I’d estimate the slope to be about \\(-2/2.5 = -0.8\\). If I were to draw the line all the way to the left until it crossed the y-axis at a poverty rate of 0, its y-intercept would be around 95. So I could express the line that is drawn above as:\n\\[\\hat{y} = 95 - 0.8 x\\]\n\nThe Least Squares Line\nIf that felt a little shifty to you - drawing a line by hand and then eyeballing its slope and intercept - we can be more precise by using a more precisely-defined type of linear model: the least squares line. This is a method that we’ll study in depth when we get to the unit on prediction, but for now, we’ll use it because it makes calculation very easy. You can find the slope and intercept of the least squares line using statistics that we’re already familiar with: \\(\\bar{x}, \\bar{y}, s_x, x_y\\), and \\(r\\).\n\nLeast Squares Slope\n\n\\[ b_1 = r \\frac{s_y}{s_x} \\]\n\nLeast Squares Intercept\n\n\\[ b_0 = \\bar{y} - b_1 \\bar{x}\\]\n\n\n\nSo how does this line look compared to the hand-drawn line? Let’s calculate the slope and intercept and add the resulting line to our scatter plot.\n\n\n\n\n\n\n\n\n\nThat works remarkably well!\nThe function that was used to calculate the least squares slope and intercept is lm().\n\nlm(Graduates ~ Poverty, data = poverty)\n\n\nCall:\nlm(formula = Graduates ~ Poverty, data = poverty)\n\nCoefficients:\n(Intercept)      Poverty  \n    96.2022      -0.8979  \n\n\nThe syntax for lm() uses what’s called “formula notation” in R. The first argument is a formula of the form y ~ x and can be read as, “Explain the y as a function of the x”. In the second argument, you specify which data frame contains the variables used in the formula.\nSo if the correlation coefficient measures the strength of the linear relationship between two variables, what exactly are the slope and intercept measuring? The slope captures the expected change in the \\(y\\) associated with the \\(x\\) changing by 1 unit. In this example, states that are separated by 1 percentage point in their poverty rate tend to be separated by about -.89 in their graduation rate. This is distinct from what the correlation tells us because while \\(r\\) will stay the same regardless of the units in which the data is measured, \\(b_1\\) is expressly designed to tell us how those units of measurement relate to one another.\nWhat about the intercept? It tells us the value that we’d expect the \\(y\\) to take when the \\(x\\) takes a value of zero. Sometimes that’s an informative statistic, sometime it is not. In this setting, do you really expect the graduation rate to be around 96% when their poverty rate is zero? What would it even look like for a state to have a poverty rate of zero? The abstraction of the linear model allows us to ponder such a world, but the reality of economics in the US is that we would never actually observe poverty rates of zero.\nSo what good is the intercept? Well, it’s useful in helping us calculate a residual.\n\n\nResiduals\nOne of the benefits of explaining the association between two variables with a line instead of just the correlation coefficient is that it allows us to calculate what we would expect an observation’s y-value to be based on its x value, so that we can see how far our expectation is from reality. That gap between expectation and reality is called a residual.\n\nResidual (\\(\\hat{e}_i\\))\n\nThe difference between the observed value of a data point, \\(y_i\\), and the value that we would expect according to a linear model, \\(\\hat{y}_i\\). \\[ \\hat{e}_i = y_i - \\hat{y}_i \\]\n\n\n\n\n\\(\\hat{y}_i\\) is said “y hat sub i” and is also called the “fitted value”.\nLet’s calculate the residual for California. Here is that row in the data set.\n\npoverty |&gt;\n  filter(State == \"California\") |&gt;\n  select(State, Graduates, Poverty)\n\n# A tibble: 1 × 3\n  State      Graduates Poverty\n  &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;\n1 California      81.1    12.8\n\n\nThis shows us that for California, \\(y = 81.1\\), so the next step is to find where the line passes through California’s x-value, \\(x = 12.8\\). There are several ways to do that calculation, including using R like a calculator and simply plugging that value into the equation for the line show above.\n\ny_hat &lt;- 96.2022 - 0.8979 * 12.8\ny_hat\n\n[1] 84.70908\n\n\nWith that in hand, we can calculate California’s residual.\n\n81.1 - y_hat\n\n[1] -3.60908\n\n\nThis residual tells us that California is actually a bit of an underachiever. Among states with a poverty rate around 12.8, we would expect their graduate rate to be around 84.7. California’s rate, however, is 81.1, a decrease of 3.6.\nThe calculation of the residual can be seen in the plot below.\n\n\n\n\n\n\n\n\n\nThe horizontal dashed line represents \\(\\hat{y} = 84.7\\), the y-value of the least squares line when it passes through \\(x = 12.8\\). The vertical red dashed line is the residual: the distance between the line and the observation in the y direction.\nResiduals open up a new avenue for numerical statistics. While the slope and intercept are two statistics that tell us about the overall linear relationship between the two variables, each residual is a statistic that tells us whether an individual observation’s y-value is higher or lower than we’d expect based on its x-value.\n\n\nIf you have \\(n\\) data points, you can calculate \\(n\\) residuals.",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarizing Numerical Associations"
+    ]
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/notes.html#summary",
+    "href": "2-summarizing-data/05-summarizing-associations/notes.html#summary",
+    "title": "Summarizing Numerical Associations",
+    "section": "Summary",
+    "text": "Summary\nIn these notes we considered the question of how to capture the association between two variables with visualizations and numerical summary statistics. The correlation coefficient is one of the most common: it captures the strength and direction of the linear trend. This statistic can be used, along with other simple summary statistics, to calculate the slope and intercept of the least squares line. The least squares line is an alternative approach to summarizing the linear relationship between two numerical variables. It has the advantage of providing an expectation for the y-value of every observation, which allows us to calculate residuals which are expressions of whether each observation is higher or lower than we’d expect.\nWe’ll spend time practicing calculating these statistics - and looking at lots of scatter plots - in class. We’ve also prepared a tutorial to help you become adept at working with linear models in R.\nContinue on to the tutorial portion of the notes",
+    "crumbs": [
+      "Notes",
+      "Summarization",
+      "Summarizing Numerical Associations"
+    ]
+  },
+  {
     "objectID": "2-summarizing-data/03-a-grammar-of-graphics/notes.html",
     "href": "2-summarizing-data/03-a-grammar-of-graphics/notes.html",
     "title": "A Grammar of Graphics",
@@ -296,6 +344,160 @@
     "title": "A Grammar of Graphics",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nFor data documentation, see the stat20data R package.↩︎\nFor data documentation, see the palmerpenguins R package.↩︎\nTo see the vast (and somewhat strange) palette of color names that R knows, type colors() at the console.↩︎\nVisualization drawn from the excellent collection of graphics at the Financial Times Covid Tracker https://ig.ft.com/coronavirus-vaccine-tracker/.↩︎\nExplore the themes available within ggplot2 by reading the documentation https://ggplot2.tidyverse.org/reference/ggtheme.html. For the additional themes held in the ggthemes package, read this: https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/.↩︎\nDocumentation for annotation layers in ggplot2: https://ggplot2.tidyverse.org/reference/annotate.html.↩︎"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#agenda",
+    "href": "2-summarizing-data/04-conditioning/slides.html#agenda",
+    "title": "Conditioning",
+    "section": "Agenda",
+    "text": "Agenda\n\nAnnouncements\nReading Questions: Conditioning\nBreak\nWorksheet: Conditioning\nBreak\nLab 2: Flights"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#announcements",
+    "href": "2-summarizing-data/04-conditioning/slides.html#announcements",
+    "title": "Conditioning",
+    "section": "Announcements",
+    "text": "Announcements\n\nYou are allowed one, one-sided, handwritten cheatsheet for the Quiz on Thursday.\n\n\n\nPortfolio 2 due Thursday, not Friday, at 8pm."
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#which-of-the-following-pieces-of-code-will-not-cause-an-error",
+    "href": "2-summarizing-data/04-conditioning/slides.html#which-of-the-following-pieces-of-code-will-not-cause-an-error",
+    "title": "Conditioning",
+    "section": "Which of the following pieces of code will not cause an error?",
+    "text": "Which of the following pieces of code will not cause an error?\n\nA\n\npenguins \n  |&gt; mutate(bill_size = bill_len * bill_dep) \n  |&gt; select(bill_size)\n\nB\n\npenguins |&gt; \n  mutate(bill_size = bill_len * bill_dep) |&gt;\n  select(bill_size)\n\nC\n\npenguins |&gt; \n  mutate(penguins, bill_size = bill_len * bill_dep) |&gt;\n  select(penguins, bill_size)\n\n  \n    −\n    +\n \n 00:45"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#which-option-describes-a-filter-operation",
+    "href": "2-summarizing-data/04-conditioning/slides.html#which-option-describes-a-filter-operation",
+    "title": "Conditioning",
+    "section": "Which option describes a filter operation?",
+    "text": "Which option describes a filter operation?\n\nA: Subsetting the rows of a data frame according to their position.\nB: Subsetting the columns of a data frame based on their names.\nC: Subsetting the rows of a data frame based on their values of particular variables.\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#what-will-the-following-command-return",
+    "href": "2-summarizing-data/04-conditioning/slides.html#what-will-the-following-command-return",
+    "title": "Conditioning",
+    "section": "What will the following command return?",
+    "text": "What will the following command return?\nmean(c(TRUE, TRUE, TRUE, FALSE))\n\nA TRUE\nB FALSE\nC: An error will be produced\nD: 0.75\nE: 0.25\n\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#which-of-the-following-lines-of-code-correctly-extracts-rows-from-the-penguins-data-frame-that-are-of-the-desired-species",
+    "href": "2-summarizing-data/04-conditioning/slides.html#which-of-the-following-lines-of-code-correctly-extracts-rows-from-the-penguins-data-frame-that-are-of-the-desired-species",
+    "title": "Conditioning",
+    "section": "Which of the following lines of code correctly extracts rows from the penguins data frame that are of the desired species?",
+    "text": "Which of the following lines of code correctly extracts rows from the penguins data frame that are of the desired species?\n\nA: filter(penguins, species %in% c(\"Adelie\", \"Chinstrap\"))\nB: filter(penguins, species == c(\"Adelie\", \"Chinstrap\"))\nC: filter(penguins, species = c(\"Adelie\", \"Chinstrap\"))\nD: slice(penguins, species %in% c(\"Adelie\", \"Chinstrap\"))\nE: select(penguins, species %in% c(\"Adelie\", \"Chinstrap\"))\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#section",
+    "href": "2-summarizing-data/04-conditioning/slides.html#section",
+    "title": "Conditioning",
+    "section": "",
+    "text": "c(\"fruit\", \"fruit\", \"vegetable\") == \"fruit\"\n\n\nWhat will this line of code return?\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#evaluating-equivalence-cont.",
+    "href": "2-summarizing-data/04-conditioning/slides.html#evaluating-equivalence-cont.",
+    "title": "Conditioning",
+    "section": "Evaluating equivalence, cont.",
+    "text": "Evaluating equivalence, cont.\nIn R, this evaluation happens element-wise when operating on vectors.\n\nc(\"fruit\", \"fruit\", \"vegetable\") == \"fruit\"\n\n\n\n[1]  TRUE  TRUE FALSE\n\n\n\n\nc(\"fruit\", \"fruit\", \"vegetable\") != \"fruit\"\n\n\n\n\n\n[1] FALSE FALSE  TRUE\n\n\n\n\n\nc(\"fruit\", \"vegetable\", \"boba\") %in% c(\"fruit\", \"vegetable\")\n\n\n\n\n\n[1]  TRUE  TRUE FALSE"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#question-2",
+    "href": "2-summarizing-data/04-conditioning/slides.html#question-2",
+    "title": "Conditioning",
+    "section": "Question 2",
+    "text": "Question 2\n\nclass_survey |&gt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \"Speed skating\"),\n         is_entrepreneur == TRUE)\n\n\nWhich observations will be included in the following data frame?\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#question-3",
+    "href": "2-summarizing-data/04-conditioning/slides.html#question-3",
+    "title": "Conditioning",
+    "section": "Question 3",
+    "text": "Question 3\n\nWhich data frame will have fewer rows?\n\n\n\n# A\nfilter(class_survey, time_at_cal == \"This is my first semester!\")\n\n# B\nclass_survey |&gt;\n  mutate(first_sem = (time_at_cal == \"This is my first semester!\")) |&gt;\n  filter(first_sem)\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#building-data-pipelines",
+    "href": "2-summarizing-data/04-conditioning/slides.html#building-data-pipelines",
+    "title": "Conditioning",
+    "section": "Building data pipelines",
+    "text": "Building data pipelines\nConsider the subset of students here:\n\nclass_survey |&gt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \"Speed skating\"),\n         is_entrepreneur == TRUE)\n\n\nHow do we extract the average of these students’ chance that class will be disrupted by a new COVID variant?\n\nLet’s look at three different ways to answer this question"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nfilter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE)\n\n\nThis set of slides walks through the three different approaches to stringing together functions in R, identifies the pros and cons of each, and encourages students to use the pipe."
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-1",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-1",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nselect(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_xcale,\n       olympics,\n       is_entrepreneur,\n       covid)"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-2",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-2",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nsummarize(select(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_scale,\n       olympics,\n       is_entrepreneur,\n       covid),\n       covid_avg = mean(covid))"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-3",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-3",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nsummarize(select(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_scale,\n       olympics,\n       is_entrepreneur,\n       covid),\n       covid_avg = mean(covid))\n\n# A tibble: 1 × 1\n  covid_avg\n      &lt;dbl&gt;\n1     0.428"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-4",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-4",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nsummarize(select(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_scale,\n       olympics,\n       is_entrepreneur,\n       covid),\n       covid_avg = mean(covid))\n\n\n\n\nCons\n\nMust be read from inside out\nHard to keep track of arguments `\n\n\nPros\n\nAll in one line of code\nOnly refer to one data frame"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#step-by-step",
+    "href": "2-summarizing-data/04-conditioning/slides.html#step-by-step",
+    "title": "Conditioning",
+    "section": "Step-by-step",
+    "text": "Step-by-step\n\n\ndf1 &lt;- filter(class_survey, \n              coding_exp_scale &lt; 3,\n              olympics %in% c(\"Ice skating\", \"Speed skating\"),\n              is_entrepreneur == TRUE)\ndf2 &lt;- select(df1, \n              coding_exp_scale,\n              olympics,\n              is_entrepreneur,\n              covid)\nsummarize(df2,\n          covid_avg = mean(covid))\n\n\n\n\n\nCons\n\nHave to repeat data frame names\nCreates unnecessary objects\n\n\nPros\n\nStores intermediate objects\nCan be read top to bottom"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#using-the-pipe-operator",
+    "href": "2-summarizing-data/04-conditioning/slides.html#using-the-pipe-operator",
+    "title": "Conditioning",
+    "section": "Using the pipe operator",
+    "text": "Using the pipe operator\n\n\nclass_survey |&gt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \"Speed skating\"),\n         is_entrepreneur == TRUE) |&gt;\n  select(coding_exp_scale,\n         olympics,\n         is_entrepreneur,\n         covid) |&gt;\n  summarize(covid_avg = mean(covid))\n\n\n\nCons\n\nPros\n\nCan be read like an english paragraph\nOnly type the data once\nNo leftovers objects"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#understanding-your-pipeline",
+    "href": "2-summarizing-data/04-conditioning/slides.html#understanding-your-pipeline",
+    "title": "Conditioning",
+    "section": "Understanding your pipeline",
+    "text": "Understanding your pipeline\n\nIt’s good practice to understand the output of each line of code by breaking the pipe.\n\n\n\n\n\nclass_survey |&gt;\n  select(covid) |&gt;\n  filter(time_at_cal == \"It's my first time_at_cal.\")\n\nError in `filter()`:\nℹ In argument: `time_at_cal == \"It's my first time_at_cal.\"`.\nCaused by error:\n! object 'time_at_cal' not found\n\n\n\n\nclass_survey |&gt;\n  select(covid)\n\n# A tibble: 816 × 1\n   covid\n   &lt;dbl&gt;\n 1  0   \n 2  0.5 \n 3  0.6 \n 4  0.7 \n 5 NA   \n 6  0.15\n 7  0.7 \n 8  0   \n 9  0.8 \n10 NA   \n# ℹ 806 more rows"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#concept-question",
+    "href": "2-summarizing-data/04-conditioning/slides.html#concept-question",
+    "title": "Conditioning",
+    "section": "Concept Question",
+    "text": "Concept Question\n\nclass_survey |&gt; # A #&lt;&lt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \n                         \"Speed skating\"),\n         is_entrepreneur == TRUE) |&gt; # B #&lt;&lt;\n  select(coding_exp_scale,\n         olympics,\n         is_entrepreneur,\n         covid) |&gt; # C #&lt;&lt;\n  summarize(covid_avg = mean(covid)) # D #&lt;&lt;\n\n\n# note\ndim(class_survey)\n\n[1] 816  30\n\n\n\nWhat are the dimensions (rows x columns) of the data frames output at each stage of this pipe?\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#section-2",
+    "href": "2-summarizing-data/04-conditioning/slides.html#section-2",
+    "title": "Conditioning",
+    "section": "",
+    "text": "summarize(class_survey,\n          mean(time_at_cal == \"I'm in my first year.\", na.rm = TRUE))\n\n\nWhat is will this line of code return?\n\n\n  \n    −\n    +\n \n 01:00\n \n\nThis will return the proportion of students who answered “I’m in my first year”. This is surprising to students because it’s not immediately clear that a mean of a logical vector is the same as the proportion of cases that are true."
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#boolean-algebra",
+    "href": "2-summarizing-data/04-conditioning/slides.html#boolean-algebra",
+    "title": "Conditioning",
+    "section": "Boolean Algebra",
+    "text": "Boolean Algebra\nLogical vectors have a dual representation as TRUE FALSE and 1, 0, so you can do math on logicals accordingly.\n\nTRUE + TRUE\n\n[1] 2\n\n\n\n\nTRUE * TRUE\n\n[1] 1\n\n\n\n\n\nTaking the mean of a logical vector is equivalent to find the proportion of rows that are TRUE (i.e. the proportion of rows that meet the condition)."
   },
   {
     "objectID": "2-summarizing-data/04-conditioning/tutorial.html",
@@ -515,6 +717,20 @@
     "title": "Lab: Flights",
     "section": "",
     "text": "The goal of the “Think before you compute” design of these labs is that the students should be able to do their thinking without the distractions of technology. If you project this data frame, that should be sufficient for them to answer all of the questions in Part I.\n\n\n  \n    −\n    +\n \n 25:00"
+  },
+  {
+    "objectID": "2-summarizing-data/labs/flights/part-2.html",
+    "href": "2-summarizing-data/labs/flights/part-2.html",
+    "title": "Flights",
+    "section": "",
+    "text": "The data for this lab can be found in the flights data frame in the stat20data package. Run ?flights at the console to learn more about the columns. Where applicable, answer each question with one pipeline, which may include dplyr code, ggplot2 code or both.\n\n\nHow many flights in the dataset left in the springtime and were destined for Portland, Oregon?\n\n\n\nCreate a new variable called avg_speed that is the average speed of the plane during the flight, measured in miles per hour. Save it back into the data frame; you’ll use it later on.\n\n\n\nArrange the data frame to figure out: what is the destination and delay time (in hrs) for the flight that was most delayed?\n\n\n\nArrange the data frame to figure out: what is the destination and delay time (in hrs) for the flight that was least delayed, i.e. that left the most ahead of schedule?\n\n\n\nWhat proportion of all of the flights left on or ahead of schedule? For Oakland and SFO separately, what proportion of flights left on or ahead of schedule?\n\n\n\nHow many flights left SFO during March 2020?\n\n\n\nHow many flights left SFO during April 2020?\n\n\n\nCreate a bar chart that shows the distribution by month of all the flights leaving the Bay Area (SFO and OAK). Do you any sign of an effect of the pandemic?\n\n\n\nCreate a histogram showing the distribution of departure delays for all flights. Be sure to\n\nset the limits of the x-axis to focus on where most of the data lie,\nadd a text annotation that explains the meaning of a negative departure delay,\nand below the plot write 1-2 sentences that describe the shape and modality of the distribution.\n\n\n\n\nCreate a data frame that contains the median and interquartile range for departure delays, grouped by carrier. Which carrier has the lowest typical departure delay? Which one has the least variable departure delays?\n\n\n\nCreate a plot that captures the relationship of average speed vs. distance and describe the shape and structure that you see. What phenomena related to taking flights from the Bay Area might explain this structure?\n\n\n\nFor flights leaving SFO, which month has the highest mean departure delay? What about the highest median departure delay? Which of these measures is more useful to know when deciding which month(s) to avoid flying if you particularly dislike flights that are severely delayed?\n\n\n\nEach individual airplane can be uniquely identified by its tailnumber in the same way that US citizens can be by their social security numbers. Which airplane flew the farthest in total during this year for which we have data? How many times around the planet does that translate to?\n\n\n\nWhat is the tailnumber of the fastest plane in the data set? What type of plane is it (google it!)? Be sure to be clear how you’re defining fastest.\n\n\n\nThe plot below shows the relationship between the number of flights going out of SFO and the average departure delay. It illustrates the hypothesis that more flights on a given day would lead to a more congested airport which would lead to greater delays on average. Each point represents single day in 2020; there are 366 of them on the plot. Please form a single pipeline that will create this plot, starting with the raw data set.\n\n\n\n\n\n\n\n\nCreate a plot to illustrate the association between departure delay and arrival delay. Summarize the linear relationship by calculating the correlation coefficient and by fitting a linear model and showing the value of those statistics (this requires two multiple pipelines). For an optional challenge, use geom_smooth() to superimpose the linear model on the scatter plot.\n\n\n\nWhich flight has the longest arrival delay given its departure delay?\n\n\n\nFit a multiple linear regression model that explains arrival delay using departure delay and the distance of the flight and print out the coefficients (the intercept and two slopes). Speculate as to why the sign (positive or negative) of the distance coefficient is what it is.\n\n\n\nOn average, which carrier’s flights had the smallest arrival delay given their departure delay and distance?\n\n\n\nCan we compare the regression coefficients for departure delay and distance to understand which has the stronger relationship? Why or why not?\n\n\n\nWill you ensure that your submission to Gradescope…\n\nis of a pdf generated from a qmd file,\nhas all of your code visible to readers,\nand assigns each of the questions to all pages that show your work for that question?\n\n(This one is easy! Just answer “yes” or “no”)"
+  },
+  {
+    "objectID": "2-summarizing-data/labs/flights/part-2.html#part-ii-computing-on-the-data",
+    "href": "2-summarizing-data/labs/flights/part-2.html#part-ii-computing-on-the-data",
+    "title": "Flights",
+    "section": "",
+    "text": "The data for this lab can be found in the flights data frame in the stat20data package. Run ?flights at the console to learn more about the columns. Where applicable, answer each question with one pipeline, which may include dplyr code, ggplot2 code or both.\n\n\nHow many flights in the dataset left in the springtime and were destined for Portland, Oregon?\n\n\n\nCreate a new variable called avg_speed that is the average speed of the plane during the flight, measured in miles per hour. Save it back into the data frame; you’ll use it later on.\n\n\n\nArrange the data frame to figure out: what is the destination and delay time (in hrs) for the flight that was most delayed?\n\n\n\nArrange the data frame to figure out: what is the destination and delay time (in hrs) for the flight that was least delayed, i.e. that left the most ahead of schedule?\n\n\n\nWhat proportion of all of the flights left on or ahead of schedule? For Oakland and SFO separately, what proportion of flights left on or ahead of schedule?\n\n\n\nHow many flights left SFO during March 2020?\n\n\n\nHow many flights left SFO during April 2020?\n\n\n\nCreate a bar chart that shows the distribution by month of all the flights leaving the Bay Area (SFO and OAK). Do you any sign of an effect of the pandemic?\n\n\n\nCreate a histogram showing the distribution of departure delays for all flights. Be sure to\n\nset the limits of the x-axis to focus on where most of the data lie,\nadd a text annotation that explains the meaning of a negative departure delay,\nand below the plot write 1-2 sentences that describe the shape and modality of the distribution.\n\n\n\n\nCreate a data frame that contains the median and interquartile range for departure delays, grouped by carrier. Which carrier has the lowest typical departure delay? Which one has the least variable departure delays?\n\n\n\nCreate a plot that captures the relationship of average speed vs. distance and describe the shape and structure that you see. What phenomena related to taking flights from the Bay Area might explain this structure?\n\n\n\nFor flights leaving SFO, which month has the highest mean departure delay? What about the highest median departure delay? Which of these measures is more useful to know when deciding which month(s) to avoid flying if you particularly dislike flights that are severely delayed?\n\n\n\nEach individual airplane can be uniquely identified by its tailnumber in the same way that US citizens can be by their social security numbers. Which airplane flew the farthest in total during this year for which we have data? How many times around the planet does that translate to?\n\n\n\nWhat is the tailnumber of the fastest plane in the data set? What type of plane is it (google it!)? Be sure to be clear how you’re defining fastest.\n\n\n\nThe plot below shows the relationship between the number of flights going out of SFO and the average departure delay. It illustrates the hypothesis that more flights on a given day would lead to a more congested airport which would lead to greater delays on average. Each point represents single day in 2020; there are 366 of them on the plot. Please form a single pipeline that will create this plot, starting with the raw data set.\n\n\n\n\n\n\n\n\nCreate a plot to illustrate the association between departure delay and arrival delay. Summarize the linear relationship by calculating the correlation coefficient and by fitting a linear model and showing the value of those statistics (this requires two multiple pipelines). For an optional challenge, use geom_smooth() to superimpose the linear model on the scatter plot.\n\n\n\nWhich flight has the longest arrival delay given its departure delay?\n\n\n\nFit a multiple linear regression model that explains arrival delay using departure delay and the distance of the flight and print out the coefficients (the intercept and two slopes). Speculate as to why the sign (positive or negative) of the distance coefficient is what it is.\n\n\n\nOn average, which carrier’s flights had the smallest arrival delay given their departure delay and distance?\n\n\n\nCan we compare the regression coefficients for departure delay and distance to understand which has the stronger relationship? Why or why not?\n\n\n\nWill you ensure that your submission to Gradescope…\n\nis of a pdf generated from a qmd file,\nhas all of your code visible to readers,\nand assigns each of the questions to all pages that show your work for that question?\n\n(This one is easy! Just answer “yes” or “no”)"
   },
   {
     "objectID": "docs/index.html",
@@ -766,21 +982,21 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\n\nLab 2: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\n\nLab 2: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\n\nLab 2: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\n\nLab 2: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#worksheets",
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nNo matching items"
   },
   {
     "objectID": "4-causation/03-matching/notes.html",
@@ -1283,6 +1499,18 @@
     "title": "A Grammar of Graphics",
     "section": "What geometry is used to represent the observations?",
     "text": "What geometry is used to represent the observations?\n\n\nPoints"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/tutorial.html",
+    "href": "2-summarizing-data/05-summarizing-associations/tutorial.html",
+    "title": "Summarizing Numerical Associations",
+    "section": "",
+    "text": "cor()\nThe cor() function will calculate the Pearson correlation coefficient between two vectors. When working with a data frame, it is used in combination with summarize().\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that in comparison to other numerical summaries that we have calculated with summarize(), the correlation is function of two variables. Also, as always, keep an eye out for missing values.\n\n\nlm()\nThe workhorse of the linear modeling in R is the lm() function. Generically, this function takes the form:\nlm(y ~ x, data = my_df)\nThis can be read as, “I’d like a linear model that explains y as a function of x, both coming from the my_df data frame.” Correspondingly, be sure that y and x are columns found in my_df.\nUnlike many of the functions we’ve been learning lately, you will generally call lm() on it’s own line and not as part of a data pipeline. To fit a model that explains bill_length_mm as a function of bill_depth_mm and save that model to a new object called m1, you would use:\n\n\n\n\n\n\n\n\nBecause you’ve saved the linear model as m1, when you run this line of code, it won’t return any output. However, now you can refer to the model later on in your code. To see the values of the estimated coefficients (the slope and the intercept), you can just enter the name of that model.\n\n\n\n\n\n\n\n\n\n\nfitted()\nThe fitted values, \\(\\hat{y}_i\\), are the \\(y\\) values where the linear model passes through the x coordinates of the observations (\\(x_i\\)). They give a sense of the y value that your linear model expects for that observation, given it’s x value. You can extract those fitted values from your linear model by simply calling the fitted() function on your model.\n\n\n\n\n\n\n\n\nNote that when you run this line of code, it gets messy! It returns a vector that is the same length as the number of (non-missing) observations; if you have \\(n\\) observations, you will have \\(n\\) fitted values.\nIt is often helpful to store these statistics that emerge from your linear model in your data frame right alongside the variables used to fit the model. We can do so using the mutate() function.\n\n\n\n\n\n\n\n\nYou can check how your fitted values compare to your original data by isolating those columns with select() and taking a peek at the first few rows.\n\n\n\n\n\n\n\n\nSure enough, your fitted values, \\(\\hat{y}_i\\), look fairly similar to the original \\(y_i\\) (bill_length_mm).\n\n\nresid()\nNow that you have your fitted values in your data frame, you could calculate residuals yourself by creating a new column that is the difference between \\(y_i\\) and \\(\\hat{y}_i\\). However, you can also get there by using the resid() function. This works similarly to fitted() - it operates on your linear model object and returns a vector of residuals - so lets jump straight to putting the residuals back into our data frame.\n\n\n\n\n\n\n\n\nLet’s see how that worked.\n\n\n\n\n\n\n\n\nIt worked just as we expected: in the first row, the value of e_hat is the observed y value, bill_length_mm, minus the expected/fitted y value, y_hat.",
+    "crumbs": [
+      "Tutorials",
+      "R Tutorials",
+      "Summarizing Numerical Associations"
+    ]
   },
   {
     "objectID": "2-summarizing-data/notes.html",
