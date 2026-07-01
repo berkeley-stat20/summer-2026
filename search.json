@@ -25,14 +25,14 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "This course is designed to teach students who have never done statistics or have done any type of computer programming before! There are no stupid questions, and we will not tolerate behavior which discourage students from asking questions. Everyone starts somewhere.\nDiscrimination/harassment based on race, gender, ethnicity, sexual orientation, or anything else will not be tolerated.\nAcademic dishonesty will also not be tolerated. We will take any violations of academic integrity to the Center for Student Conduct, in addition to any grade penalties that ensue. Repeat violations will result in failure. There is more on this later on the syllabus.\nBerkeley Honor Code:\n\n\nAs a member of the UC Berkeley community, I act with honesty, integrity, and respect for others."
+    "text": "GSPP 150"
   },
   {
     "objectID": "syllabus.html#course-culture",
     "href": "syllabus.html#course-culture",
     "title": "Syllabus",
-    "section": "",
-    "text": "This course is designed to teach students who have never done statistics or have done any type of computer programming before! There are no stupid questions, and we will not tolerate behavior which discourage students from asking questions. Everyone starts somewhere.\nDiscrimination/harassment based on race, gender, ethnicity, sexual orientation, or anything else will not be tolerated.\nAcademic dishonesty will also not be tolerated. We will take any violations of academic integrity to the Center for Student Conduct, in addition to any grade penalties that ensue. Repeat violations will result in failure. There is more on this later on the syllabus.\nBerkeley Honor Code:\n\n\nAs a member of the UC Berkeley community, I act with honesty, integrity, and respect for others."
+    "section": "Course Culture",
+    "text": "Course Culture\n\nThis course is designed to teach students who have never done statistics or have done any type of computer programming before! There are no stupid questions, and we will not tolerate behavior which discourage students from asking questions. Everyone starts somewhere.\nDiscrimination/harassment based on race, gender, ethnicity, sexual orientation, or anything else will not be tolerated.\nAcademic dishonesty will also not be tolerated. We will take any violations of academic integrity to the Center for Student Conduct, in addition to any grade penalties that ensue. Repeat violations will result in failure. There is more on this later on the syllabus.\nBerkeley Honor Code:\n\n\nAs a member of the UC Berkeley community, I act with honesty, integrity, and respect for others."
   },
   {
     "objectID": "syllabus.html#websites-to-know",
@@ -996,7 +996,7 @@
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nNo matching items"
   },
   {
     "objectID": "4-causation/03-matching/notes.html",
@@ -1511,6 +1511,153 @@
       "R Tutorials",
       "Summarizing Numerical Associations"
     ]
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#agenda",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#agenda",
+    "title": "Summarizing Numerical Associations",
+    "section": "Agenda",
+    "text": "Agenda\n\nAnnouncements\nConcept Questions\nBreak\nWorksheet: Summarizing Numerical Associations\nIf time permits: the correlation coefficient \\(r\\)"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#announcements",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#announcements",
+    "title": "Summarizing Numerical Associations",
+    "section": "Announcements",
+    "text": "Announcements\n\nQuiz 2 tomorrow (make sure you arrive on time)\n\n\n\nPortfolio 2 due Friday at 11:59 pm\n\n\n\n\nLab 2 part 2 out now on website\n\n\n\n\nTA Office Hours Thursday 5-7pm in Evans 330."
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#describe-the-meaning-of-an-association-between-two-variables.",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#describe-the-meaning-of-an-association-between-two-variables.",
+    "title": "Summarizing Numerical Associations",
+    "section": "Describe the meaning of an association between two variables.",
+    "text": "Describe the meaning of an association between two variables.\n\nA: A change in the values of the first variable directly causes a change in the values of the second variable.\nB: The values of the second variable vary depending on the values of the first variable.\nC: The values of the second variable do not vary depending on the values of the first variable.\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#the-correlation-coefficient-rbetween-two-numerical-variables-is--.3.-what-does-that-tell-you-about-the-slope-of-the-corresponding-least-squares-line-hint-think-carefully-about-what-kinds-of-values-standard-deviation-can-take.",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#the-correlation-coefficient-rbetween-two-numerical-variables-is--.3.-what-does-that-tell-you-about-the-slope-of-the-corresponding-least-squares-line-hint-think-carefully-about-what-kinds-of-values-standard-deviation-can-take.",
+    "title": "Summarizing Numerical Associations",
+    "section": "The correlation coefficient, \\(r\\),between two numerical variables is -.3. What does that tell you about the slope of the corresponding least squares line? Hint: think carefully about what kinds of values standard deviation can take.",
+    "text": "The correlation coefficient, \\(r\\),between two numerical variables is -.3. What does that tell you about the slope of the corresponding least squares line? Hint: think carefully about what kinds of values standard deviation can take.\n\nA: It will be negative\nB: It will be positive\nC: It may either be negative or positive.\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#given-two-numerical-variables-x-and-y-and-a-linear-model-which-relates-them-what-is-the-correct-way-to-calculate-a-residual-hint-what-does-a-positive-value-for-a-residual-mean-visually",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#given-two-numerical-variables-x-and-y-and-a-linear-model-which-relates-them-what-is-the-correct-way-to-calculate-a-residual-hint-what-does-a-positive-value-for-a-residual-mean-visually",
+    "title": "Summarizing Numerical Associations",
+    "section": "Given two numerical variables \\(x\\) and \\(y\\) and a linear model which relates them, what is the correct way to calculate a residual? Hint: What does a positive value for a residual mean visually?",
+    "text": "Given two numerical variables \\(x\\) and \\(y\\) and a linear model which relates them, what is the correct way to calculate a residual? Hint: What does a positive value for a residual mean visually?\n\nA: \\(\\hat{y}_i - y_i\\)\nB: \\(\\hat{y}_i - x_i\\)\nC: \\(y_i - \\hat{y}_i\\)\nD: \\(\\hat{x}_i - x_i\\)\nE: The correct answer is not here.\n\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#i-have-a-data-frame-called-df-with-two-numerical-columns-x-and-y.-which-of-the-following-lines-of-code-creates-a-linear-model-model-which-explains-y-as-a-function-of-x",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#i-have-a-data-frame-called-df-with-two-numerical-columns-x-and-y.-which-of-the-following-lines-of-code-creates-a-linear-model-model-which-explains-y-as-a-function-of-x",
+    "title": "Summarizing Numerical Associations",
+    "section": "I have a data frame called df with two numerical columns, x and y. Which of the following lines of code creates a linear model model which explains y as a function of x?",
+    "text": "I have a data frame called df with two numerical columns, x and y. Which of the following lines of code creates a linear model model which explains y as a function of x?\n\nA: model &lt;- lm(x ~ y, data = df)\nB: model &lt;- lm(y, x, data = df)\nC: model &lt;- lm(x, y, data = df)\nD: model &lt;- lm(y ~ x, data = df)\nE: model &lt;- lm(y |&gt; x, data = df)\n\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#which-piece-of-code-creates-a-two-column-dataframe-with-the-fitted-values-and-residuals-of-the-model-as-columns",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#which-piece-of-code-creates-a-two-column-dataframe-with-the-fitted-values-and-residuals-of-the-model-as-columns",
+    "title": "Summarizing Numerical Associations",
+    "section": "Which piece of code creates a two-column dataframe with the fitted values and residuals of the model as columns?",
+    "text": "Which piece of code creates a two-column dataframe with the fitted values and residuals of the model as columns?\n\nA\n\ndf |&gt; \n  mutate(fitted_values = fitted(model),\n              residuals = resid(model)) |&gt;\n  select(fitted_values,\n         residuals)\n\nB\n\ndf |&gt; \n  summarise(fitted_values = fitted(model),\n              residuals = resid(model)) |&gt;\n  filter(fitted_values,\n         residuals)\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#estimate-the-correlation",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#estimate-the-correlation",
+    "title": "Summarizing Numerical Associations",
+    "section": "Estimate the correlation",
+    "text": "Estimate the correlation\n\n\nWhat is the (Pearson) correlation coefficient between these two variables?\n\n\nThis plot has a very strong negative linear association; the correlation coefficient is -.98.\nThe goal of this exercise is threefold: 1. Start calibrating the ability to associate the correlation with the structure in a scatter plot. 2. Make it clear that this is still just an informal eye-balling procedure (therefore multiple answers can be reasonable, but some are unreasonable). 3. Set some of them up for a challenge on the next one; some will conflate correlation with association.\nIf you’d like to train their eye a bit more, you can open up https://www.guessthecorrelation.com/ in a browser and play the game a few times.\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#section",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#section",
+    "title": "Summarizing Numerical Associations",
+    "section": "",
+    "text": "Which four plots exhibit the strongest association?\n\n\n  \n    −\n    +\n \n 01:00\n \n\nStudent will likely identify B, D, E, and F. F only appears to be highly associated because of the scaling of the y-axis. This is a good opportunity to review definition of association. The following slides demonstrate the effects of that scaling."
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\n\n\ndf_f"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-1",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-1",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\n\n\ndf_f\n\n        x            y\n1   -8.00 -1.307007369\n2   -7.95 -0.466886973\n3   -7.90 -1.317638373\n4   -7.85  1.008059015\n5   -7.80  1.153714017\n6   -7.75  0.136000314\n7   -7.70  1.081268517\n8   -7.65  0.027234440\n9   -7.60 -0.755489564\n10  -7.55  0.643581028\n11  -7.50 -2.221816425\n12  -7.45 -0.352711462\n13  -7.40  0.788325702\n14  -7.35  0.348209977\n15  -7.30  0.888132692\n16  -7.25  1.494640228\n17  -7.20  0.539665177\n18  -7.15  1.534245783\n19  -7.10 -0.636288267\n20  -7.05  1.400750746\n21  -7.00  0.857266821\n22  -6.95  0.689240640\n23  -6.90 -0.578689332\n24  -6.85 -0.247484190\n25  -6.80 -1.616711187\n26  -6.75 -0.211921880\n27  -6.70 -1.389650022\n28  -6.65 -0.667030427\n29  -6.60  0.265923179\n30  -6.55  0.368512913\n31  -6.50  0.159370185\n32  -6.45 -0.803029578\n33  -6.40 -1.181853575\n34  -6.35  0.799141786\n35  -6.30 -0.119741600\n36  -6.25  1.055099362\n37  -6.20  0.260610303\n38  -6.15  1.215058556\n39  -6.10 -2.093776227\n40  -6.05 -0.340475843\n41  -6.00  1.098181964\n42  -5.95 -1.022920292\n43  -5.90  0.997308309\n44  -5.85  0.442282185\n45  -5.80  2.024841893\n46  -5.75 -0.206236931\n47  -5.70 -0.366921396\n48  -5.65 -0.540982671\n49  -5.60  0.326545855\n50  -5.55  1.185875818\n51  -5.50  0.163270582\n52  -5.45 -0.252746010\n53  -5.40 -0.538783647\n54  -5.35  0.239830058\n55  -5.30  0.227238979\n56  -5.25  0.146973095\n57  -5.20  1.206565164\n58  -5.15  0.274237725\n59  -5.10  0.291223416\n60  -5.05 -0.048435420\n61  -5.00 -0.160503335\n62  -4.95  0.982662625\n63  -4.90 -0.009812706\n64  -4.85 -1.236449694\n65  -4.80 -0.220086594\n66  -4.75  0.916450245\n67  -4.70  0.312158589\n68  -4.65 -0.271222289\n69  -4.60 -0.362834150\n70  -4.55  0.690127669\n71  -4.50  0.954579372\n72  -4.45 -1.002334741\n73  -4.40 -0.827510811\n74  -4.35 -0.481050964\n75  -4.30  0.213284850\n76  -4.25  0.694018655\n77  -4.20  0.318705891\n78  -4.15  1.359291786\n79  -4.10  0.299499214\n80  -4.05 -0.136853535\n81  -4.00 -0.907524278\n82  -3.95  0.580039124\n83  -3.90 -0.451761432\n84  -3.85 -0.637651429\n85  -3.80 -0.377287558\n86  -3.75 -0.108975033\n87  -3.70  0.266174878\n88  -3.65  1.950537958\n89  -3.60  2.481797153\n90  -3.55  0.024020307\n91  -3.50 -0.271974465\n92  -3.45 -0.324420253\n93  -3.40  0.914990966\n94  -3.35 -0.177070403\n95  -3.30  1.668125591\n96  -3.25 -0.196626395\n97  -3.20  0.909735944\n98  -3.15  0.379802619\n99  -3.10 -0.717674077\n100 -3.05 -0.137978296\n101 -3.00 -0.032596143\n102 -2.95 -1.151078285\n103 -2.90 -0.035147120\n104 -2.85  1.289653594\n105 -2.80  1.301664628\n106 -2.75 -1.314453018\n107 -2.70  0.279983464\n108 -2.65 -0.134496134\n109 -2.60 -0.993968666\n110 -2.55 -1.125493956\n111 -2.50 -0.585075814\n112 -2.45 -0.360440229\n113 -2.40 -0.128946258\n114 -2.35 -1.763949074\n115 -2.30  0.249921212\n116 -2.25  1.356315758\n117 -2.20 -0.221241869\n118 -2.15 -0.255945298\n119 -2.10  0.764032808\n120 -2.05 -0.429023148\n121 -2.00 -0.506416626"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-2",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-2",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\n\n\ndf_f |&gt;\n    ggplot(aes(x = x,\n               y = y)) +\n    geom_point() +\n    ylim(-9, 9) +\n    theme_bw()"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-3",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-3",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\n\n\ndf_f |&gt;\n    ggplot(aes(x = x,\n               y = y)) +\n    geom_point() +\n    ylim(-9, 9) +\n    theme_bw()"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-4",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-4",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\n\n\ndf_f |&gt;\n    ggplot(aes(x = x,\n               y = y)) +\n    geom_point() +\n    theme_bw()"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-5",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-5",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\n\n\ndf_f |&gt;\n    ggplot(aes(x = x,\n               y = y)) +\n    geom_point() +\n    theme_bw()"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-6",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-6",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\ndf_f |&gt;\n    summarize(pearson = cor(x, y))"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-7",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#pearson-correlation-and-scale-7",
+    "title": "Summarizing Numerical Associations",
+    "section": "Pearson Correlation and Scale",
+    "text": "Pearson Correlation and Scale\n\ndf_f |&gt;\n    summarize(pearson = cor(x, y))\n\n      pearson\n1 -0.03106456"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#describing-associations",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#describing-associations",
+    "title": "Summarizing Numerical Associations",
+    "section": "Describing Associations",
+    "text": "Describing Associations\nWhen considering the structure in a scatter plot, pay attention to:\n\nThe strength of the association\n\nHow much does the conditional distribution of y change when you move along the x?\n\n\n\n\nThe shape of the association\n\nLinear? Quadratic? Cubic or beyond?\n\n\n\n\n\nThe direction of the (linear) association\n\nPositive or negative?"
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#section-1",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#section-1",
+    "title": "Summarizing Numerical Associations",
+    "section": "",
+    "text": "Guess: Which state has the highest poverty rate? The lowest?\n\n\nThis can be asked without poll-everywhere, without group discussion, just asking students to shout out which states they think will have highest and lowest.\nAs they answer, ask where they’re thinking those states points are; how they’re using this plot to think about the highest povery rate and the lowest poverty rate. Point out that these two questions don’t even take advantage of the scatter plot, which allows you to see the relationship between two variables. Each question just deals with the marginal distribution of poverty or graduation rate, which could just as well be two separate histograms, as shown on the next slide."
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#section-2",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#section-2",
+    "title": "Summarizing Numerical Associations",
+    "section": "",
+    "text": "This is an equally-useful set of plots to answer the previous question.\nIf we want to ask a question that requires a scatter plot (and a linear model) to answer, we need to ask a conditional question."
+  },
+  {
+    "objectID": "2-summarizing-data/05-summarizing-associations/slides.html#section-3",
+    "href": "2-summarizing-data/05-summarizing-associations/slides.html#section-3",
+    "title": "Summarizing Numerical Associations",
+    "section": "",
+    "text": "Which state has the highest graduation rate given its poverty rate?\n\n\n  \n    −\n    +\n \n 01:00\n \n\nThis assesses whether or not students have an informal sense of what a residual is."
   },
   {
     "objectID": "2-summarizing-data/notes.html",
