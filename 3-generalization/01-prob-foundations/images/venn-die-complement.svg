@@ -1,0 +1,23 @@
+<svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <!-- shaded field = the complement of A -->
+  <rect x="24" y="24" width="592" height="392" rx="14" fill="#b6ddd7" fill-opacity="0.55" stroke="#9aa3ab" stroke-width="1.5"/>
+  <text x="42" y="54" font-size="20" fill="#5b6167">&#937;</text>
+
+  <!-- A punched out (white) -->
+  <circle cx="235" cy="240" r="105" fill="#ffffff" stroke="#cf7a99" stroke-width="2.5"/>
+
+  <text x="235" y="118" font-size="20" fill="#c05680" font-weight="bold" text-anchor="middle">A</text>
+  <text x="560" y="80" font-size="20" fill="#3f8a80" font-weight="bold" text-anchor="middle">A<tspan baseline-shift="super" font-size="13">C</tspan></text>
+
+  <!-- inside A -->
+  <text x="205" y="250" font-size="25" fill="#2b2b2b" text-anchor="middle">1</text>
+  <text x="268" y="250" font-size="25" fill="#2b2b2b" text-anchor="middle">2</text>
+
+  <!-- complement outcomes -->
+  <text x="420" y="165" font-size="25" fill="#2b2b2b" text-anchor="middle">3</text>
+  <text x="530" y="165" font-size="25" fill="#2b2b2b" text-anchor="middle">4</text>
+  <text x="420" y="330" font-size="25" fill="#2b2b2b" text-anchor="middle">5</text>
+  <text x="530" y="330" font-size="25" fill="#2b2b2b" text-anchor="middle">6</text>
+
+  <text x="320" y="404" font-size="16" fill="#555555" text-anchor="middle" font-style="italic">A = {1, 2},  A&#7580; = {3, 4, 5, 6}</text>
+</svg>

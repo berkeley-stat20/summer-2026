@@ -1,0 +1,31 @@
+<svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="24" y="24" width="592" height="392" rx="14" fill="#edf0f2" stroke="#9aa3ab" stroke-width="1.5"/>
+  <text x="42" y="54" font-size="20" fill="#6b7178">&#937;</text>
+
+  <defs>
+    <clipPath id="lensClip"><circle cx="390" cy="235" r="120"/></clipPath>
+  </defs>
+
+  <!-- pale circle fills -->
+  <circle cx="250" cy="235" r="120" fill="#f3c1d3" fill-opacity="0.45"/>
+  <circle cx="390" cy="235" r="120" fill="#b6ddd7" fill-opacity="0.5"/>
+  <!-- emphasized lens (intersection) -->
+  <circle cx="250" cy="235" r="120" fill="#b98cc4" fill-opacity="0.75" clip-path="url(#lensClip)"/>
+  <!-- outlines -->
+  <circle cx="250" cy="235" r="120" fill="none" stroke="#cf7a99" stroke-width="2.5"/>
+  <circle cx="390" cy="235" r="120" fill="none" stroke="#4f9e94" stroke-width="2.5"/>
+
+  <!-- labels, clear above circles -->
+  <text x="215" y="92" font-size="19" fill="#c05680" font-weight="bold" text-anchor="middle">A: less than 3</text>
+  <text x="435" y="92" font-size="19" fill="#3f8a80" font-weight="bold" text-anchor="middle">B: even</text>
+
+  <!-- outcomes -->
+  <text x="195" y="244" font-size="25" fill="#2b2b2b" text-anchor="middle">1</text>
+  <text x="320" y="244" font-size="25" fill="#2b2b2b" text-anchor="middle" font-weight="bold">2</text>
+  <text x="448" y="206" font-size="25" fill="#2b2b2b" text-anchor="middle">4</text>
+  <text x="448" y="284" font-size="25" fill="#2b2b2b" text-anchor="middle">6</text>
+  <text x="60" y="244" font-size="25" fill="#2b2b2b" text-anchor="middle">3</text>
+  <text x="588" y="244" font-size="25" fill="#2b2b2b" text-anchor="middle">5</text>
+
+  <text x="320" y="404" font-size="16" fill="#555555" text-anchor="middle" font-style="italic">A &#8745; B = {2}</text>
+</svg>

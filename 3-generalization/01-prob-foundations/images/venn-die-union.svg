@@ -1,0 +1,36 @@
+<svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="9" height="9">
+      <path d="M-1,8 l10,-10 M-1,17 l18,-18 M8,10 l10,-10" stroke="#566270" stroke-width="0.9" stroke-opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect x="24" y="24" width="592" height="392" rx="14" fill="#edf0f2" stroke="#9aa3ab" stroke-width="1.5"/>
+  <text x="42" y="54" font-size="20" fill="#6b7178">&#937;</text>
+
+  <!-- pastel fills -->
+  <circle cx="240" cy="235" r="110" fill="#f3c1d3" fill-opacity="0.5"/>
+  <circle cx="400" cy="235" r="125" fill="#b6ddd7" fill-opacity="0.5"/>
+  <!-- cross-hatch overlay across the whole union -->
+  <circle cx="240" cy="235" r="110" fill="url(#hatch)"/>
+  <circle cx="400" cy="235" r="125" fill="url(#hatch)"/>
+  <!-- outlines -->
+  <circle cx="240" cy="235" r="110" fill="none" stroke="#cf7a99" stroke-width="2.5"/>
+  <circle cx="400" cy="235" r="125" fill="none" stroke="#4f9e94" stroke-width="2.5"/>
+
+  <text x="200" y="96" font-size="19" fill="#c05680" font-weight="bold" text-anchor="middle">A = {1, 2}</text>
+  <text x="430" y="96" font-size="19" fill="#3f8a80" font-weight="bold" text-anchor="middle">B = {2, 4, 5, 6}</text>
+
+  <!-- numbers with white halo for legibility over the hatch -->
+  <g font-size="25" fill="#20242a" text-anchor="middle" paint-order="stroke" stroke="#ffffff" stroke-width="3.4" stroke-linejoin="round">
+    <text x="190" y="244">1</text>
+    <text x="312" y="244">2</text>
+    <text x="448" y="192">4</text>
+    <text x="415" y="288">5</text>
+    <text x="478" y="288">6</text>
+  </g>
+  <!-- 3 outside both, in Omega (no halo needed on plain field) -->
+  <text x="72" y="244" font-size="25" fill="#20242a" text-anchor="middle">3</text>
+
+  <text x="320" y="404" font-size="16" fill="#555555" text-anchor="middle" font-style="italic">A &#8746; B = {1, 2, 4, 5, 6}   (3 is left out)</text>
+</svg>

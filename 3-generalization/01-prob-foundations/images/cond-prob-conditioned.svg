@@ -1,0 +1,14 @@
+<svg viewBox="0 0 620 410" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<rect x="24" y="24" width="572" height="300" rx="12" fill="#ffffff" stroke="#9aa3ab" stroke-width="1.5"/>
+<circle cx="385" cy="180" r="108" fill="#b6ddd7" fill-opacity="0.4"/>
+<circle cx="235" cy="180" r="108" fill="none" stroke="#cf7a99" stroke-width="2" stroke-opacity="0.5" stroke-dasharray="6 5"/>
+<path d="M 310.0,102.3 A 108 108 0 0 1 310.0,257.7 A 108 108 0 0 1 310.0,102.3 Z" fill="#c9a9de" fill-opacity="0.9" stroke="#8e6aa8" stroke-width="2"/>
+<path d="M24,24 H596 V324 H24 Z M 277,180 A 108 108 0 1 0 493,180 A 108 108 0 1 0 277,180 Z" fill="#5b6570" fill-opacity="0.28" fill-rule="evenodd"/>
+<rect x="24" y="24" width="572" height="300" rx="12" fill="none" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="42" y="52" font-size="20" fill="#6b7178" opacity="0.5">&#937;</text>
+<circle cx="385" cy="180" r="108" fill="none" stroke="#4f9e94" stroke-width="3"/>
+<text x="175" y="70" font-size="20" fill="#cf7a99" font-weight="bold" text-anchor="middle" opacity="0.55">A</text>
+<text x="470" y="82" font-size="19" fill="#4f9e94" font-weight="bold" text-anchor="middle">new space = B</text>
+<text x="300" y="150" font-size="15" fill="#8e6aa8" text-anchor="middle" font-weight="bold">A &#8745; B</text>
+<text x="310" y="384" font-size="17" fill="#20242a" text-anchor="middle">P(A|B) = <tspan font-style="italic">area of A &#8745; B</tspan> &#247; <tspan font-style="italic">area of B</tspan></text>
+</svg>
