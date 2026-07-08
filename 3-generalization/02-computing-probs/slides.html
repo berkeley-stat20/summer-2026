@@ -133,8 +133,6 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../../site_libs/countdown-0.4.0/countdown.js"></script>
 <meta property="og:title" content="Probability Foundations II – Stat 20">
 <meta property="og:image" content="https://stat20.berkeley.edu/summer-2026/3-generalization/02-computing-probs/assets/stat20-hex.png">
 <meta property="og:site_name" content="Stat 20">
@@ -161,38 +159,28 @@ STAT 20: Introduction to Probability and Statistics
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ul>
-<li>Announcements</li>
-<li>Review: <em>Probability Foundations I</em></li>
-<li>Break</li>
-<li>Lecture: <em>Probability Foundations II</em></li>
-<li>Appendix: More practice!</li>
+<li>Lecture, Combinatorics and Computing Probabilities</li>
+<li>WS Part 1</li>
+<li>Lecture, Simulating Code in R</li>
+<li>WS Part 2</li>
+<li>Fun Live Experiment: The Birthday Problem!</li>
 </ul>
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li>Portfolio 3 due next Monday. The Gradescope assignment will go up on Thursday.</li>
-</ul>
-<div class="fragment">
-<ul>
-<li>Quiz 2 is next Thursday and covers everything from Monday to next Wednesday.</li>
-</ul>
-</div>
-</section>
-<section id="review-probability-foundations-i" class="title-slide slide level1 center">
-<h1>Review: <em>Probability Foundations I</em></h1>
-<div id="timer_5424453deb98758e609c14f8e560d7414eded394" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<section id="lecture-part-1" class="title-slide slide level1 center">
+<h1>Lecture Part 1</h1>
+<p><strong>Combinatorics and Computing Probabilities</strong></p>
+<div id="timer_5d24c188db199e9bdf4e7d912ba8e0bcdf35b4a5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
  </div>
- <code class="countdown-time"><span class="countdown-digits minutes">30</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ <code class="countdown-time"><span class="countdown-digits minutes">60</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
  </div>
 </section>
 
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
-<div id="timer_5424453deb98758e609c14f8e560d7414eded394" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_5d24c188db199e9bdf4e7d912ba8e0bcdf35b4a5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -201,419 +189,101 @@ STAT 20: Introduction to Probability and Statistics
  </div>
 </section>
 
-<section id="lecture-probability-foundations-ii" class="title-slide slide level1 center">
-<h1>Lecture <em>Probability Foundations II</em></h1>
-
+<section id="worksheet-part-1" class="title-slide slide level1 center">
+<h1>Worksheet Part 1</h1>
+<div id="timer_5d24c188db199e9bdf4e7d912ba8e0bcdf35b4a5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
 </section>
 
-<section>
-<section id="appendix-more-practice" class="title-slide slide level1 center">
-<h1>Appendix: More practice!</h1>
-
-</section>
-<section id="do-you-want-a-car-or-do-you-want-a-goat" class="slide level2">
-<h2>Do you want a car or do you want a goat?</h2>
-
-<img data-src="https://imgs.xkcd.com/comics/monty_hall.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
-<p>Of course, this is the Monty Hall problem. The text for this comic is “A few minutes later, the goat behind door C drives away in the car. Can have some fun and ask them to if they chose door A and door B had a goat, would they stay with A or would they switch to C? (pollev) Setup: There are three doors A, B, C. Car behind one of them, goats behind other two. You pick a door at random (say you pick A), host opens one of the doors you didn’t pick (say they open B), and shows you a goat. Now should you stick with your original choice of A or should you switch to C. Will be fun to see what they input. The right answer is that they should switch. Waving hands, the total mass of 1 was split 1/3 to 2/3 (win to not win) with the choice of A. A is kept aside, and B is opened.Now the P(A doesn’t win) = 2/3 is moved to C.Therefore better to switch. Not worth doing it with formal notation even after going over Bayes. From Everett’s suggestions (spring 2025): Have the class”play” this game. Explain the scenario, draw “doors” on the board, maybe even invite a “contestant,” and have a poll to ask “should they switch?” with options (yes | no | it doesn’t matter). Then show (through code/simulation, then math) why switching is better. For conditional probability, one good example to share is election polling. Trump/Harris was pretty much 50/50 by all reasonable pollsters, but then trump won by kind of a lot. Among other reasons, this is because the “swing states” probabilities were not independent - there was some latent unknown “trumpiness” that affected all of them.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section id="birthday-problem" class="title-slide slide level1 center">
-<h1>Birthday problem</h1>
-<p>This is a fun one we will play out in class! What is the probability that with <span class="math inline">\(K\)</span> people in a room, at least 2 of them share a birthday? It turns out that with just 23 people there is already about a 50% chance two people share a birthday.</p>
-<details>
-<summary>
-Check your answer
-</summary>
-<p>It is far easier to compute the <strong>complement</strong> — the probability that <em>everyone’s birthday is different</em> — and subtract from 1.</p>
-<p>Line the people up. The 1st person can have any birthday. The 2nd must avoid that one day: <span class="math inline">\(\tfrac{364}{365}\)</span>. The 3rd must avoid two days: <span class="math inline">\(\tfrac{363}{365}\)</span>, and so on. Multiplying: <span class="math display">\[P(\text{all different}) = \frac{365}{365}\cdot\frac{364}{365}\cdots\frac{365-K+1}{365} = \frac{365!}{(365-K)!\,\;365^{K}}.\]</span></p>
-<p>So the probability of at least one shared birthday is <span class="math display">\[P(\text{at least one match}) = 1 - \frac{365!}{(365-K)!\,\;365^{K}}.\]</span></p>
-<p>Plugging in values gives the (famously surprising) numbers:</p>
-<table class="caption-top" style="width:100%;">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>People <span class="math inline">\(K\)</span></th>
-<th>10</th>
-<th>23</th>
-<th>30</th>
-<th>50</th>
-<th>57</th>
-<th>70</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(P(\text{match})\)</span></td>
-<td>0.117</td>
-<td><strong>0.507</strong></td>
-<td>0.706</td>
-<td>0.970</td>
-<td>0.990</td>
-<td>0.999</td>
-</tr>
-</tbody>
-</table>
-<p>At <span class="math inline">\(K = 23\)</span> we cross 50%, and by <span class="math inline">\(K = 70\)</span> a shared birthday is all but certain. The surprise comes from the fact that we are comparing <em>all pairs</em> of people, and the number of pairs grows fast — there are <span class="math inline">\(\binom{23}{2} = 253\)</span> pairs among just 23 people.</p>
-<p><em>(Assumptions: 365 equally likely birthdays, no leap years, no twins.)</em></p>
-</details>
+<section id="lecture-part-2" class="title-slide slide level1 center">
+<h1>Lecture Part 2</h1>
+<p><strong>Simulation Code in R</strong></p>
+<div id="timer_5d24c188db199e9bdf4e7d912ba8e0bcdf35b4a5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
 </section>
 
-<section>
-<section id="concept-questions-review" class="title-slide slide level1 center">
-<h1>Concept questions &amp; review</h1>
-
-</section>
-<section id="rules" class="slide level2">
-<h2>Rules</h2>
-<ul>
-<li>Conditional Probabilty</li>
-</ul>
-<p>For two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math inline">\(P(A \vert B) = \displaystyle \frac{P(A \text{ and } B)}{P(B)}\)</span></p>
-<ul>
-<li>Multiplication rule</li>
-</ul>
-<p>For two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math inline">\(P(A \text{ and } B) = P(A \vert B) P(B)\)</span></p>
-<ul>
-<li>Complement rule</li>
-</ul>
-<p><span class="math inline">\(P(A^C) = 1 - P(A)\)</span></p>
-<aside class="notes">
-<ul>
-<li>WS needs 20/25 minutes: time for them to work, and for you to review the problems (If you have already given enough time, do the coin flipping activity)</li>
-<li>Lecture on conditional probability and independence</li>
-<li>Concept Review</li>
-<li>Concept questions</li>
-<li>Break ~3 mins</li>
-</ul>
-<p>You can tell them here that <span class="math inline">\(A^C\)</span> is “not A”, and then maybe use dice or coin toss examples. Review mutually exclusive vs independent events, emphasizing that these are very different ideas, though both apply to pairs of events.</p>
-<ul>
-<li>Mutually exclusive events means that the occurrence of one event prevents the occurrence of the other. (that is, it reduces the chance of the other occurring to 0.)</li>
-</ul>
-<p>Independent events means that the occurrence of one event does not change the chance of the other occurring.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="concept-question-1" class="slide level2">
-<h2>Concept Question 1</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_551e44d4" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-<p>Flip 3 coins, one at a time. Define the following events:</p>
-<p><span class="math inline">\(A\)</span> is the event that the first coin flipped shows a head</p>
-<p><span class="math inline">\(B\)</span> is the event that the first two coins flipped both show heads</p>
-<p><span class="math inline">\(C\)</span> is the event that the last two coins flipped both show tails</p>
-<div class="poll">
-<p>The events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are: ________</p>
-</div>
-<aside class="notes">
-<p>After they do this and next, write out the outcome space for the results of flipping 3 coins. And go through what are A, B, and C.</p>
-<p>A and B are neither independent nor mutually exclusive.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="concept-question-2" class="slide level2">
-<h2>Concept Question 2</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_7ed605eb" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-<p>Flip 3 coins, one at a time. Define the following events:</p>
-<p><span class="math inline">\(A\)</span> is the event that the first coin flipped shows a head</p>
-<p><span class="math inline">\(B\)</span> is the event that the first two coins flipped both show heads</p>
-<p><span class="math inline">\(C\)</span> is the event that the last two coins flipped both show tails</p>
-<div class="poll">
-<p>The events <span class="math inline">\(A\)</span> and <span class="math inline">\(C\)</span> are: ________</p>
-</div>
-<aside class="notes">
-<p>After they do this and next, write out the outcome space for the results of flipping 3 coins. And go through what are A, B, and C.</p>
-<p>A and C are independent. P(A &amp; C ) = 1/8 = P(A)P(C) = 1/4 * 1/2</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="concept-question-3" class="slide level2 scrollable">
-<h2>Concept Question 3</h2>
-<p>Suppose we draw 2 tickets at random without replacement from a box with tickets marked {1, 2, 3, . . . , 9}. Let <span class="math inline">\(A\)</span> be the event that <em>at least one</em> of the tickets drawn is labeled with an <em>even</em> number, let <span class="math inline">\(B\)</span> be the event that <em>at least one</em> of the tickets drawn is labeled with a <em>prime</em> number (recall that the number 1 is <strong>not</strong> regarded as a prime number). Suppose the numbers on the tickets drawn are <strong>3</strong> and <strong>9</strong>.</p>
-<div class="poll">
-<p>Which of the following events occur?</p>
-<ol type="i">
-<li><p><span class="math inline">\(A\)</span></p></li>
-<li><p><span class="math inline">\(B\)</span></p></li>
-<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> (<span class="math inline">\(= A \cap B\)</span>)</p></li>
-<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B^c\)</span> (<span class="math inline">\(= A \cap B^c\)</span>)</p></li>
-<li><p><span class="math inline">\(A^c\)</span> and <span class="math inline">\(B\)</span> (<span class="math inline">\(= A^c \cap B\)</span>)</p></li>
-</ol>
-</div>
-<aside class="notes">
-<p>ii and v, I told them they can immediately see that A^C is true since no even number, so definitely (v) and then we do have a prime number and both are odd so (ii) is true.</p>
-<p>You could give other events for practice such as 2 and 9, or 4 and 9 etc.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_50dcb176" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="section" class="slide level2 scrollable">
-<h2></h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_24e441c6" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-
-<img data-src="images/lad-nyy-ws24.png" class="quarto-figure quarto-figure-center, r-stretch quarto-figure-center" width="300"><div class="poll">
-<p>The 2024 World Series was the championship series was a best-of-seven playoff between the Los Angeles Dodgers and the New York Yankees. The winners in the World Series have to win a majority of 7 games, so the first team to win 4 games wins the series. Suppose we assumed that the probability that the Dodgers would have beaten the Yankees in any single game was estimated at 56%, <em>independently</em> of all the other games.</p>
-<p><strong>What was the probability that the Dodgers would have won in a clean sweep?</strong></p>
-</div>
-<aside class="notes">
-<p>It was the Dodgers’ first World Series appearance and win since 2020, and the Yankees’ first World Series appearance since 2009. Straightforward application of multiplication rule for independent events. probability is 0.56^4 = 0.098. You could even ask more or less than 10%?</p>
-<p>You may have to explain Clean sweep means that they won in the first 4 games - which didn’t happen, they won in 5 games.</p>
-<p>Follow up comment/question: if the teams were more evenly matched, say probability of either team winning is 50%, the probability of going to 7 games and probability of winning in 6 games is equal given 5 games are played.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="concept-question-5" class="slide level2">
-<h2>Concept Question 5</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_55ab906f" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-
-<img data-src="images/lad-nyy-ws24.png" class="quarto-figure quarto-figure-center, r-stretch quarto-figure-center" width="300"><div class="poll">
-<p>Suppose we assume, instead, that the probability that the Dodgers would have beaten the Yankees in any single game was 50%, independently of all the other games. In this case, was the probability that the series would have gone to 6 games higher than the probability that the series would have gone to 7 games, <strong>given</strong> that 5 games were played?</p>
-</div>
-<aside class="notes">
-<p>if 5 games are played it means one of the teams is leading 3-2. Therefore there are two scenarios: the team that is ahead wins game 6 and the series, or the team that is behind wins game 6 and they go to 7 games. Both are equally likely.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<!---
-## 
-
-
-::: {.cell}
-::: {.cell-output-display}
-
-```{=html}
-<div class="countdown" id="timer_e3761469" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-```
-
-:::
-:::
-
-
-Let's play a game where I first roll a fair six-sided die, and then toss a coin as many times as the number of spots I rolled. I win the game if I get all heads.
-
-:::{.poll}
-Given I roll a k what is the probability that I flip all heads? 
-:::
-
-## 
-
-
-::: {.cell}
-::: {.cell-output-display}
-
-```{=html}
-<div class="countdown" id="timer_8a009112" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-```
-
-:::
-:::
-
-
-Let's play a game where I first roll a fair six-sided die, and then toss a coin as many times as the number of spots I rolled. I win the game if I get all heads.
-
-:::{.poll}
-What is the probability I win the game?
-:::
-
-:::{.notes}
-
-P(win) = P(roll 1 and all H) + P(roll 2 and all H) + ... = P(all H | roll = 1)*P(roll =1) + ... =  (1/2)*(1/6) + (1/4)*(1/6) + ...+ (1/64)*(1/6). The point is to illustrate the 3 steps used to solve this problem 1) partition the win event into 6 mutually exclusive sets 2) apply the addition rule for ME events then 3) the multiplication rule for dependent events.
-:::
-
-
-
-## 
-
-
-::: {.cell}
-::: {.cell-output-display}
-
-```{=html}
-<div class="countdown" id="timer_83ce013d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-```
-
-:::
-:::
-
-
-
-A rare condition affects **0.2%** of the population. A test for this condition is 99% accurate: this means that the probability that a person *with* the condition tests positive is 99% and the probability that a person *without* the condition tests negative is 99%. What is the probability that a person who tests positive has the condition? 
-
-
-:::{.notes}
-First, don't do Bayes' theorem (next slide is Bayes) but show them how to think about the chances, and where the positive tests come from. We can think about the number of cases in 100,000, then the numbers are nice and whole.
-
-Since prevalence is 0.2%, then  0.2% of 100,000 is 0.002*100000 = 200 people will have the condition, and 99% or 198 of them are expected to test positive. Out of the remaining (100000-200 = 99800) people who do not have the condition, 1% will test positive, which is 998 people, so the total number of positive tests is 998+198 = 1198. The proportion of true positives is 198/1198 = about 16.55% cases or about between 16% and 17% of the positives are true positives (if we use Bayes' rule formally, it works out to be 16.55%).
-:::
-
-## Bayes' theorem
-
-Let $A$ and $B$ be events with positive probability. Then:
-
-(i) $B$ can be written as $B = (B\cap A) \cup (B \cap A^C)$
-
-(ii)$$ \begin{align} 
-    P(A|B) &= \displaystyle \frac{P(A \cap B)}{P(B)}  \\
-          &=  \frac{P(A \cap B)}{P(B\cap A) + P(B \cap A^C)} \\
-          &= \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^C)P(A^C)}
-    \end{align}$$
-
-
-
-:::{.notes}
-Draw a picture here to show how we can write B like this. Now can go over problem on previous slide using Bayes
-:::
--->
-</section></section>
 <section id="break-1" class="title-slide slide level1 center">
 <h1>Break</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_45451cba" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
+<div id="timer_5d24c188db199e9bdf4e7d912ba8e0bcdf35b4a5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
 </section>
 
-<section id="worksheet-computing-probabilities" class="title-slide slide level1 center">
-<h1>Worksheet: Computing Probabilities</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_889bb1e9" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Then review the WS</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<section>
+<section id="worksheet-part-2" class="title-slide slide level1 center">
+<h1>Worksheet Part 2</h1>
+<div id="timer_5d24c188db199e9bdf4e7d912ba8e0bcdf35b4a5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+<section id="fun-experiment-the-birthday-problem" class="slide level2">
+<h2>Fun Experiment, The Birthday Problem!</h2>
+<ul>
+<li>Here is a question: How many people do you need in a room before there is a 50% chance at least 2 of them share a birthday. Guesses?</li>
+</ul>
+<p>-Let’s see if we can work it out with probability, and then see if anyone in the room shares a birthday (don’t check yet!)</p>
+</section></section>
+<section id="setting-up-the-problem" class="title-slide slide level1 center">
+<h1>Setting Up the Problem</h1>
+<ul>
+<li><p>Say we have <span class="math inline">\(K\)</span> people in a room</p></li>
+<li><p>Define the event <span class="math inline">\(A = \{\text{At least two people in a room share a birthday}\}\)</span></p></li>
+<li><p>Consider the complement event, <span class="math inline">\(A^{C} = \{\text{no one in the room shares a birthday}\}\)</span></p></li>
+<li><p>In this case, computing <span class="math inline">\(P(A^{C})\)</span> seems like the easier route, so we will do that</p></li>
+</ul>
+</section>
+
+<section id="two-people-in-a-room" class="title-slide slide level1 center">
+<h1>Two People In a Room</h1>
+<ul>
+<li>Consider two people in a room. Total number of birthdays possible is <span class="math inline">\(365^2\)</span>.</li>
+<li>For them NOT to share a birthday, <span class="math inline">\(365 \times 364\)</span>. Person 1 can have any day of the year, person 2 has to have not that day.</li>
+</ul>
+<p><span class="math display">\[P(\text{2 people don't share birthday out of 2}) = \frac{365 \times 364}{365 \times 365}\]</span></p>
+<p><span class="math display">\[P(\text{At least 2 people share a birthday out of 2}) = 1- \frac{365 \times 364}{365 \times 365}\]</span></p>
+</section>
+
+<section id="three-people-in-a-room" class="title-slide slide level1 center">
+<h1>Three People In a Room</h1>
+<ul>
+<li>Now consider a third person, total birthdays possible <span class="math inline">\(365^3\)</span></li>
+<li>Yet third person cannot share first or second’s birthday, so only 363 days left for them</li>
+</ul>
+<p><span class="math display">\[P(\text{2 people don't share birthday out of 3}) = \frac{365 \times 364 \times 363}{365 \times 365 \times 365}\]</span></p>
+<ul>
+<li>Notice numbers on top are getting smaller, on bottom staying same size.</li>
+</ul>
+<p><span class="math display">\[P(\text{At least 2 people share a birthday out of 3}) = 1-\frac{365 \times 364 \times 363}{365 \times 365 \times 365}\]</span></p>
+</section>
+
+<section id="k-people-in-a-room" class="title-slide slide level1 center">
+<h1>K People In a Room</h1>
+<ul>
+<li>Recognizing the pattern here, we see that with <span class="math inline">\(K\)</span> people in a room, the probability no one shares a birthday is</li>
+</ul>
+<p><span class="math display">\[P(\text{K people don't share birthday}) = \frac{365}{365} \times \frac{364}{364}\times \frac{363}{365} \times \cdots \frac{(365-K+1)}{365}\]</span> <span class="math display">\[P(\text{At least 2 people share a birthday out of K}) = 1-\frac{365}{365} \times \frac{364}{364}\times \frac{363}{365} \times \cdots \frac{(365-K+1)}{365}\]</span></p>
+<ul>
+<li><p>It turns out, this equals 0.5 at <strong>23 people</strong>! Not really that many at all!</p></li>
+<li><p>Let’s test it out, make (hopefully 2) groups of 23 and lets see if anyone in those groups shares a birthday!</p></li>
+</ul>
 
 
 </section>
@@ -833,44 +503,6 @@ Draw a picture here to show how we can write B like this. Now can go over proble
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
