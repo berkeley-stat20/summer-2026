@@ -1,0 +1,25 @@
+<svg viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<text x="24" y="156" font-size="15" fill="#555555" font-style="italic">Toss 1</text>
+<line x1="70" y1="150" x2="197.0" y2="150" stroke="none"/>
+<text x="24" y="256" font-size="15" fill="#555555" font-style="italic">Toss 2</text>
+<line x1="70" y1="250" x2="109.0" y2="250" stroke="none"/>
+<line x1="398.0" y1="69" x2="222.0" y2="133" stroke="#9aa3ab" stroke-width="2"/>
+<line x1="398.0" y1="69" x2="574.0" y2="133" stroke="#9aa3ab" stroke-width="2"/>
+<line x1="222.0" y1="164" x2="134.0" y2="233" stroke="#9aa3ab" stroke-width="2"/>
+<line x1="222.0" y1="164" x2="310.0" y2="233" stroke="#9aa3ab" stroke-width="2"/>
+<line x1="574.0" y1="164" x2="486.0" y2="233" stroke="#9aa3ab" stroke-width="2"/>
+<line x1="574.0" y1="164" x2="662.0" y2="233" stroke="#9aa3ab" stroke-width="2"/>
+<circle cx="398.0" cy="55" r="13" fill="#e2e6ea" stroke="#9aa3ab" stroke-width="2.5"/>
+<text x="398.0" y="31" font-size="14" fill="#555555" text-anchor="middle" font-style="italic">start</text>
+<circle cx="222.0" cy="150" r="19" fill="#b6ddd7" stroke="#4f9e94" stroke-width="2.5"/><text x="222.0" y="157" font-size="20" fill="#2b6b62" text-anchor="middle" font-weight="bold">H</text>
+<circle cx="574.0" cy="150" r="19" fill="#f3c1d3" stroke="#cf7a99" stroke-width="2.5"/><text x="574.0" y="157" font-size="20" fill="#9c3d5c" text-anchor="middle" font-weight="bold">T</text>
+<circle cx="134.0" cy="250" r="19" fill="#b6ddd7" stroke="#4f9e94" stroke-width="2.5"/><text x="134.0" y="257" font-size="20" fill="#2b6b62" text-anchor="middle" font-weight="bold">H</text>
+<circle cx="310.0" cy="250" r="19" fill="#f3c1d3" stroke="#cf7a99" stroke-width="2.5"/><text x="310.0" y="257" font-size="20" fill="#9c3d5c" text-anchor="middle" font-weight="bold">T</text>
+<circle cx="486.0" cy="250" r="19" fill="#b6ddd7" stroke="#4f9e94" stroke-width="2.5"/><text x="486.0" y="257" font-size="20" fill="#2b6b62" text-anchor="middle" font-weight="bold">H</text>
+<circle cx="662.0" cy="250" r="19" fill="#f3c1d3" stroke="#cf7a99" stroke-width="2.5"/><text x="662.0" y="257" font-size="20" fill="#9c3d5c" text-anchor="middle" font-weight="bold">T</text>
+<text x="134.0" y="291" font-size="16" fill="#20242a" text-anchor="middle" font-weight="bold" font-family="Menlo, Consolas, monospace">HH</text>
+<text x="310.0" y="291" font-size="16" fill="#20242a" text-anchor="middle" font-weight="bold" font-family="Menlo, Consolas, monospace">HT</text>
+<text x="486.0" y="291" font-size="16" fill="#20242a" text-anchor="middle" font-weight="bold" font-family="Menlo, Consolas, monospace">TH</text>
+<text x="662.0" y="291" font-size="16" fill="#20242a" text-anchor="middle" font-weight="bold" font-family="Menlo, Consolas, monospace">TT</text>
+<text x="380.0" y="325" font-size="16" fill="#2b6b62" text-anchor="middle" font-weight="bold">2 &#215; 2 = 4 possible outcomes</text>
+</svg>

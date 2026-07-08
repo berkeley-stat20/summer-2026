@@ -81,6 +81,35 @@ gtag('js', new Date());
 gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
 <meta property="og:title" content="Probability Foundations II – Stat 20">
@@ -89,7 +118,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <meta property="og:site_name" content="Stat 20">
 <meta name="twitter:title" content="Probability Foundations II – Stat 20">
 <meta name="twitter:description" content="Combinatorics and the Uniform Distribution">
-<meta name="twitter:image" content="https://stat20.berkeley.edu/summer-2026/3-generalization/02-computing-probs/assets/stat20-hex.png">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/summer-2026/3-generalization/02-computing-probs/images/coin-tree-1.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -317,8 +346,28 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides-fill"></i>Slides</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#different-probability-distributions" id="toc-different-probability-distributions" class="nav-link active" data-scroll-target="#different-probability-distributions">Different Probability Distributions</a></li>
+  <li><a href="#uniform-distribution-equally-likely-outcomes" id="toc-uniform-distribution-equally-likely-outcomes" class="nav-link" data-scroll-target="#uniform-distribution-equally-likely-outcomes">Uniform Distribution: Equally Likely Outcomes</a>
+  <ul class="collapse">
+  <li><a href="#the-exponential-function" id="toc-the-exponential-function" class="nav-link" data-scroll-target="#the-exponential-function">The Exponential Function</a></li>
+  </ul></li>
+  <li><a href="#the-factorial-function" id="toc-the-factorial-function" class="nav-link" data-scroll-target="#the-factorial-function">The Factorial Function</a></li>
+  <li><a href="#the-n-choose-k-function" id="toc-the-n-choose-k-function" class="nav-link" data-scroll-target="#the-n-choose-k-function">The N Choose K Function</a></li>
+  <li><a href="#practice-examples" id="toc-practice-examples" class="nav-link" data-scroll-target="#practice-examples">Practice Examples</a></li>
+  <li><a href="#worked-examples" id="toc-worked-examples" class="nav-link" data-scroll-target="#worked-examples">Worked Examples</a>
+  <ul class="collapse">
+  <li><a href="#sum-of-two-dice-rolls" id="toc-sum-of-two-dice-rolls" class="nav-link" data-scroll-target="#sum-of-two-dice-rolls">1) Sum of two dice rolls</a></li>
+  <li><a href="#baking-a-cake" id="toc-baking-a-cake" class="nav-link" data-scroll-target="#baking-a-cake">2) Baking a cake</a></li>
+  <li><a href="#balls-in-urns" id="toc-balls-in-urns" class="nav-link" data-scroll-target="#balls-in-urns">3) Balls in Urns</a></li>
+  <li><a href="#penguin-picking-clothes" id="toc-penguin-picking-clothes" class="nav-link" data-scroll-target="#penguin-picking-clothes">4) Penguin picking clothes</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides-fill"></i>Slides</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -342,7 +391,259 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </header>
 
 
+<section id="different-probability-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="different-probability-distributions">Different Probability Distributions</h2>
+<p>Yesterday we learned the axioms of probability, the “rules” that tell us how to compute probability. Let’s apply these rules in two different versions of the same situation.</p>
+<p>Consider a fair coin as a coin which is heads 50% of the time and tails 50% of the time. Assume each coin toss is independent. What is the probability of getting two heads in a row?</p>
+<p>The event two heads in a row, is the intersection of the event heads on toss 1 and heads on toss 2. The events are independent with probability 0.5 so we have <span class="math display">\[\begin{align*}
+P(\{\text{two heads on a fair coin}\}) &amp;= P(\{\text{heads on toss 1}\} \cap \{
+\text{heads on toss 2}\})\\
+&amp;=  P(\{\text{heads on toss 1}\}) P(\{\text{heads on toss 2}\})\\
+&amp;= (0.5)(0.5)\\
+&amp;= 0.25
+\end{align*}\]</span></p>
+<p>Now consider if I have “Curtis’ coin”, which I use to cheat at gambling so it returns heads <span class="math inline">\(70\%\)</span> of the time and tails <span class="math inline">\(30\%\)</span> of the time. In this case, the logic is the same until I plug in the numbers</p>
+<p><span class="math display">\[\begin{align*}
+P(\{\text{two heads on a Curtis' coin}\}) &amp;= P(\{\text{heads on toss 1}\} \cap \{
+\text{heads on toss 2}\})\\
+&amp;=  P(\{\text{heads on toss 1}\}) P(\{\text{heads on toss 2}\})\\
+&amp;= (0.7)(0.7)\\
+&amp;= 0.49 \approx 0.5
+\end{align*}\]</span></p>
+<p>Both of these computations follow the rules of probability we learned yesterday, they are both valid <strong>probability distributions</strong>.</p>
+<div class="def">
+<dl>
+<dt><strong>Probability Distribution</strong></dt>
+<dd>
+Any function <span class="math inline">\(P\)</span> that assigns probabilities to events that follows the axioms of probability.
+</dd>
+</dl>
+</div>
+<p>Today we will look at a very special probability distribution and one we encounter often in the wild: <em>the uniform distribution on a discrete state space</em>.</p>
+</section>
+<section id="uniform-distribution-equally-likely-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="uniform-distribution-equally-likely-outcomes">Uniform Distribution: Equally Likely Outcomes</h2>
+<p>Recall an experiment has a state space <span class="math inline">\(\Omega\)</span> of possible outcomes, for a coin it is <span class="math inline">\(\{H,T\}\)</span> for a dice it is <span class="math inline">\(\{1,2,3,4,5,6\}\)</span>. If we assume all outcomes are equally likely, this is called the <strong>uniform distribution</strong>.</p>
+<p>In a state space with <span class="math inline">\(N\)</span> outcomes, the probability of any one outcome is then <span class="math inline">\(1/N\)</span>. For a fair coin, the probability of heads is <span class="math inline">\(1/2\)</span>. For a fair dice, the probability of any one number is <span class="math inline">\(1/6\)</span>.</p>
+<p>For an event, which is a collection of outcomes, the probability of an event is the number of outcomes in the event divided by the total number of possible outcomes <span class="math display">\[P(\text{Event}) = \frac{\text{Number of outcomes in an event}}{\text{Total number of possible outcomes}}\]</span> Let’s look back at our coin outcome before. Using set theory rules, we computed the probability of 2 heads in a row is <span class="math inline">\(1/4\)</span>. Using this new rule, the total number of possible outcomes is <span class="math inline">\(HH, HT, TH, TT\)</span>. Only one of them has 2 heads in it, which agrees with our previous computation.</p>
+<p>So that’s it: computing probabilities for the uniform distribution boils down to counting the number of ways an event could happen, and dividing by the total number of things that could happen. This is a field of mathematics called <strong>combinatorics</strong>, and we will have to count some pretty big numbers.</p>
+<p>Recall I said last lecture the probability of getting dealt a pair in a game of poker is 42%, the actual number is</p>
+<p><span class="math display">\[P(\text{dealt a pair in poker}) = \frac{1,098,240}{2,598,960} \approx 0.42\]</span></p>
+<p>Wow, that’s a big number. Do I have to count to 1 million to compute that probability?</p>
+<p>No, we don’t. Today we will learn some specific math functions that allow us to count very large numbers easily:</p>
+<ul>
+<li>the <strong>exponential</strong>, ex. <span class="math inline">\(2^3\)</span>, means 2 times 2 times 2</li>
+<li>the <strong>factorial</strong>, ex <span class="math inline">\(5!\)</span>, means multiply all the numbers up to 5, so 5 times 4 times 3 times 2 times 1</li>
+<li>a function called <strong>n choose k</strong>, written as <span class="math inline">\(\binom{5}{3}\)</span> and said as “5 choose 3” which we will discuss shortly</li>
+</ul>
+<p>We will learn which situations use these kinds of functions, and learn to recognize those situations in counting problems in the wild.</p>
+<p>Note there are two numbers to figure out to compute this kind of probability:</p>
+<ul>
+<li>The bottom of the fraction, which is the total number of possible outcomes</li>
+<li>The top of the fraction, which is the total number of outcomes inside a particular event of interest</li>
+</ul>
+<p>The bottom number is usually simpler and easier to compute so I would recommend in most problems starting there. The top number must always be less than the bottom number, so if you ever get a fraction more than 1 a mistake has been made and it’s best to start over and try again.</p>
+<p>So let’s start with counting the bottom of the fraction and learning these new functions.</p>
+<section id="the-exponential-function" class="level3">
+<h3 class="anchored" data-anchor-id="the-exponential-function">The Exponential Function</h3>
+<p>The function <span class="math inline">\(n^k\)</span> means the number <span class="math inline">\(n\)</span> times itself <span class="math inline">\(k\)</span> times. So <span class="math inline">\(2^3\)</span> means <span class="math inline">\(2 \times 2 \times 2 = 8\)</span>, <span class="math inline">\(3^7\)</span> is 3 times itself 7 times which is 2,187.</p>
+<p>This type of computation comes up a lot when we repeat the same experiment many times in a row and do not change the outcome space of the experiment.</p>
+<p>When counting the total number of possible outcomes, a <strong>decision tree</strong> can be a useful tool. Let’s consider all the possible outcomes of tossing a coin 3 times.</p>
+<p>Well there will be three coin tosses, each will be a head or a tail. So we have three blank spaces ___ ___ ____ that will each get a head or a tail.</p>
+<p>Let’s consider what could happen in the first toss: I could get a head or a tail. Let’s write that as a tree that branches left or right to heads or tails.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/coin-tree-1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>Then, in the second toss, I could get a head or a tail again. Let’s branch on the branches, we now see 4 possible outcomes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/coin-tree-2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>Finally, in the third toss we can again get heads or tails. Each of the previous 4 branches gets 2 more, so 8 branches total at the bottom of our tree showing all the possible outcomes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/coin-tree-3.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>This is an example of a decision tree, we break our problem down into individual pieces and consider all the outcomes of the parts, and combine them together to write down all the possible outcomes at the bottom of the tree. The total number of outcomes is <span class="math inline">\(2^3 = 2\times 2 \times 2 = 8\)</span>.</p>
+<p>In general, when we have a list of <span class="math inline">\(\{1,\cdots, N\}\)</span> possible outcomes, and we pick an outcome <span class="math inline">\(K\)</span> times independently, there are <span class="math inline">\(N^K\)</span> total possible outcomes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/n-to-the-k.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>For example, if I roll a dice 3 times there are <span class="math inline">\(6^3\)</span> possible outcomes.</p>
+<p>This is an example of <em>sampling with replacement</em>. Imagine a bag of <span class="math inline">\(6\)</span> items, I reach into that bag and pick out an item at random and place that into the first slot, say I picked 3.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/replacement-bag.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>Now, 3 is “out of the bag” and not a valid choice for the next time. However, consider if I put the item back in the bag and pick a number again. Then, 3 is a valid choice and the number of possible outcomes for the second pick is the same as the first pick. I do this 3 times for <span class="math inline">\(n^3\)</span> possible outcomes.</p>
+</section>
+</section>
+<section id="the-factorial-function" class="level2">
+<h2 class="anchored" data-anchor-id="the-factorial-function">The Factorial Function</h2>
+<p>The notation <span class="math inline">\(n!\)</span> (n exclamation mark) means multiply all the numbers up to <span class="math inline">\(n\)</span>, so</p>
+<p><span class="math display">\[n! = (1)(2)(3)\cdots(n-2)(n-1)(n)\quad\quad \text{example,}\quad 5! = (1)(2)(3)(4)(5) = 120\]</span></p>
+<p>This is helpful in computing what are called <strong>permutations</strong> and sampling <strong>without</strong> replacement.</p>
+<p>Consider a list of letters “ABC”. How many ways can I re-order the letters and get a unique string (ex CBA, BAC, etc)</p>
+<p>Let’s make a decision tree. There are three slots to fill, each slot will get a letter <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, or <span class="math inline">\(C\)</span>. Let’s think of those letters as sitting in a bag and I pick a letter out of the bag one at a time. Once a letter is out of the bag, I do not put it back in so each letter can only be used once.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/factorial-bag.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>At the first pull, I can get A, B, or C so my decision tree has 3 branches. However, once I branch off say A again, I cannot pick A a second time. So now I only have 2 branches, not 3, off the first layer. Then, at the bottom layer once I have picked two outcomes, there is only one letter left in the bag so just one possible outcome.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/factorial-tree.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>We can see there are 3 times 2 times 1, <span class="math inline">\(3! = 6\)</span> possible reorderings of this list. A re-ordering of a set of objects is called a permutation.</p>
+<p>This is also an example of <em>sampling without replacement</em>. Imagine a bag of <span class="math inline">\(N\)</span> items. I will reach into the bag <span class="math inline">\(k\)</span> times and pull out an item and write down what I pull out. Each time I pull something out, I do not put it back so the set of options on the second pull is one less than the first pull. The total number of options in this case is <span class="math inline">\(N(N-1)(N-2)\cdots (N-K+1)\)</span>, which can also be written <span class="math display">\[N(N-1)(N-2)\cdots (N-K+1) =\frac{(N)(N-1)\cdots(2)(1)}{(N-K)(N-K-1)\cdots(2)(1)} = \frac{N!}{(N-K)!}\]</span></p>
+</section>
+<section id="the-n-choose-k-function" class="level2">
+<h2 class="anchored" data-anchor-id="the-n-choose-k-function">The N Choose K Function</h2>
+<p>Notice in the last few cases, the order of the objects was an important factor. In a coin toss, I consider <span class="math inline">\(HTH\)</span> a different outcome than <span class="math inline">\(HHT\)</span> even though both have 2 heads and 1 tails, they are in different orders.</p>
+<p>What if order did not matter to me? Imagine I have an amorphous blob of 5 items, maybe they are animal names like dog, cat, bird, fish, snake. How many ways can I pick 2 out of the 5 animals to make a new amorphous blob of 2 animals if order does not matter to me? Eg {cat, snake} is considered the same outcome as {snake, cat} in this situation. This is called a <strong>combination</strong>, when order is not relevant. In a <strong>permutation</strong> as discussed above, order was relevant.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/combination-bags.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>The answer is a function called “5 choose 2”, written <span class="math inline">\(\binom{5}{2}\)</span>, and defined in terms of factorials,</p>
+<p><span class="math display">\[\binom{5}{2} = \frac{5!}{2!(5-2)!} = 10\quad\quad \binom{n}{k} = \frac{n!}{k!(n-k)!}\]</span></p>
+<p>I will not ask you to memorize this function, I will explain once where it comes from. Most important though is to recognize when a situation calls for an n choose k operation, (a combination) and then <span class="math inline">\(R\)</span> or your calculator will have the built in function to find the number.</p>
+<p>Consider first, all the possible permutations of the 5 animals, which we discussed is <span class="math inline">\(5!\)</span> above. The ways the animals can be placed in 5 slots.</p>
+<p>Then, draw a line dividing the first two slots from the back 3, call the first animals the “in” group. We see, each initial “in” group appears <span class="math inline">\(3!\)</span> times for all the shuffling of the “out” group attached to it.</p>
+<p>Furthermore, the “in” group {snake, cat} appears again as {cat, snake} in this order dependent version. Each unique group will appear 2! times for each shuffling of the in group.</p>
+<p>So even though there are <span class="math inline">\(5!\)</span> order dependent arrangements of the animals, each unique group appears in the first two slots <span class="math inline">\((2!)(3!)\)</span> times, so to find the number of unique groups we have to divide <span class="math inline">\(5!\)</span> by <span class="math inline">\((2!)(3!)\)</span> which is exactly the 5 choose 2 operation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/n-choose-k.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>Here are some example situations where the n choose k function counts the number of outcomes,</p>
+<p><strong>Example 1</strong>: In 5 coin tosses, how many ways are there to get 3 heads out of 5? Well, there are 5 locations, and we need to pick 3 of them to be heads, so the total number of outcomes is 5 choose 3, <span class="math inline">\(\binom{5}{3}\)</span>.</p>
+<p><strong>Example 2</strong>: I have 30 friends, I want to make a team of 11 people to play soccer. How many unique soccer teams can I make? Answer: here, order does not matter to the definition of the soccer team. No matter what order I list the players’ names in, it is the same soccer team.m. So this is an example of a combination, and the total number of teams is <span class="math inline">\(\binom{30}{11}\)</span>.</p>
+</section>
+<section id="practice-examples" class="level2">
+<h2 class="anchored" data-anchor-id="practice-examples">Practice Examples</h2>
+<p>Combinatorics can seem quite confusing, and it is really a way of thinking you develop over time. The only way to get good at these counting type problems is to do many practice problems. Then you will start to recognize problems you have solved before and learn from your mistakes. A few useful things to keep in mind when counting the number of outcomes in an event:</p>
+<ol type="1">
+<li>Would a decision tree help here?</li>
+<li>Does this problem seem like sampling <em>with</em> replacement or <em>without</em> replacement? Is the set of possible outcomes changing with each step?</li>
+<li>Does order seem relevant to the outcome here?</li>
+</ol>
+</section>
+<section id="worked-examples" class="level2">
+<h2 class="anchored" data-anchor-id="worked-examples">Worked Examples</h2>
+<p>Feel free to try these problems yourself first, solutions are attached. We will also go over these in class, and have more problems like this in the worksheet.</p>
+<section id="sum-of-two-dice-rolls" class="level3">
+<h3 class="anchored" data-anchor-id="sum-of-two-dice-rolls">1) Sum of two dice rolls</h3>
+<p>Say I roll 2 dice and add up the sum of the dice. So rolling a 2 and a 4 adds up to 6.</p>
+<ol type="a">
+<li>What is the total number of outcomes?</li>
+<li>What is the probability of getting a 7?</li>
+<li>What is the probability of getting an 8?</li>
+<li>What is the probability of getting an 11?</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p><strong>a)</strong> Each die has 6 outcomes, and the two dice are independent, so there are <span class="math inline">\(6 \times 6 = 36\)</span> equally likely ordered outcomes (treating “die 1 = 2, die 2 = 4” as different from “die 1 = 4, die 2 = 2”).</p>
+<p><strong>b)</strong> A sum of 7 happens for <span class="math inline">\((1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\)</span> — 6 outcomes. So <span class="math display">\[P(\text{sum}=7) = \frac{6}{36} = \frac{1}{6} \approx 0.167.\]</span></p>
+<p><strong>c)</strong> A sum of 8 happens for <span class="math inline">\((2,6),(3,5),(4,4),(5,3),(6,2)\)</span> — 5 outcomes. So <span class="math display">\[P(\text{sum}=8) = \frac{5}{36} \approx 0.139.\]</span></p>
+<p><strong>d)</strong> A sum of 11 happens for <span class="math inline">\((5,6),(6,5)\)</span> — 2 outcomes. So <span class="math display">\[P(\text{sum}=11) = \frac{2}{36} = \frac{1}{18} \approx 0.056.\]</span></p>
+</details>
+<hr>
+</section>
+<section id="baking-a-cake" class="level3">
+<h3 class="anchored" data-anchor-id="baking-a-cake">2) Baking a cake</h3>
+<p>Say I am baking a cake.</p>
+<ul>
+<li>The <strong>flavor</strong> can be vanilla, chocolate, or strawberry (3 options)</li>
+<li>The <strong>icing</strong> can be buttercream, cream cheese, fondant, or whipped cream (4 options)</li>
+<li>The <strong>cake type</strong> can be an ice cream cake or a baked cake (2 options)</li>
+</ul>
+<p>I make a selection of each option, each equally likely.</p>
+<ol type="a">
+<li>How many different cakes could I make?</li>
+<li>Draw a decision tree to show all possible outcomes.</li>
+<li>What is the probability the cake is chocolate <strong>and</strong> an ice cream cake?</li>
+<li>What is the probability the cake is strawberry <strong>or</strong> has buttercream icing?</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p><strong>a)</strong> Independent choices multiply: <span class="math inline">\(3 \times 4 \times 2 = 24\)</span> possible cakes.</p>
+<p><strong>b)</strong> The tree branches 3 ways (flavor), then 4 ways off each (icing), then 2 ways off each (cake type), giving <span class="math inline">\(3 \times 4 \times 2 = 24\)</span> leaves. <em>(See the decision-tree figure.)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cake-tree.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="620"></p>
+</figure>
+</div>
+<p><strong>c)</strong> We can read off the 24 solutions at the bottom and count there are 4 which are both chocolate and ice cream. We can also see there is (1) choice for flavor, (1) choice for cake type, and (4) choices for icing since it is not specified. So in either case,</p>
+<p><span class="math display">\[P(\text{chocolate and ice cream}) = 4/24 = 1/6\]</span></p>
+<p><strong>d)</strong> We can again count the number of total cake options at the bottom of the decision tree and see 12 of them satisfy these conditions. We can also break the (or) down into three mutually exclusive events:</p>
+<ul>
+<li>flavor is strawberry (1) and icing is NOT butter cream (3), any cake type (2) = 6 outcomes</li>
+<li>flavor is strawberry (1) and icing IS butter cream (1), any cake type (2) = 2 outcomes</li>
+<li>flavor is NOT strawberry (2), icing IS butter cream (1), any cake type (2) = 4 outcomes</li>
+</ul>
+<p>So 12 outcomes in the event and 24 outcomes over all gives a 50% probability,</p>
+<p><span class="math display">\[P(\text{strawberry or buttercream}) = 12/24 = 1/2\]</span></p>
+</details>
+<hr>
+</section>
+<section id="balls-in-urns" class="level3">
+<h3 class="anchored" data-anchor-id="balls-in-urns">3) Balls in Urns</h3>
+<p>Say I have an urn with 4 red balls and 5 blue balls. I reach into the urn 3 times and pick a ball, and I do <strong>not</strong> replace the ball each time.</p>
+<ol type="a">
+<li>What is the probability I draw 3 red balls in a row?</li>
+<li>What is the probability I get at least 1 blue ball?</li>
+<li>What is the probability I draw more blue balls than red balls?</li>
+</ol>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>There are 9 balls total, and we draw 3 without replacement.</p>
+<p><strong>a)</strong> This is an example of sampling without replacement. Consider the events red ball on draw 1, red ball on draw 2, red ball on draw 3. The event in question requires all three to happen. Each time I take a red ball out of the urn, the number of red balls left decreases. The probability shrinks with each draw as red balls leave the urn: <span class="math display">\[P(\text{3 red}) = \frac{4}{9}\cdot\frac{3}{8}\cdot\frac{2}{7} = \frac{24}{504} = \frac{1}{21} \approx 0.048.\]</span></p>
+<p><strong>b)</strong> “At least 1 blue” is the <strong>complement</strong> of “no blue at all” — and “no blue” means “all red,” which we just found. So use the complement trick, <span class="math display">\[P(\text{at least 1 blue}) = 1 - P(\text{3 red}) = 1 - \frac{1}{21} = \frac{20}{21} \approx 0.952.\]</span></p>
+<p><strong>c)</strong> With 3 draws, “more blue than red” means 2 or 3 of the draws are blue. Getting 3 blues has probability (like the 3 red example above)</p>
+<p><span class="math display">\[P(BBB) = \frac{5}{9} \cdot\frac{4}{8} \cdot\frac{3}{7} = \frac{60}{504}\]</span> The probability of getting 2 blues is RBB, BRB, or BBR which all have probability</p>
+<p><span class="math display">\[P(RBB) = \frac{4}{9}\frac{5}{8}\frac{4}{7} = \frac{80}{504}\]</span> <span class="math display">\[P(BRB) = \frac{5}{9}\frac{4}{8}\frac{4}{7} = \frac{80}{504}\]</span> <span class="math display">\[P(BBR) = \frac{5}{9}\frac{4}{8}\frac{4}{7} = \frac{80}{504}\]</span> These are all mutually exclusive events, so add up the probabilities and we have: <span class="math display">\[P(\text{more blue than red}) = 3 \frac{80}{504}+\frac{60}{504}= \frac{300}{504} = \frac{25}{42}\]</span></p>
+</details>
+<hr>
+</section>
+<section id="penguin-picking-clothes" class="level3">
+<h3 class="anchored" data-anchor-id="penguin-picking-clothes">4) Penguin picking clothes</h3>
+<p>Every morning for 10 days, a penguin reaches into its wardrobe and picks one of <strong>3 bowties</strong> — red, blue, or green — at random, with each equally likely and each day independent of the others.</p>
+<p>What is the probability the penguin wears the <strong>red</strong> bowtie on <strong>exactly 4</strong> of the 10 days?</p>
+<details>
+<summary>
+Check your answer
+</summary>
+<p>This problem needs <em>both</em> tools from this chapter at once. This is honestly kind of a difficult counting problem and I probably won’t ask one this difficult on a test, but wanted to show how these tools interact together.</p>
+<p>First, the total number of equally likely 10-day outfit sequences is an <strong>exponential</strong> count: 3 choices each day, 10 days, so <span class="math inline">\(3^{10} = 59{,}049\)</span> sequences.</p>
+<p>Now count the favorable ones — exactly 4 red days. Two independent decisions:</p>
+<ol type="1">
+<li><strong>Which</strong> 4 of the 10 days are red? That is an <strong><span class="math inline">\(n\)</span>-choose-<span class="math inline">\(k\)</span></strong> count: <span class="math inline">\(\binom{10}{4} = 210\)</span> ways.</li>
+<li>Fill the other 6 days with <strong>non-red</strong> bowties. Each of those days has 2 choices (blue or green), so <span class="math inline">\(2^{6} = 64\)</span> ways.</li>
+</ol>
+<p>Multiplying, the number of favorable sequences is <span class="math inline">\(\binom{10}{4}\cdot 2^{6} = 210 \cdot 64 = 13{,}440\)</span>, and <span class="math display">\[P(\text{exactly 4 red}) = \frac{\binom{10}{4}\,2^{6}}{3^{10}} = \frac{13{,}440}{59{,}049} \approx 0.228.\]</span></p>
+</details>
 
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -770,8 +1071,8 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="../../license.html">
- License
-    </a>
+<p>License</p>
+</a>
   </li>  
 </ul>
     </div>

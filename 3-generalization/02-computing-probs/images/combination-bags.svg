@@ -1,0 +1,14 @@
+<svg viewBox="0 0 790 350" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<text x="395.0" y="30" font-size="15" fill="#20242a" text-anchor="middle">Picking 2 of 5 when order doesn’t matter &#8212; a <tspan font-style="italic">combination</tspan></text>
+<path d="M 138.9,78 L 211.1,78 L 211.1,106.8 C 270.0,132.0 270.0,258 175,258 C 80.0,258 80.0,132.0 138.9,106.8 Z" fill="#eadfce" stroke="#b7a37a" stroke-width="2"/><rect x="136.9" y="99.6" width="76.2" height="6" rx="3" fill="#cdbb93"/>
+<text x="175" y="70" font-size="13" fill="#555555" text-anchor="middle" font-style="italic">a bag of 5</text>
+<text x="175" y="132" font-size="17" fill="#5b6169" text-anchor="middle" font-weight="bold">dog</text><text x="175" y="158" font-size="17" fill="#9c3d5c" text-anchor="middle" font-weight="bold">cat</text><text x="175" y="184" font-size="17" fill="#5b6169" text-anchor="middle" font-weight="bold">bird</text><text x="175" y="210" font-size="17" fill="#5b6169" text-anchor="middle" font-weight="bold">fish</text><text x="175" y="236" font-size="17" fill="#2b6b62" text-anchor="middle" font-weight="bold">snake</text>
+<line x1="290" y1="168" x2="428" y2="168" stroke="#9aa3ab" stroke-width="3"/>
+<path d="M 426,160 L 438,168 L 426,176 Z" fill="#9aa3ab"/>
+<text x="364.0" y="152" font-size="14" fill="#20242a" text-anchor="middle" font-weight="bold">choose 2</text>
+<text x="364.0" y="194" font-size="12" fill="#555555" text-anchor="middle" font-style="italic">order doesn’t matter</text>
+<path d="M 556.5,120 L 613.5,120 L 613.5,139.2 C 660.0,156.0 660.0,240 585,240 C 510.0,240 510.0,156.0 556.5,139.2 Z" fill="#eadfce" stroke="#b7a37a" stroke-width="2"/><rect x="554.5" y="134.4" width="61.0" height="6" rx="3" fill="#cdbb93"/>
+<text x="585" y="112" font-size="13" fill="#555555" text-anchor="middle" font-style="italic">a bag of 2</text>
+<text x="585" y="172" font-size="17" fill="#9c3d5c" text-anchor="middle" font-weight="bold">cat</text><text x="585" y="200" font-size="17" fill="#2b6b62" text-anchor="middle" font-weight="bold">snake</text>
+<text x="395.0" y="305" font-size="16" fill="#20242a" text-anchor="middle"><tspan fill="#9c3d5c" font-weight="bold">{cat, snake}</tspan> is the same outcome as <tspan fill="#2b6b62" font-weight="bold">{snake, cat}</tspan></text>
+</svg>

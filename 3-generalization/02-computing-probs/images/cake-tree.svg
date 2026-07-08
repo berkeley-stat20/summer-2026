@@ -1,0 +1,129 @@
+<svg viewBox="0 0 760 743" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+<text x="180" y="46" font-size="13" fill="#555555" text-anchor="middle" font-style="italic" font-weight="bold">flavor (3)</text>
+<text x="352" y="46" font-size="13" fill="#555555" text-anchor="middle" font-style="italic" font-weight="bold">icing (4)</text>
+<text x="560" y="46" font-size="13" fill="#555555" text-anchor="middle" font-style="italic" font-weight="bold">cake type (2)</text>
+<line x1="66" y1="365.5" x2="164" y2="165.5" stroke="#b3b9bf" stroke-width="1.6"/>
+<line x1="66" y1="365.5" x2="164" y2="365.5" stroke="#b3b9bf" stroke-width="1.6"/>
+<line x1="66" y1="365.5" x2="164" y2="565.5" stroke="#b3b9bf" stroke-width="1.6"/>
+<line x1="196" y1="165.5" x2="339" y2="90.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="165.5" x2="339" y2="140.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="165.5" x2="339" y2="190.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="165.5" x2="339" y2="240.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="365.5" x2="339" y2="290.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="365.5" x2="339" y2="340.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="365.5" x2="339" y2="390.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="365.5" x2="339" y2="440.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="565.5" x2="339" y2="490.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="565.5" x2="339" y2="540.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="565.5" x2="339" y2="590.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="196" y1="565.5" x2="339" y2="640.5" stroke="#b3b9bf" stroke-width="1.4"/>
+<line x1="365" y1="90.5" x2="511" y2="78" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="90.5" x2="511" y2="103" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="140.5" x2="511" y2="128" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="140.5" x2="511" y2="153" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="190.5" x2="511" y2="178" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="190.5" x2="511" y2="203" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="240.5" x2="511" y2="228" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="240.5" x2="511" y2="253" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="290.5" x2="511" y2="278" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="290.5" x2="511" y2="303" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="340.5" x2="511" y2="328" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="340.5" x2="511" y2="353" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="390.5" x2="511" y2="378" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="390.5" x2="511" y2="403" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="440.5" x2="511" y2="428" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="440.5" x2="511" y2="453" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="490.5" x2="511" y2="478" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="490.5" x2="511" y2="503" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="540.5" x2="511" y2="528" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="540.5" x2="511" y2="553" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="590.5" x2="511" y2="578" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="590.5" x2="511" y2="603" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="640.5" x2="511" y2="628" stroke="#b3b9bf" stroke-width="1.2"/>
+<line x1="365" y1="640.5" x2="511" y2="653" stroke="#b3b9bf" stroke-width="1.2"/>
+<circle cx="52" cy="365.5" r="14" fill="#e2e6ea" stroke="#9aa3ab" stroke-width="2"/>
+<text x="52" y="345.5" font-size="12" fill="#555555" text-anchor="middle" font-style="italic">cake</text>
+<circle cx="180" cy="165.5" r="15" fill="#f4e8c6" stroke="#cbb26a" stroke-width="2.2"/>
+<text x="180" y="169.5" font-size="12" fill="#7a6420" text-anchor="middle" font-weight="bold">V</text>
+<text x="180" y="145.5" font-size="11.5" fill="#7a6420" text-anchor="middle" font-weight="bold">vanilla</text>
+<circle cx="180" cy="365.5" r="15" fill="#d8bda6" stroke="#8a5a3b" stroke-width="2.2"/>
+<text x="180" y="369.5" font-size="12" fill="#5c3a24" text-anchor="middle" font-weight="bold">C</text>
+<text x="180" y="345.5" font-size="11.5" fill="#5c3a24" text-anchor="middle" font-weight="bold">chocolate</text>
+<circle cx="180" cy="565.5" r="15" fill="#f3c1d3" stroke="#cf7a99" stroke-width="2.2"/>
+<text x="180" y="569.5" font-size="12" fill="#9c3d5c" text-anchor="middle" font-weight="bold">S</text>
+<text x="180" y="545.5" font-size="11.5" fill="#9c3d5c" text-anchor="middle" font-weight="bold">strawberry</text>
+<circle cx="352" cy="90.5" r="12" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.8"/>
+<text x="352" y="94.5" font-size="10.5" fill="#7a6420" text-anchor="middle" font-weight="bold">BC</text>
+<circle cx="352" cy="140.5" r="12" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.8"/>
+<text x="352" y="144.5" font-size="10.5" fill="#7a6420" text-anchor="middle" font-weight="bold">CC</text>
+<circle cx="352" cy="190.5" r="12" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.8"/>
+<text x="352" y="194.5" font-size="10.5" fill="#7a6420" text-anchor="middle" font-weight="bold">FD</text>
+<circle cx="352" cy="240.5" r="12" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.8"/>
+<text x="352" y="244.5" font-size="10.5" fill="#7a6420" text-anchor="middle" font-weight="bold">WH</text>
+<circle cx="352" cy="290.5" r="12" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.8"/>
+<text x="352" y="294.5" font-size="10.5" fill="#5c3a24" text-anchor="middle" font-weight="bold">BC</text>
+<circle cx="352" cy="340.5" r="12" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.8"/>
+<text x="352" y="344.5" font-size="10.5" fill="#5c3a24" text-anchor="middle" font-weight="bold">CC</text>
+<circle cx="352" cy="390.5" r="12" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.8"/>
+<text x="352" y="394.5" font-size="10.5" fill="#5c3a24" text-anchor="middle" font-weight="bold">FD</text>
+<circle cx="352" cy="440.5" r="12" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.8"/>
+<text x="352" y="444.5" font-size="10.5" fill="#5c3a24" text-anchor="middle" font-weight="bold">WH</text>
+<circle cx="352" cy="490.5" r="12" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.8"/>
+<text x="352" y="494.5" font-size="10.5" fill="#9c3d5c" text-anchor="middle" font-weight="bold">BC</text>
+<circle cx="352" cy="540.5" r="12" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.8"/>
+<text x="352" y="544.5" font-size="10.5" fill="#9c3d5c" text-anchor="middle" font-weight="bold">CC</text>
+<circle cx="352" cy="590.5" r="12" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.8"/>
+<text x="352" y="594.5" font-size="10.5" fill="#9c3d5c" text-anchor="middle" font-weight="bold">FD</text>
+<circle cx="352" cy="640.5" r="12" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.8"/>
+<text x="352" y="644.5" font-size="10.5" fill="#9c3d5c" text-anchor="middle" font-weight="bold">WH</text>
+<circle cx="520" cy="78" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="82" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="103" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="107" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="128" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="132" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="153" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="157" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="178" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="182" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="203" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="207" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="228" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="232" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="253" r="6" fill="#f4e8c6" stroke="#cbb26a" stroke-width="1.5"/>
+<text x="533" y="257" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="278" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="282" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="303" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="307" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="328" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="332" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="353" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="357" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="378" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="382" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="403" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="407" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="428" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="432" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="453" r="6" fill="#d8bda6" stroke="#8a5a3b" stroke-width="1.5"/>
+<text x="533" y="457" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="478" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="482" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="503" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="507" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="528" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="532" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="553" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="557" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="578" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="582" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="603" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="607" font-size="11" fill="#20242a">baked</text>
+<circle cx="520" cy="628" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="632" font-size="11" fill="#20242a">ice cream</text>
+<circle cx="520" cy="653" r="6" fill="#f3c1d3" stroke="#cf7a99" stroke-width="1.5"/>
+<text x="533" y="657" font-size="11" fill="#20242a">baked</text>
+<text x="52" y="687" font-size="11.5" fill="#555555">icing key:  BC = buttercream    CC = cream cheese    FD = fondant    WH = whipped cream</text>
+<text x="380.0" y="717" font-size="16" fill="#9c3d5c" text-anchor="middle" font-weight="bold">3 flavors &#215; 4 icings &#215; 2 types = 24 possible cakes</text>
+</svg>
