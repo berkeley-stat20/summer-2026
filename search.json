@@ -1346,7 +1346,7 @@
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Multiple Linear Regression\n\n\nWS: Probability Foundations I\n\n\nWS: Probability Foundations II\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Multiple Linear Regression\n\n\nWS: Probability Foundations I\n\n\nWS: Probability Foundations II\n\n\nWS: Probability Distributions\n\n\nNo matching items"
   },
   {
     "objectID": "4-causation/03-matching/notes.html",
@@ -1721,7 +1721,7 @@
     "href": "2-summarizing-data/06-multiple-linear-regression/notes.html#what-is-a-line-more-than-you-think-polynomial-regression",
     "title": "Multiple Linear Regression",
     "section": "What is “A Line”? More than you think! Polynomial Regression",
-    "text": "What is “A Line”? More than you think! Polynomial Regression\nLinear regression is a very powerful tool, and we need to expand a bit our idea of what “linear” means in this context. We probably all learned in high school that the equation for a line is\n\\[y = mx+b\\]\nand this is exactly what our linear model is fitting in a one variable model like\n\\[ \\widehat{price} =2.94 × food -17.83  \\]\nBut what is actually going on here in multiple linear regression is I have a data frame with some columns \\(y, x_{1},x_{2}, \\cdots, x_{N}\\). I want to fit a value \\(\\hat{y}\\) to explain the \\(y\\) column in terms of the \\(x\\) columns, and I can scale them in any way I want with \\(b_{i}\\) values, and a \\(b_{0}\\) intercept\n\\[\\hat{y} = b_{0}+b_{1} \\times x_{1}+\\cdots+b_{N} \\times x_{N}\\]\n“Linear” here means I am only allowed to scale my columns, once I pick my columns I am stuck with them.\nBut consider the following data example, which looks quite quadratic, not linear at all,\n\n\n\n\n\n\n\n\n\nWe can consider the data frame that made this and fit a linear model on \\(x\\) alone, but it will not be a great fit\n\n\n           x         y\n1 -2.7352140 -25.57385\n2  0.6655210  19.91533\n3 -0.7450830  22.55532\n4  0.2845784  16.67568\n5 -2.7661832 -20.16285\n6 -0.8787080  16.63158\n\n\n\n\n\n\n\n\n\nHowever, what if I mutate my data frame to make a new column called \\(z\\) which is x squared? Then I can fit a multiple linear regression\n\\[ \\hat{y} = b_{0}+b_{1} \\times x+b_{2} \\times z\\]\nYet \\(z\\) here is \\(x^2\\). There is no rule against this, multiple linear regression is just fitting scalings of my columns to the target data. So even though my new column happens to be x squared, that doesn’t really change anything we’ve discussed already. So really I am fitting\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2\\] which is the general form of a quadratic! So fitting a quadratic function IS linear regression! All I am doing is picking scalings of my data frame columns, and one of those columns so happens to be \\(x^2\\). Mind blown!\n\n\n\n\n\n\n\n\n\nHere is the linear model using \\(x\\) alone, and the one which uses the \\(x^2\\) column.\n\n\n          y          x      x_sqr     y_hat_1   y_hat_2\n1 -25.57385 -2.7352140 7.48139568 -0.08668091 -20.67451\n2  19.91533  0.6655210 0.44291826  3.62374571  18.90272\n3  22.55532 -0.7450830 0.55514867  2.08468351  16.81607\n4  16.67568  0.2845784 0.08098485  3.20811210  20.34140\n5 -20.16285 -2.7661832 7.65176936 -0.12047032 -21.57741\n6  16.63158 -0.8787080 0.77212775  1.93888980  15.56511\n\n\n\n\n\n\n\n\n\nWe can in general fit even higher order polynomials like cubic and get even more flexible fits\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2+b_3 \\times x^3\\]\n\n\n           y          x     x_sqr      x_cube   y_hat_3\n1  2.4174212 -1.4069480 1.9795027 -2.78505745  4.526963\n2  4.5938025 -0.7672566 0.5886827 -0.45167068  4.604353\n3 -5.6255616  0.4371202 0.1910741  0.08352232 -3.135866\n4 12.7144888  2.4492467 5.9988096 14.69256484 12.479627\n5 -0.9033124 -1.7899084 3.2037721 -5.73445869  1.289343\n6 15.8849226  2.3903381 5.7137163 13.65771377 10.764833\n\n\n\n\n\n\n\n\n\nAs long as I have columns in my data frame which are \\(y,x, x^2\\), and \\(x^3\\) as the values in those column, all I am doing is picking the coefficients (or scalings) of those columns. This is called polynomial regression, but really it is just a specific form of multiple linear regression where the column data happens to be polynomial values.\nSo you might think, I should always fit like 1 million degree polynomials to all my data and get perfect fits! But we have to be careful, more is not always better. We will discuss later in the course the idea of over fitting, when you fit the data too well. Adding more columns will always result in lower residuals, but that is not always the best course of action.\nWe are also starting to get into territory that is covered in the 4th unit of the course “prediction”, so we will stop here for now. But the take away is “linear” means a lot more than you think!",
+    "text": "What is “A Line”? More than you think! Polynomial Regression\nLinear regression is a very powerful tool, and we need to expand a bit our idea of what “linear” means in this context. We probably all learned in high school that the equation for a line is\n\\[y = mx+b\\]\nand this is exactly what our linear model is fitting in a one variable model like\n\\[ \\widehat{price} =2.94 × food -17.83  \\]\nBut what is actually going on here in multiple linear regression is I have a data frame with some columns \\(y, x_{1},x_{2}, \\cdots, x_{N}\\). I want to fit a value \\(\\hat{y}\\) to explain the \\(y\\) column in terms of the \\(x\\) columns, and I can scale them in any way I want with \\(b_{i}\\) values, and a \\(b_{0}\\) intercept\n\\[\\hat{y} = b_{0}+b_{1} \\times x_{1}+\\cdots+b_{N} \\times x_{N}\\]\n“Linear” here means I am only allowed to scale my columns, once I pick my columns I am stuck with them.\nBut consider the following data example, which looks quite quadratic, not linear at all,\n\n\n\n\n\n\n\n\n\nWe can consider the data frame that made this and fit a linear model on \\(x\\) alone, but it will not be a great fit\n\n\n            x           y\n1  2.86073431 -19.6567739\n2 -0.16385491  17.7898276\n3  0.08869814  18.5891509\n4 -1.05045502  16.9849179\n5  1.91501751   0.8597144\n6 -0.09419183  16.5007210\n\n\n\n\n\n\n\n\n\nHowever, what if I mutate my data frame to make a new column called \\(z\\) which is x squared? Then I can fit a multiple linear regression\n\\[ \\hat{y} = b_{0}+b_{1} \\times x+b_{2} \\times z\\]\nYet \\(z\\) here is \\(x^2\\). There is no rule against this, multiple linear regression is just fitting scalings of my columns to the target data. So even though my new column happens to be x squared, that doesn’t really change anything we’ve discussed already. So really I am fitting\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2\\] which is the general form of a quadratic! So fitting a quadratic function IS linear regression! All I am doing is picking scalings of my data frame columns, and one of those columns so happens to be \\(x^2\\). Mind blown!\n\n\n\n\n\n\n\n\n\nHere is the linear model using \\(x\\) alone, and the one which uses the \\(x^2\\) column.\n\n\n            y           x       x_sqr  y_hat_1    y_hat_2\n1 -19.6567739  2.86073431 8.183800808 7.435485 -18.646945\n2  17.7898276 -0.16385491 0.026848431 4.415447  19.322358\n3  18.5891509  0.08869814 0.007867361 4.667620  19.650024\n4  16.9849179 -1.05045502 1.103455755 3.530180  13.125567\n5   0.8597144  1.91501751 3.667292072 6.491191   3.048728\n6  16.5007210 -0.09419183 0.008872101 4.485005  19.476401\n\n\n\n\n\n\n\n\n\nWe can in general fit even higher order polynomials like cubic and get even more flexible fits\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2+b_3 \\times x^3\\]\n\n\n           y          x     x_sqr      x_cube   y_hat_3\n1  2.4174212 -1.4069480 1.9795027 -2.78505745  4.526963\n2  4.5938025 -0.7672566 0.5886827 -0.45167068  4.604353\n3 -5.6255616  0.4371202 0.1910741  0.08352232 -3.135866\n4 12.7144888  2.4492467 5.9988096 14.69256484 12.479627\n5 -0.9033124 -1.7899084 3.2037721 -5.73445869  1.289343\n6 15.8849226  2.3903381 5.7137163 13.65771377 10.764833\n\n\n\n\n\n\n\n\n\nAs long as I have columns in my data frame which are \\(y,x, x^2\\), and \\(x^3\\) as the values in those column, all I am doing is picking the coefficients (or scalings) of those columns. This is called polynomial regression, but really it is just a specific form of multiple linear regression where the column data happens to be polynomial values.\nSo you might think, I should always fit like 1 million degree polynomials to all my data and get perfect fits! But we have to be careful, more is not always better. We will discuss later in the course the idea of over fitting, when you fit the data too well. Adding more columns will always result in lower residuals, but that is not always the best course of action.\nWe are also starting to get into territory that is covered in the 4th unit of the course “prediction”, so we will stop here for now. But the take away is “linear” means a lot more than you think!",
     "crumbs": [
       "Notes",
       "Summarization",
@@ -3017,6 +3017,62 @@
       "Generalization",
       "Probability Foundations II"
     ]
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#agenda",
+    "href": "3-generalization/03-probability-dsns/slides.html#agenda",
+    "title": "Probability Distributions",
+    "section": "Agenda",
+    "text": "Agenda\n\nAnnouncements\nReview: Probability Foundations II\nBreak\nLecture: Probability Distributions\nBreak\nWorktime: Portfolio 3\nAppendix: more practice!"
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#announcements",
+    "href": "3-generalization/03-probability-dsns/slides.html#announcements",
+    "title": "Probability Distributions",
+    "section": "Announcements",
+    "text": "Announcements\n\nPortfolio 3 assignment due Friday at 11:59 pm.\n(4 worksheets in portfolio from this week Monday-Thursday)\n\n\n\nWe’ll be working on your Quiz 1 grades this week, should be done by Monday.\n\n\n\n\nQuiz 2 next Thursday."
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#section",
+    "href": "3-generalization/03-probability-dsns/slides.html#section",
+    "title": "Probability Distributions",
+    "section": "",
+    "text": "−+\n02:00\n\n\n\nConsider the box of tickets shown below.\n\n\n\n\n\nThe plots below show:\n\nThe probability histogram for the value of a ticket drawn at random from the box\nAn empirical histogram for which the data were generated by drawing 10 tickets from the box with replacement\nAn empirical histogram for which the data were generated by drawing 100 tickets from the box with replacement\nAn empirical histogram generated by 20 draws from a different box.\n\n\n\n\n\n\n\n\n\n\n\nIdentify which is which by matching the letters to the numbers.\n\n\nSince you have to scroll, maybe draw the box on the board. Scroll to see graphs\n\nB-1 the prob dsn of tickets\nD-2 emp dsn of 10 draws\nC-3 emp dsn of 100 draws\nA-4 emp dsn from different box"
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#section-1",
+    "href": "3-generalization/03-probability-dsns/slides.html#section-1",
+    "title": "Probability Distributions",
+    "section": "",
+    "text": "−+\n02:00"
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#section-2",
+    "href": "3-generalization/03-probability-dsns/slides.html#section-2",
+    "title": "Probability Distributions",
+    "section": "",
+    "text": "−+\n01:00\n\n\n\nDoes the quantity described below have a probability distribution that is binomial (if so, what are \\(n\\) and \\(p\\)?), hypergeometric (if so , what are \\(N\\), \\(G\\), and \\(n\\)?), or neither (why)?\n\n\nRoll a fair ten-sided die 20 times. We count the number of times we roll a multiple of 3.\n\n\n\nBinomial, hypergeometric, or neither?\n\n\nBinomial(20, 3/10). The pollev will have 4 choices, and then figuring out the parameters can be a classroom discussion. The fourth choice is “Need more info”"
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#section-3",
+    "href": "3-generalization/03-probability-dsns/slides.html#section-3",
+    "title": "Probability Distributions",
+    "section": "",
+    "text": "−+\n01:00\n\n\n\nDoes the quantity described below have a probability distribution that is binomial (if so, what are \\(n\\) and \\(p\\)?), hypergeometric (if so , what are \\(N\\), \\(G\\), and \\(n\\)?), or neither (why)?\n\n\nYouGov surveyed 1,500 adult US citizens last December and counted the number of respondents who had read at least one book in 2023. The population of the US is about 335 million.\n\nBinomial, hypergeometric, or neither?\n\n\nHypergeometric(\\(N = 335\\) mill, \\(n = 1500\\), G), where G is not known, being the number of people who have read at least one book . Can remark that we could use the binomial to model this rather than HG, and that we will discuss sample surveys in this unit. Disturbingly, only 54% of respondents had read at least one book. Here is the link: https://today.yougov.com/entertainment/articles/48239-54-percent-of-americans-read-a-book-this-year"
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#section-4",
+    "href": "3-generalization/03-probability-dsns/slides.html#section-4",
+    "title": "Probability Distributions",
+    "section": "",
+    "text": "−+\n01:00\n\n\n\nAre we describing a probability distribution below that is binomial? Or is it hypergeometric? Or do neither apply?\n\n\nA six-sided die is tossed twice, and we check if the sum of the spots is 8 or not.\n\n\n\nBinomial, hypergeometric, or neither?\n\n\nBinomial, with \\(n = 1, p = 5/36\\) or Bernoulli with \\(p = 5/36\\)."
+  },
+  {
+    "objectID": "3-generalization/03-probability-dsns/slides.html#section-5",
+    "href": "3-generalization/03-probability-dsns/slides.html#section-5",
+    "title": "Probability Distributions",
+    "section": "",
+    "text": "−+\n01:00\n\n\n\nAre we describing a probability distribution below that is binomial? Or is it hypergeometric? Or do neither apply?\n\nA bag that has 6 pieces of fruit: 2 mangoes, 3 apples, and 1 orange. I reach into the bag and draw out one fruit at a time, selecting each fruit at random (so all the fruit left in the bag are equally likely on each draw). I put the fruit away after I take it out (and don’t put it back into the bag). I count the number of draws until and including the first time I draw a apple.\n\nBinomial, hypergeometric, or neither?\n\n\nNeither. It would be useful at this point to write out what is going on, and point out that they are using the multiplication rule and a conditional probability."
   },
   {
     "objectID": "glossary-defs.html",
