@@ -228,7 +228,9 @@ STAT 20: Introduction to Probability and Statistics
 <h2>Agenda</h2>
 <ul>
 <li>Announcements</li>
-<li>Reading Questions</li>
+<li>Concept Questions</li>
+<li>Bootstrapping Lecture</li>
+<li><code>Infer</code> Package in <code>R</code></li>
 <li><em>Break</em></li>
 <li>Worksheet: <em>Bootstrapping</em></li>
 <li>Appendix</li>
@@ -237,27 +239,23 @@ STAT 20: Introduction to Probability and Statistics
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Portfolio 5 due Friday at 5pm</li>
+<li>Portfolio 5 due Friday at 11:59pm</li>
 </ul>
 <div class="fragment">
 <ul>
-<li>Lab 3 due Wednesday at 12pm</li>
+<li>Lab 3 due Friday July 31 at 11:59pm</li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li>Quiz 3 next Thursday.</li>
+<li>Quiz 3 next Thursday July 30.</li>
 </ul>
 </div>
 </section>
 <section>
-<section id="reading-questions" class="title-slide slide level1 center">
-<h1>Reading Questions</h1>
-<ul>
-<li>Please put your laptops under your desk and your phones away.</li>
-<li>Write your name, ID, and bubble in Version “A” on your answer sheet.</li>
-<li>You may work only with those at your table!</li>
-</ul>
+<section id="concept-questions" class="title-slide slide level1 center">
+<h1>Concept Questions</h1>
+
 </section>
 <section id="read-this-first." class="slide level2">
 <h2>Read this first.</h2>
@@ -273,7 +271,7 @@ STAT 20: Introduction to Probability and Statistics
 <li>C: 100</li>
 <li>D: The correct answer is not listed here.</li>
 </ul>
-<div id="timer_38c9ba94dab0a569139678ceada855a4b178845f" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_9a608e7e312b4b684c18b93a54aca02822a62b15" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -289,7 +287,7 @@ STAT 20: Introduction to Probability and Statistics
 <li>C: 50</li>
 <li>D: 20</li>
 </ul>
-<div id="timer_38c9ba94dab0a569139678ceada855a4b178845f" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_9a608e7e312b4b684c18b93a54aca02822a62b15" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -303,7 +301,7 @@ STAT 20: Introduction to Probability and Statistics
 <li>A: True</li>
 <li>B: False</li>
 </ul>
-<div id="timer_38c9ba94dab0a569139678ceada855a4b178845f" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_9a608e7e312b4b684c18b93a54aca02822a62b15" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -320,7 +318,7 @@ STAT 20: Introduction to Probability and Statistics
 <li>D: Within our table, there is no linear association between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</li>
 <li>E: In the population, there is a causal link between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</li>
 </ul>
-<div id="timer_38c9ba94dab0a569139678ceada855a4b178845f" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_9a608e7e312b4b684c18b93a54aca02822a62b15" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -330,23 +328,12 @@ STAT 20: Introduction to Probability and Statistics
 </section></section>
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
-<div id="timer_38c9ba94dab0a569139678ceada855a4b178845f" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_9a608e7e312b4b684c18b93a54aca02822a62b15" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
  </div>
  <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>
-</section>
-
-<section id="worksheet-bootstrapping" class="title-slide slide level1 center">
-<h1>Worksheet: <em>Bootstrapping</em></h1>
-<div id="timer_38c9ba94dab0a569139678ceada855a4b178845f" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">40</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
  </div>
 </section>
 
@@ -356,7 +343,7 @@ STAT 20: Introduction to Probability and Statistics
 </section>
 
 <section>
-<section id="concept-questions" class="title-slide slide level1 center">
+<section id="concept-questions-1" class="title-slide slide level1 center">
 <h1>Concept Questions</h1>
 
 </section>
@@ -365,7 +352,7 @@ STAT 20: Introduction to Probability and Statistics
 <div class="poll">
 <p>Which of these is a valid bootstrap sample?</p>
 </div>
-<div id="timer_38c9ba94dab0a569139678ceada855a4b178845f" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_9a608e7e312b4b684c18b93a54aca02822a62b15" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -912,7 +899,7 @@ STAT 20: Introduction to Probability and Statistics
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a27919d9" data-update-every="1" tabindex="0" style="right:0;bottom:0;font-size:2em;">
+<div class="countdown" id="timer_4daccfb1" data-update-every="1" tabindex="0" style="right:0;bottom:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -921,9 +908,19 @@ STAT 20: Introduction to Probability and Statistics
 </section>
 <section id="section-6" class="slide level2" data-background-image="images/infer-code.jpg" data-background-size="contain">
 <h2></h2>
-
-
 </section></section>
+<section id="worksheet-bootstrapping" class="title-slide slide level1 center">
+<h1>Worksheet: <em>Bootstrapping</em></h1>
+<div id="timer_9a608e7e312b4b684c18b93a54aca02822a62b15" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">40</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-vsmall.png" class="slide-logo"></p>
