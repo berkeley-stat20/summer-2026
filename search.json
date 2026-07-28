@@ -480,6 +480,78 @@
     "text": "Assuming that metro and smoking_ban variables are the only ones we have measured, name an unmeasured variable that could introduce confounding between median_edu and homeownership.\n\n\n\n\n−+\n02:00\n\n\n\n\nThere’s a free response question on PollEV if you want to use it; either I think this works best as a “pair-and-share” group discussion question followed by a brief class discussion (either with groups volunteering answers or you reviewing their submitted short-answers from Poll EV). Some interesting variables to discuss might include median age and whether or not a county contains a large university."
   },
   {
+    "objectID": "4-causation/01-defining-causality/notes.html",
+    "href": "4-causation/01-defining-causality/notes.html",
+    "title": "Defining Causality",
+    "section": "",
+    "text": "What exactly does it mean to say that “A causes B”?\nWe speak of causes and effects all the time, even though the language we use varies widely. “I took an aspirin and my headache got better” implies that taking the aspirin is what caused your headache to get better. “She was able to find a good job because she graduated from Berkeley” is more direct: graduating from Berkeley was the cause of her being able to find a good job.\nIdentifying a causal statement is one thing, but we’re still left the conundrum: what definition can we use to be precise about the meaning of a causal statement?\nLet’s see what your intuition tells you about what is a cause and what is not a cause. Which causes do you identify in the following scenario1?\nAs you ponder where to draw the line to determine which of the these four people are the cause of the death of the prisoner, you are working out your own internal definition of causation. Keep your answers on hand; we will discuss this example in class. For now, though, let’s introduce the most widely used definitions of cause and effect.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Defining Causality"
+    ]
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/notes.html#from-individual-level-claims-to-group-level-claims",
+    "href": "4-causation/01-defining-causality/notes.html#from-individual-level-claims-to-group-level-claims",
+    "title": "Defining Causality",
+    "section": "From individual-level claims to group-level claims",
+    "text": "From individual-level claims to group-level claims\nOur inability to observe both counterfactuals makes it hard to make reliable claims about causal effects for an individual. However, it can sometimes be easier to make a claim about the typical causal effect among a group of individuals. The distinction between individual and group level causation is demonstrated in following two statements.\n\nEvelyn got a good job because she graduated from Cal.\nGraduating from Cal helps people get a good job.\n\nThe first is a strong statement about a single individual, Evelyn. The second is a much more general statement that compares people who have have graduated from Cal with a counterfactual group who has not.\nGroup-level causation is the focus of many sciences, which aim to make general claims about the causal mechanisms of the world. The goal is to estimate the average treatment effect.\n\nAverage Treatment Effect\n\nA population parameter that captures the effect of being administered a particular treatment, averaged over each group. Most often estimated by a difference in sample means or a difference in sample proportions.\n\n\nIn statement two above, a natural estimate for the average treatment effect would be the difference between the proportion of Cal graduates who got a good job and the proportion of non-Cal graduates who got a good job. That can be visualized in a simple example of three students who graduated from Cal and three who did not. The difference in the proportion with a good job is \\(2/3 - 1/3 = 1/3\\).\n\n\n\n \n\n\n\n\n\n\n\n\n\nName\nCal Grad\nGood Job\n\n\n\n\nEvelyn\nTRUE\nTRUE\n\n\nGrace\nTRUE\nFALSE\n\n\nJuan\nTRUE\nTRUE\n\n\nAlex\nFALSE\nFALSE\n\n\nMonica\nFALSE\nFALSE\n\n\nSriya\nFALSE\nTRUE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCal Grad\nP(Good Job)\n\n\n\n\nTRUE\n0.67\n\n\nFALSE\n0.33\n\n\n\n\n\n\n\n\n \n\n\n\nIt is easier to come up with plausible-seeming estimates of average treatment effects than individual treatment effects because we see subjects under both treatment and control conditions. But to decide if estimates like the one we’ve just given are reliable we need to think about how the data for the two groups was generated and whether they serve as good approximations to each other’s counterfactuals.\nThis question will be the focus of the rest of the causality unit.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Defining Causality"
+    ]
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/notes.html#summary",
+    "href": "4-causation/01-defining-causality/notes.html#summary",
+    "title": "Defining Causality",
+    "section": "Summary",
+    "text": "Summary\nWe set the stage for reasoning about causation by defining cause and effect in terms of a conditional counterfactual. We say “A causes B” if, in a world where A didn’t happen, B no longer happens. This definition is problematic because we can’t simultaneously observe the same subjects under A and not-A. However, there is more hope to say something meaningful about average treatment treatment effects, which can also be defined using counterfactuals.\nIn the remainder of the causality unit, we will discuss strategies for estimating average treatment effects using carefully-designed comparisons that leverage knowledge about how the data was produced. \n\n\n\n\n\n\nIllustration by Mayaan Hayal3",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Defining Causality"
+    ]
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/notes.html#footnotes",
+    "href": "4-causation/01-defining-causality/notes.html#footnotes",
+    "title": "Defining Causality",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis example appears in The Book of Why (2018) by Pearl and Mackenzie, as do subsequent historical quotations from Thucydides and Hume.↩︎\nAn a historical aside, Evelyn Fix is the name of a past professor of statistics at UC Berkeley and the co-inventor of the k-nearest neighbors algorithm.↩︎\nA drawing from “The Book of Why” depicting the notion of potential outcomes described in Robert Frost’s poem The Road Not Taken.↩︎",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Defining Causality"
+    ]
+  },
+  {
+    "objectID": "4-causation/notes.html",
+    "href": "4-causation/notes.html",
+    "title": "Causation",
+    "section": "",
+    "text": "At the beginning of this course, we considered four different claims associated with the following news article1.\nEach one of these four claims illustrates a different type of claim made using data. As a brief recap of where we are in this course, let’s take them each in turn.\nThis is a claim concerning the nature of the data that is on hand, a descriptive claim. While these seem like the most straightforward type of claim, don’t underestimate their utility or the challenges involved in crafting them. Deciding which measure is most appropriate is tricky work and the process of wrangling the data takes careful thought and time.\nThis claim looks deceptively like the first but there is one important difference. The first claim concerns the CPI, which is calculated using data from the US. This second claim is about the broader global population of which the US data is a subset. In other words, this is a generalization from a sample to a population.\nFor a generalization to be sound, we must take several considerations into account. First off: is the sample representative of the population or is it biased in some way? Secondly: what sources of variability are present? When working with a sample that originated from a chance method, it’s important to consider the degree to which sampling variability might be able to explain the structure you see in the data. Our primary tools in this area are the confidence interval, to assess the uncertainty in a statistic, and the hypothesis test, to assess whether a particular statistic is consistent with an assertion about the state of the population parameters.\nThis is a prediction, a claim that uses the structure of the data at hand to predict the value of observations about which we have only partial information. In midsummer, we know the date will be July 15th, that’s the x-coordinate. But what will the y-coordinate be, the Consumer Price Index? Now we recognize this as a regression problem.\nThis bring us to the final claim, which is one concerning causation. The claim asserts that the structure in the data (the rise in the CPI) can be attributed to specific cause (the war in Ukraine). Causal claims are often the most challenging claims to craft but they are also some of the most useful. Uncovering causes and effects is at the heart of many sciences from Economics to Biomedicine. They also help guide decision making for individuals (is it worth my time to study for the final?) as well as for organizations (will Twitter’s new option to pay for verification result in a net increase in revenue for the company?).\nFor the remainder of Stat 20, we lay the foundation for causation, first by defining it precisely, then identifying a few of the most powerful strategies for inferring it from data.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Causation"
+    ]
+  },
+  {
+    "objectID": "4-causation/notes.html#footnotes",
+    "href": "4-causation/notes.html#footnotes",
+    "title": "Causation",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSmialek, Jeanna (2022, May 11). Consumer Prices are Still Climbing Rapidly. The New York Times. https://www.nytimes.com/2022/05/11/business/economy/april-2022-cpi.html↩︎",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Causation"
+    ]
+  },
+  {
     "objectID": "4-causation/labs/taste-test/slides.html#making-claims-with-data",
     "href": "4-causation/labs/taste-test/slides.html#making-claims-with-data",
     "title": "Lab: A Matter of Taste",
@@ -599,7 +671,7 @@
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Multiple Linear Regression\n\n\nWS: Probability Foundations I\n\n\nWS: Probability Foundations II\n\n\nWS: Probability Distributions\n\n\nWS: Random Variables\n\n\nWS: Expected Value and Variance\n\n\nWS: Continuous Distributions and Normal Approximations\n\n\nWS: Sampling Distributions\n\n\nWS: Bootstrapping\n\n\nWS: Hypothesis Testing\n\n\nWS: Hypothesis Tests II\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Multiple Linear Regression\n\n\nWS: Probability Foundations I\n\n\nWS: Probability Foundations II\n\n\nWS: Probability Distributions\n\n\nWS: Random Variables\n\n\nWS: Expected Value and Variance\n\n\nWS: Continuous Distributions and Normal Approximations\n\n\nWS: Sampling Distributions\n\n\nWS: Bootstrapping\n\n\nWS: Hypothesis Testing\n\n\nWS: Hypothesis Tests II\n\n\nWS: Wrong by Design\n\n\nNo matching items"
   },
   {
     "objectID": "2-summarizing-data/06-multiple-linear-regression/slides.html#agenda",
@@ -1866,6 +1938,125 @@
       "Generalization",
       "Generalization"
     ]
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#agenda",
+    "href": "3-generalization/12-wrong-by-design/slides.html#agenda",
+    "title": "Wrong By Design",
+    "section": "Agenda",
+    "text": "Agenda\n\nAnnouncements\nReading Questions: Wrong By Design\nBreak\nWorksheet: Wrong By Design\nBreak\nLab 3: People’s Park"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#announcements",
+    "href": "3-generalization/12-wrong-by-design/slides.html#announcements",
+    "title": "Wrong By Design",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 3 (both parts) due tomorrow. You are only required to finish the portions mentioned on Ed.\n\n\n\nQuiz 3 on Thursday.\n\n\n\n\nPortfolio 6 (Mon., Tue., Wed.) due Friday at 5pm."
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#read-this-first.",
+    "href": "3-generalization/12-wrong-by-design/slides.html#read-this-first.",
+    "title": "Wrong By Design",
+    "section": "Read this first.",
+    "text": "Read this first.\n\nA patient named Ana was diagnosed with Fibromyalgia, a long-term syndrome of body pain, and was prescribed anti-depressants. Being the skeptic that she is, Ana didn’t initially believe that anti-depressants would help her symptoms. However, after a couple months of being on the medication she would like to re-evaluates this belief.\n\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#let-anas-null-hypothesis-be-that-anti-depressants-would-not-help-her-symptoms.-describe-a-type-i-error.",
+    "href": "3-generalization/12-wrong-by-design/slides.html#let-anas-null-hypothesis-be-that-anti-depressants-would-not-help-her-symptoms.-describe-a-type-i-error.",
+    "title": "Wrong By Design",
+    "section": "Let Ana’s null hypothesis be that anti-depressants would not help her symptoms. Describe a Type I error.",
+    "text": "Let Ana’s null hypothesis be that anti-depressants would not help her symptoms. Describe a Type I error.\n\nA: Deciding that the anti-depressants helped her symptoms when in fact they did not help.\nB: Deciding that the anti-depressants helped her symptoms when they did help.\nC: Deciding that the anti-depressants did not help her symptoms when in fact they did help.\nD: The correct answer is not here.\n\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#let-anas-null-hypothesis-be-that-anti-depressants-would-not-help-her-symptoms.-describe-a-type-ii-error.",
+    "href": "3-generalization/12-wrong-by-design/slides.html#let-anas-null-hypothesis-be-that-anti-depressants-would-not-help-her-symptoms.-describe-a-type-ii-error.",
+    "title": "Wrong By Design",
+    "section": "Let Ana’s null hypothesis be that anti-depressants would not help her symptoms. Describe a Type II error.",
+    "text": "Let Ana’s null hypothesis be that anti-depressants would not help her symptoms. Describe a Type II error.\n\nA: Deciding that the anti-depressants helped her symptoms when in fact they did not help.\nB: Deciding that the anti-depressants did not help when they did not help.\nC: Deciding that the anti-depressants helped her symptoms when they did help.\nD: The correct answer is not here.\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#which-of-the-following-is-not-an-upside-of-a-two-tailed-two-sided-hypothesis-test-as-compared-to-a-one-tailed-hypothesis-test",
+    "href": "3-generalization/12-wrong-by-design/slides.html#which-of-the-following-is-not-an-upside-of-a-two-tailed-two-sided-hypothesis-test-as-compared-to-a-one-tailed-hypothesis-test",
+    "title": "Wrong By Design",
+    "section": "Which of the following is not an upside of a two-tailed (two-sided) hypothesis test as compared to a one-tailed hypothesis test?",
+    "text": "Which of the following is not an upside of a two-tailed (two-sided) hypothesis test as compared to a one-tailed hypothesis test?\n\nA: A two-tailed hypothesis tests removes “confirmation bias”.\nB: A two-tailed hypothesis test results in a lower p-value than the corresponding one-tailed test.\nC: A two-tailed hypothesis tests helps ensure that we are not inflating the type I error rate.\nD: All of these are upsides.\n\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#read-this-first.-1",
+    "href": "3-generalization/12-wrong-by-design/slides.html#read-this-first.-1",
+    "title": "Wrong By Design",
+    "section": "Read this first.",
+    "text": "Read this first.\n\nA study of 40 California voters failed to find any significant difference in the proportion that supported increased funding for NASA when comparing Republicans to Democrats (that is, the study retained the null hypothesis)."
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#based-on-just-the-information-above-which-of-the-statements-below-do-we-know-is-false",
+    "href": "3-generalization/12-wrong-by-design/slides.html#based-on-just-the-information-above-which-of-the-statements-below-do-we-know-is-false",
+    "title": "Wrong By Design",
+    "section": "Based on just the information above, which of the statements below do we know is false?",
+    "text": "Based on just the information above, which of the statements below do we know is false?\n\nA: The sample of California voters may have been biased.\nB: The study may have had lower power as a result of the small sample size.\nC: The researchers may have committed a Type I error.\nD. The researchers may have committed a Type II error.\n\n\n  \n    −\n    +\n \n 00:40"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "Instead of constructing a confidence interval to learn about the parameter, we could assert the value of a parameter and see whether it is consistent with the data using a hypothesis test. Say you are interested in testing whether there is a clear majority opinion of support or opposition to the project.\n\n\nWhat are the null and alternative hypotheses?\n\n\n  \n    −\n    +\n \n 01:00\n \n\nThe null is the p = .5 and the alternative is that p != .5.\nThis brings up a good discussion of one- and two-tailed tests. When students share their answers, you can draw a picture of a null distribution on the board with the observed statistic as a vertical line and consider how the p-value calculation would change depending on the alternative hypothesis.\nThis also brings up a discussion of the link between hypothesis tests and confidence intervals. Below the picture of the null distribution on the board, you could draw a bootstrap distribution centered on the vertical line of the observed statistic. In the HT setting, you consider the location of the statistic relative to the null distribution. In making a decision with a CI, you consider the location of the parameter relative to the bootstrap distribution (or more generally, the sampling distribution of the statistic)."
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-1",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-1",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(infer)\nlibrary(stat20data)\n\nppk &lt;- ppk |&gt;\n  mutate(support_before = Q18_words %in% c(\"Somewhat support\", \n                                          \"Strongly support\",\n                                          \"Very strongly support\"))"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-2",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-2",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(infer)\nlibrary(stat20data)\n\nppk &lt;- ppk |&gt;\n  mutate(support_before = Q18_words %in% c(\"Somewhat support\", \n                                          \"Strongly support\",\n                                          \"Very strongly support\"))\nobs_stat &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  calculate(stat = \"prop\")"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-3",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-3",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(infer)\nlibrary(stat20data)\n\nppk &lt;- ppk |&gt;\n  mutate(support_before = Q18_words %in% c(\"Somewhat support\", \n                                          \"Strongly support\",\n                                          \"Very strongly support\"))\nobs_stat &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  calculate(stat = \"prop\")\nobs_stat\n\nResponse: support_before (factor)\n# A tibble: 1 × 1\n   stat\n  &lt;dbl&gt;\n1 0.339"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-4",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-4",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-5",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-5",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n       &lt;int&gt; &lt;dbl&gt;\n 1         1 0.498\n 2         2 0.489\n 3         3 0.504\n 4         4 0.501\n 5         5 0.487\n 6         6 0.496\n 7         7 0.524\n 8         8 0.508\n 9         9 0.519\n10        10 0.508\n# ℹ 490 more rows"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-6",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-6",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nvisualize(null) +\n  shade_p_value(obs_stat, direction = \"both\")"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-7",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-7",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "What would a Type I error be in this context?\n\n\nAnswer: Concluding that there is a clear majority one way or another when in fact there is an even split.\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "3-generalization/12-wrong-by-design/slides.html#section-8",
+    "href": "3-generalization/12-wrong-by-design/slides.html#section-8",
+    "title": "Wrong By Design",
+    "section": "",
+    "text": "What would a Type II error be in this context?\n\n\nAnswer: Concluding that there is an even split when in fact there is a clear majority.\nAfter the previous question, students should get this quite easily."
   },
   {
     "objectID": "3-generalization/06-normal-approx/notes.html",
@@ -3225,7 +3416,7 @@
     "href": "3-generalization/09-bootstrapping/tutorial.html",
     "title": "Bootstrapping",
     "section": "",
-    "text": "This tutorial utilizes several functions from the infer library, which can be used to calculate confidence intervals via the bootstrap and conduct hypothesis tests via a few different methods. It can be loaded with library(infer).\nFor a comprehensive list of templates that you can use to form intervals, see the online documentation: https://infer.netlify.app/articles/observed_stat_examples.html.\n\nspecify()\nThe specify function allows you to specify which column of a data frame you are using as your response variable (your variable of interest). When looking at the relationship between two variables you will specify both the response and the explanatory variables. As such, the main arguments are response and explanatory.\n\npenguins |&gt;\n  specify(response = bill_length_mm)\n\nResponse: bill_length_mm (numeric)\n# A tibble: 342 × 1\n   bill_length_mm\n            &lt;dbl&gt;\n 1           39.1\n 2           39.5\n 3           40.3\n 4           36.7\n 5           39.3\n 6           38.9\n 7           39.2\n 8           34.1\n 9           42  \n10           37.8\n# ℹ 332 more rows\n\n\nObserve that the output of specify is essentially the same data frame that went in. the only difference is that bill_length_mm is tagged as the response variable. That will be useful for downstream functions.\n\nWorking with categorical response variables\nbill_length_mm is numerical. Say you’re working with a categorical variable and want to estimate a proportion. Since there are usually at least two levels (options) in a categorical variable, the specify() function will ask you: “the proportion of what level?” You need to tell specify() which level explicitly. This can be done with the additional success argument! Below, we are telling infer that we are interested in estimating the proportion of all Antarctic penguins that are female. Make sure the column name is in quotes.\n\npenguins |&gt;\n  specify(response = sex, success = \"female\")\n\nResponse: sex (factor)\n# A tibble: 333 × 1\n   sex   \n   &lt;fct&gt; \n 1 male  \n 2 female\n 3 female\n 4 female\n 5 male  \n 6 female\n 7 male  \n 8 female\n 9 male  \n10 male  \n# ℹ 323 more rows\n\n\n\n\n\ngenerate()\nThe generate function generates many replicate data frames using simulation, the bootstrap procedure, or shuffling. Note that it must follow specify() so that it knows which column(s) to use.\nUseful functions include:\n\nreps: the number of data set replicates to generate. Generally set this to 500 when making confidence intervals.\ntype: the mechanism used to generate new data. Either \"bootstrap\", \"draw\", or \"permute\". Today, we’ll be using the bootstrap; the other two argument choices will be explained in subsequent lectures!\n\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 2, type = \"bootstrap\")\n\nResponse: bill_length_mm (numeric)\n# A tibble: 684 × 2\n# Groups:   replicate [2]\n   replicate bill_length_mm\n       &lt;int&gt;          &lt;dbl&gt;\n 1         1           49.8\n 2         1           41.3\n 3         1           33.1\n 4         1           39.6\n 5         1           45.3\n 6         1           41.1\n 7         1           45.4\n 8         1           46.6\n 9         1           47.2\n10         1           49.1\n# ℹ 674 more rows\n\n\nObserve:\n\nthe output data frame has two columns, replicate, which keeps track of the replicate (1 or 2 here) and bill_length_mm.\nthe number of rows in the resulting data frame is the \\(n \\times reps\\), so this data frame is contains all of the bootstrap replicate stapled together one on top of another.\n\n\n\ncalculate()\nThe third link in an infer pipeline is the calculate function, which calculates a single summary statistic for each replicate data frame. The main argument is stat, which can take values \"mean\", \"median\", \"prop\" (for proportion), \"diff in means\", \"diff in props\" and a few more.\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 2, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: bill_length_mm (numeric)\n# A tibble: 2 × 2\n  replicate  stat\n      &lt;int&gt; &lt;dbl&gt;\n1         1  43.7\n2         2  44.0\n\n\nObserve:\n\nThe name of the summary statistic should be put in quotation marks.\nThe resulting data frame had reps rows, one statistic from every replicate.\nThe calculate function is a shortcut for an operation you’re familiar with:\ndf |&gt;\n  group_by(replicate) |&gt;\n  summarize(mean(bill_length_mm))\n\n\n\nvisualize()\nNow imagine that we have a distribution of many bootstrapped statistics (a bootstrap sampling distribution). Let’s put that distribution on a histogram! Normally, we’d have to use ggplot() to do this, but the infer library offers a nifty function called visualize() which does this for us in one easy step (and even titles the plot appropriately!) Here, we’ll plot a sampling distribution of 500 bootstrapped means.\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 500, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\") |&gt;\n  visualize()\n\n\n\n\n\n\n\n\nHere is a nice visual which sums up what we’ve done so far!\n\n\n\n\n\n\n\nget_ci()\nThe moment we’ve been waiting for is here– it’s time to calculate the confidence interval! For a 95 percent confidence interval, we’ll leave out 5 percent of the sampling distribution: 2.5 percent on the low side, counting up from 0 percent, and 2.5 percent on the high side, counting down from 100 percent. Therefore, we’ll take the 2.5th percentile and the 97.5th percentile of our distribution as the lower and upper bound, respectively.\nLuckily, the get_ci() function does this work for us! Its level argument allows us to specify the confidence level we’d like.\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 500, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\") |&gt;\n  get_ci(level = 0.95)\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     43.3     44.4\n\n\n\n\nfit()\nIf you would like to create bootstrapped coefficients for a linear model, you’ll have to do something a bit different since there is a more than 1 summary statistic involved for each replicate data set. This is the role of fit(). There are no arguments to fill-in; it inherits the formula for the linear model from specify().\n\npenguins_adelie &lt;- penguins |&gt;\n  filter(species == \"Adelie\")\n\npenguins_adelie |&gt;\n  specify(body_mass_g ~ sex + flipper_length_mm) |&gt;\n  generate(reps = 2, type = \"bootstrap\") |&gt;\n  fit()\n\n# A tibble: 6 × 3\n# Groups:   replicate [2]\n  replicate term              estimate\n      &lt;int&gt; &lt;chr&gt;                &lt;dbl&gt;\n1         1 intercept            166. \n2         1 sexmale              633. \n3         1 flipper_length_mm     17.0\n4         2 intercept            641. \n5         2 sexmale              520. \n6         2 flipper_length_mm     14.6\n\n\nObserve:\n\nThe data frame has a number of rows equal to reps times the number of coefficients in the linear model (in this case \\(2 \\times 3\\)).\nTo get the collection of all coefficients for flipper_length_mm, for example, follow your infer pipeline with filter(term == \"flipper_length_mm\").",
+    "text": "This tutorial utilizes several functions from the infer library, which can be used to calculate confidence intervals via the bootstrap and conduct hypothesis tests via a few different methods. It can be loaded with library(infer).\nFor a comprehensive list of templates that you can use to form intervals, see the online documentation: https://infer.netlify.app/articles/observed_stat_examples.html.\n\nspecify()\nThe specify function allows you to specify which column of a data frame you are using as your response variable (your variable of interest). When looking at the relationship between two variables you will specify both the response and the explanatory variables. As such, the main arguments are response and explanatory.\n\npenguins |&gt;\n  specify(response = bill_length_mm)\n\nResponse: bill_length_mm (numeric)\n# A tibble: 342 × 1\n   bill_length_mm\n            &lt;dbl&gt;\n 1           39.1\n 2           39.5\n 3           40.3\n 4           36.7\n 5           39.3\n 6           38.9\n 7           39.2\n 8           34.1\n 9           42  \n10           37.8\n# ℹ 332 more rows\n\n\nObserve that the output of specify is essentially the same data frame that went in. the only difference is that bill_length_mm is tagged as the response variable. That will be useful for downstream functions.\n\nWorking with categorical response variables\nbill_length_mm is numerical. Say you’re working with a categorical variable and want to estimate a proportion. Since there are usually at least two levels (options) in a categorical variable, the specify() function will ask you: “the proportion of what level?” You need to tell specify() which level explicitly. This can be done with the additional success argument! Below, we are telling infer that we are interested in estimating the proportion of all Antarctic penguins that are female. Make sure the column name is in quotes.\n\npenguins |&gt;\n  specify(response = sex, success = \"female\")\n\nResponse: sex (factor)\n# A tibble: 333 × 1\n   sex   \n   &lt;fct&gt; \n 1 male  \n 2 female\n 3 female\n 4 female\n 5 male  \n 6 female\n 7 male  \n 8 female\n 9 male  \n10 male  \n# ℹ 323 more rows\n\n\n\n\n\ngenerate()\nThe generate function generates many replicate data frames using simulation, the bootstrap procedure, or shuffling. Note that it must follow specify() so that it knows which column(s) to use.\nUseful functions include:\n\nreps: the number of data set replicates to generate. Generally set this to 500 when making confidence intervals.\ntype: the mechanism used to generate new data. Either \"bootstrap\", \"draw\", or \"permute\". Today, we’ll be using the bootstrap; the other two argument choices will be explained in subsequent lectures!\n\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 2, type = \"bootstrap\")\n\nResponse: bill_length_mm (numeric)\n# A tibble: 684 × 2\n# Groups:   replicate [2]\n   replicate bill_length_mm\n       &lt;int&gt;          &lt;dbl&gt;\n 1         1           43.5\n 2         1           37.9\n 3         1           45.8\n 4         1           47.2\n 5         1           40.1\n 6         1           36.9\n 7         1           45.1\n 8         1           44.5\n 9         1           49.3\n10         1           45.2\n# ℹ 674 more rows\n\n\nObserve:\n\nthe output data frame has two columns, replicate, which keeps track of the replicate (1 or 2 here) and bill_length_mm.\nthe number of rows in the resulting data frame is the \\(n \\times reps\\), so this data frame is contains all of the bootstrap replicate stapled together one on top of another.\n\n\n\ncalculate()\nThe third link in an infer pipeline is the calculate function, which calculates a single summary statistic for each replicate data frame. The main argument is stat, which can take values \"mean\", \"median\", \"prop\" (for proportion), \"diff in means\", \"diff in props\" and a few more.\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 2, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\nResponse: bill_length_mm (numeric)\n# A tibble: 2 × 2\n  replicate  stat\n      &lt;int&gt; &lt;dbl&gt;\n1         1  44.2\n2         2  43.7\n\n\nObserve:\n\nThe name of the summary statistic should be put in quotation marks.\nThe resulting data frame had reps rows, one statistic from every replicate.\nThe calculate function is a shortcut for an operation you’re familiar with:\ndf |&gt;\n  group_by(replicate) |&gt;\n  summarize(mean(bill_length_mm))\n\n\n\nvisualize()\nNow imagine that we have a distribution of many bootstrapped statistics (a bootstrap sampling distribution). Let’s put that distribution on a histogram! Normally, we’d have to use ggplot() to do this, but the infer library offers a nifty function called visualize() which does this for us in one easy step (and even titles the plot appropriately!) Here, we’ll plot a sampling distribution of 500 bootstrapped means.\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 500, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\") |&gt;\n  visualize()\n\n\n\n\n\n\n\n\nHere is a nice visual which sums up what we’ve done so far!\n\n\n\n\n\n\n\nget_ci()\nThe moment we’ve been waiting for is here– it’s time to calculate the confidence interval! For a 95 percent confidence interval, we’ll leave out 5 percent of the sampling distribution: 2.5 percent on the low side, counting up from 0 percent, and 2.5 percent on the high side, counting down from 100 percent. Therefore, we’ll take the 2.5th percentile and the 97.5th percentile of our distribution as the lower and upper bound, respectively.\nLuckily, the get_ci() function does this work for us! Its level argument allows us to specify the confidence level we’d like.\n\npenguins |&gt;\n  specify(response = bill_length_mm) |&gt;\n  generate(reps = 500, type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\") |&gt;\n  get_ci(level = 0.95)\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     43.3     44.5\n\n\n\n\nfit()\nIf you would like to create bootstrapped coefficients for a linear model, you’ll have to do something a bit different since there is a more than 1 summary statistic involved for each replicate data set. This is the role of fit(). There are no arguments to fill-in; it inherits the formula for the linear model from specify().\n\npenguins_adelie &lt;- penguins |&gt;\n  filter(species == \"Adelie\")\n\npenguins_adelie |&gt;\n  specify(body_mass_g ~ sex + flipper_length_mm) |&gt;\n  generate(reps = 2, type = \"bootstrap\") |&gt;\n  fit()\n\n# A tibble: 6 × 3\n# Groups:   replicate [2]\n  replicate term              estimate\n      &lt;int&gt; &lt;chr&gt;                &lt;dbl&gt;\n1         1 intercept           -678. \n2         1 sexmale              601. \n3         1 flipper_length_mm     21.5\n4         2 intercept            407. \n5         2 sexmale              570. \n6         2 flipper_length_mm     15.8\n\n\nObserve:\n\nThe data frame has a number of rows equal to reps times the number of coefficients in the linear model (in this case \\(2 \\times 3\\)).\nTo get the collection of all coefficients for flipper_length_mm, for example, follow your infer pipeline with filter(term == \"flipper_length_mm\").",
     "crumbs": [
       "Tutorials",
       "R Tutorials",
@@ -3465,7 +3656,7 @@
     "href": "3-generalization/06-normal-approx/slides.html#sample",
     "title": "Normal Approximations",
     "section": "Sample",
-    "text": "Sample\nSay we have a list of numbers, sample by defualt will pick one number from that list WITHOUT REPLACEMENT\n\nmy_vec &lt;- c(-1,-1,0,1,2)\nsample(my_vec, size = 1)\n\n[1] 2\n\n\nWe can sample more that one time with size command, sample 3 times WITHOUT replacement,\n\nsample(x = my_vec, size = 3)\n\n[1]  0 -1  2\n\n\nSample 20 times WITH REPLACEMENT\n\nsample(x = my_vec, size = 20, replace = TRUE)\n\n [1]  2  2 -1 -1  2  2  2  0  2 -1 -1  0  0  1  0  1 -1 -1  1  1"
+    "text": "Sample\nSay we have a list of numbers, sample by defualt will pick one number from that list WITHOUT REPLACEMENT\n\nmy_vec &lt;- c(-1,-1,0,1,2)\nsample(my_vec, size = 1)\n\n[1] 0\n\n\nWe can sample more that one time with size command, sample 3 times WITHOUT replacement,\n\nsample(x = my_vec, size = 3)\n\n[1]  1  0 -1\n\n\nSample 20 times WITH REPLACEMENT\n\nsample(x = my_vec, size = 20, replace = TRUE)\n\n [1]  2 -1  2  2  1  2  1  2  0  2  1  0  1 -1  1  0  1  2 -1  0"
   },
   {
     "objectID": "3-generalization/06-normal-approx/slides.html#non-uniform-probability-and-rep",
@@ -3479,14 +3670,14 @@
     "href": "3-generalization/06-normal-approx/slides.html#use-the-rep-function-vs-p-agrument",
     "title": "Normal Approximations",
     "section": "Use the rep function vs p agrument",
-    "text": "Use the rep function vs p agrument\nThe rep function makes vector with a number repeated an amount of times,\n\nrep(-1,4)\n\n[1] -1 -1 -1 -1\n\n\n\nSo, let’s make a vector with four -1’s, four 0’s, and one 2 and sample that once with uniform probability,\n\n\nmy_vec &lt;- c(rep(-1,4), rep(0,4), 2)\nsample(my_vec, size = 1)\n\n[1] -1\n\n\n\nWe can also pass sample a p argument of probabilities, and it will pick each option with that probability\n\n\nsample(x = c(-1,0,2), p = c(4/9, 4/9, 1/9), size = 1)\n\n[1] 0"
+    "text": "Use the rep function vs p agrument\nThe rep function makes vector with a number repeated an amount of times,\n\nrep(-1,4)\n\n[1] -1 -1 -1 -1\n\n\n\nSo, let’s make a vector with four -1’s, four 0’s, and one 2 and sample that once with uniform probability,\n\n\nmy_vec &lt;- c(rep(-1,4), rep(0,4), 2)\nsample(my_vec, size = 1)\n\n[1] 0\n\n\n\nWe can also pass sample a p argument of probabilities, and it will pick each option with that probability\n\n\nsample(x = c(-1,0,2), p = c(4/9, 4/9, 1/9), size = 1)\n\n[1] -1"
   },
   {
     "objectID": "3-generalization/06-normal-approx/slides.html#using-replicate",
     "href": "3-generalization/06-normal-approx/slides.html#using-replicate",
     "title": "Normal Approximations",
     "section": "Using Replicate",
-    "text": "Using Replicate\nLet’s write code to sample 5 times with replacement from my previous vector and count the mean value,\n\nmy_sample &lt;- sample(my_vec, size = 5)\nmean(my_sample)\n\n[1] 0\n\n\nNow let’s repeat this 1000 times, so I sample 5 times, compute the mean each time, and do this 1000 times. Then let’s compute the variance of this list. Use replicate\n\nmany_samples &lt;- replicate(1000,mean(sample(my_vec, size = 5)))\nvar(many_samples)\n\n[1] 0.08333578"
+    "text": "Using Replicate\nLet’s write code to sample 5 times with replacement from my previous vector and count the mean value,\n\nmy_sample &lt;- sample(my_vec, size = 5)\nmean(my_sample)\n\n[1] -0.6\n\n\nNow let’s repeat this 1000 times, so I sample 5 times, compute the mean each time, and do this 1000 times. Then let’s compute the variance of this list. Use replicate\n\nmany_samples &lt;- replicate(1000,mean(sample(my_vec, size = 5)))\nvar(many_samples)\n\n[1] 0.08228629"
   },
   {
     "objectID": "3-generalization/12-wrong-by-design/notes.html",
@@ -4066,7 +4257,7 @@
     "href": "2-summarizing-data/06-multiple-linear-regression/notes.html#what-is-a-line-more-than-you-think-polynomial-regression",
     "title": "Multiple Linear Regression",
     "section": "What is “A Line”? More than you think! Polynomial Regression",
-    "text": "What is “A Line”? More than you think! Polynomial Regression\nLinear regression is a very powerful tool, and we need to expand a bit our idea of what “linear” means in this context. We probably all learned in high school that the equation for a line is\n\\[y = mx+b\\]\nand this is exactly what our linear model is fitting in a one variable model like\n\\[ \\widehat{price} =2.94 × food -17.83  \\]\nBut what is actually going on here in multiple linear regression is I have a data frame with some columns \\(y, x_{1},x_{2}, \\cdots, x_{N}\\). I want to fit a value \\(\\hat{y}\\) to explain the \\(y\\) column in terms of the \\(x\\) columns, and I can scale them in any way I want with \\(b_{i}\\) values, and a \\(b_{0}\\) intercept\n\\[\\hat{y} = b_{0}+b_{1} \\times x_{1}+\\cdots+b_{N} \\times x_{N}\\]\n“Linear” here means I am only allowed to scale my columns, once I pick my columns I am stuck with them.\nBut consider the following data example, which looks quite quadratic, not linear at all,\n\n\n\n\n\n\n\n\n\nWe can consider the data frame that made this and fit a linear model on \\(x\\) alone, but it will not be a great fit\n\n\n            x          y\n1 -0.07984997  20.541711\n2  1.81943812   3.528123\n3 -1.42072783  12.010140\n4  0.89441573  16.870806\n5  2.91730147 -19.253447\n6 -2.33386767 -11.778503\n\n\n\n\n\n\n\n\n\nHowever, what if I mutate my data frame to make a new column called \\(z\\) which is x squared? Then I can fit a multiple linear regression\n\\[ \\hat{y} = b_{0}+b_{1} \\times x+b_{2} \\times z\\]\nYet \\(z\\) here is \\(x^2\\). There is no rule against this, multiple linear regression is just fitting scalings of my columns to the target data. So even though my new column happens to be x squared, that doesn’t really change anything we’ve discussed already. So really I am fitting\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2\\] which is the general form of a quadratic! So fitting a quadratic function IS linear regression! All I am doing is picking scalings of my data frame columns, and one of those columns so happens to be \\(x^2\\). Mind blown!\n\n\n\n\n\n\n\n\n\nHere is the linear model using \\(x\\) alone, and the one which uses the \\(x^2\\) column.\n\n\n           y           x       x_sqr  y_hat_1    y_hat_2\n1  20.541711 -0.07984997 0.006376017 4.845903  19.540234\n2   3.528123  1.81943812 3.310355072 4.609106   4.981529\n3  12.010140 -1.42072783 2.018467565 5.013080   8.175706\n4  16.870806  0.89441573 0.799979495 4.724435  16.561535\n5 -19.253447  2.91730147 8.510647880 4.472227 -19.825316\n6 -11.778503 -2.33386767 5.446938297 5.126928  -9.816581\n\n\n\n\n\n\n\n\n\nWe can in general fit even higher order polynomials like cubic and get even more flexible fits\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2+b_3 \\times x^3\\]\n\n\n           y          x     x_sqr      x_cube   y_hat_3\n1  2.4174212 -1.4069480 1.9795027 -2.78505745  4.526963\n2  4.5938025 -0.7672566 0.5886827 -0.45167068  4.604353\n3 -5.6255616  0.4371202 0.1910741  0.08352232 -3.135866\n4 12.7144888  2.4492467 5.9988096 14.69256484 12.479627\n5 -0.9033124 -1.7899084 3.2037721 -5.73445869  1.289343\n6 15.8849226  2.3903381 5.7137163 13.65771377 10.764833\n\n\n\n\n\n\n\n\n\nAs long as I have columns in my data frame which are \\(y,x, x^2\\), and \\(x^3\\) as the values in those column, all I am doing is picking the coefficients (or scalings) of those columns. This is called polynomial regression, but really it is just a specific form of multiple linear regression where the column data happens to be polynomial values.\nSo you might think, I should always fit like 1 million degree polynomials to all my data and get perfect fits! But we have to be careful, more is not always better. We will discuss later in the course the idea of over fitting, when you fit the data too well. Adding more columns will always result in lower residuals, but that is not always the best course of action.\nWe are also starting to get into territory that is covered in the 4th unit of the course “prediction”, so we will stop here for now. But the take away is “linear” means a lot more than you think!",
+    "text": "What is “A Line”? More than you think! Polynomial Regression\nLinear regression is a very powerful tool, and we need to expand a bit our idea of what “linear” means in this context. We probably all learned in high school that the equation for a line is\n\\[y = mx+b\\]\nand this is exactly what our linear model is fitting in a one variable model like\n\\[ \\widehat{price} =2.94 × food -17.83  \\]\nBut what is actually going on here in multiple linear regression is I have a data frame with some columns \\(y, x_{1},x_{2}, \\cdots, x_{N}\\). I want to fit a value \\(\\hat{y}\\) to explain the \\(y\\) column in terms of the \\(x\\) columns, and I can scale them in any way I want with \\(b_{i}\\) values, and a \\(b_{0}\\) intercept\n\\[\\hat{y} = b_{0}+b_{1} \\times x_{1}+\\cdots+b_{N} \\times x_{N}\\]\n“Linear” here means I am only allowed to scale my columns, once I pick my columns I am stuck with them.\nBut consider the following data example, which looks quite quadratic, not linear at all,\n\n\n\n\n\n\n\n\n\nWe can consider the data frame that made this and fit a linear model on \\(x\\) alone, but it will not be a great fit\n\n\n            x             y\n1  0.01561966  20.974487911\n2 -1.88209409   3.787356302\n3 -2.50732682 -13.206243401\n4 -0.26068912  16.981311483\n5 -1.92708080  -0.004047904\n6  0.17335905  21.652530266\n\n\n\n\n\n\n\n\n\nHowever, what if I mutate my data frame to make a new column called \\(z\\) which is x squared? Then I can fit a multiple linear regression\n\\[ \\hat{y} = b_{0}+b_{1} \\times x+b_{2} \\times z\\]\nYet \\(z\\) here is \\(x^2\\). There is no rule against this, multiple linear regression is just fitting scalings of my columns to the target data. So even though my new column happens to be x squared, that doesn’t really change anything we’ve discussed already. So really I am fitting\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2\\] which is the general form of a quadratic! So fitting a quadratic function IS linear regression! All I am doing is picking scalings of my data frame columns, and one of those columns so happens to be \\(x^2\\). Mind blown!\n\n\n\n\n\n\n\n\n\nHere is the linear model using \\(x\\) alone, and the one which uses the \\(x^2\\) column.\n\n\n              y           x        x_sqr  y_hat_1     y_hat_2\n1  20.974487911  0.01561966 0.0002439739 4.868424  19.8542025\n2   3.787356302 -1.88209409 3.5422781719 4.244745   0.4920983\n3 -13.206243401 -2.50732682 6.2866877703 4.039264 -13.7316395\n4  16.981311483 -0.26068912 0.0679588182 4.777615  19.2630160\n5  -0.004047904 -1.92708080 3.7136404055 4.229960  -0.4015148\n6  21.652530266  0.17335905 0.0300533589 4.920264  19.8512147\n\n\n\n\n\n\n\n\n\nWe can in general fit even higher order polynomials like cubic and get even more flexible fits\n\\[ \\hat{y} = b_{0}+b_{1}\\times x+b_{2}\\times x^2+b_3 \\times x^3\\]\n\n\n           y          x     x_sqr      x_cube   y_hat_3\n1  2.4174212 -1.4069480 1.9795027 -2.78505745  4.526963\n2  4.5938025 -0.7672566 0.5886827 -0.45167068  4.604353\n3 -5.6255616  0.4371202 0.1910741  0.08352232 -3.135866\n4 12.7144888  2.4492467 5.9988096 14.69256484 12.479627\n5 -0.9033124 -1.7899084 3.2037721 -5.73445869  1.289343\n6 15.8849226  2.3903381 5.7137163 13.65771377 10.764833\n\n\n\n\n\n\n\n\n\nAs long as I have columns in my data frame which are \\(y,x, x^2\\), and \\(x^3\\) as the values in those column, all I am doing is picking the coefficients (or scalings) of those columns. This is called polynomial regression, but really it is just a specific form of multiple linear regression where the column data happens to be polynomial values.\nSo you might think, I should always fit like 1 million degree polynomials to all my data and get perfect fits! But we have to be careful, more is not always better. We will discuss later in the course the idea of over fitting, when you fit the data too well. Adding more columns will always result in lower residuals, but that is not always the best course of action.\nWe are also starting to get into territory that is covered in the 4th unit of the course “prediction”, so we will stop here for now. But the take away is “linear” means a lot more than you think!",
     "crumbs": [
       "Notes",
       "Summarization",
