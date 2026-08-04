@@ -2,6 +2,8 @@
   {
     "listing": "/assignments.html",
     "items": [
+      "/5-prediction/labs/07-baseball/slides.html",
+      "/5-prediction/labs/07-baseball/part-1.pdf",
       "/2-summarizing-data/labs/flights/slides.html",
       "/2-summarizing-data/labs/flights/part-1.pdf",
       "/2-summarizing-data/labs/flights/part-2.html",
@@ -28,6 +30,7 @@
       "/2-summarizing-data/05-summarizing-associations/ws.pdf",
       "/2-summarizing-data/02-summarizing-numerical-data/ws.pdf",
       "/1-questions-and-data/02-taxonomy-of-data/ws.pdf",
+      "/5-prediction/01-method-of-least-squares/ps.pdf",
       "/3-generalization/12-wrong-by-design/ws.pdf"
     ]
   },
