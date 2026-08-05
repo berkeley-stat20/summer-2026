@@ -161,7 +161,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -530,7 +530,7 @@ window.Quarto = {
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides-fill"></i>Slides</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -553,7 +553,7 @@ window.Quarto = {
 
 
 <p><span class="dropcap">I</span>n the last lecture we built our first prediction machine: a line drawn through a scatter plot that that minimizes the sum of squared residuals. In these lecture notes we focus on two questions: How can we evaluate the quality of our predictions? and How can we improve them?</p>
-<section id="evaluating-the-fit-to-your-data" class="level2 page-columns page-full">
+<section id="evaluating-the-fit-to-your-data" class="level2">
 <h2 class="anchored" data-anchor-id="evaluating-the-fit-to-your-data">Evaluating the fit to your data</h2>
 <p>Once you have fit a linear model to a scatter plot, you are able to answer questions such as:</p>
 <blockquote class="blockquote">
@@ -572,37 +572,42 @@ window.Quarto = {
 <p>From the plot above, we can tell that the model yields a prediction around roughly 82.5%. To be more precise, we could plug the x-value into our equation for the line and solve.</p>
 <p><span class="math display">\[ \hat{y} = 96.2 + -0.89 \cdot 15 = 82.85 \]</span></p>
 <p>So how good of a prediction is 82.85%? Until we observe a state with a poverty rate of 15%, we’ll never know! What we <em>can</em> know, however, is how well our model explains the structure found in the data that we <em>have</em> observed. For those observations, we have both the predicted (or fitted) values <span class="math inline">\(\hat{y}_i\)</span> as well as their actual y-values <span class="math inline">\(y_i\)</span>. These can be used to calculate a statistic that measures the explanatory power of our model.</p>
-<section id="measuring-explanatory-power-r2" class="level3 page-columns page-full">
+<section id="measuring-explanatory-power-r2" class="level3">
 <h3 class="anchored" data-anchor-id="measuring-explanatory-power-r2">Measuring explanatory power: <span class="math inline">\(R^2\)</span></h3>
-<p><span class="math inline">\(R^2\)</span> is a statistic that captures how good the predictions from your linear model are (<span class="math inline">\(\hat{y}\)</span>) by comparing them another even simpler model: <span class="math inline">\(\bar{y}\)</span>. To understand how this statistic is constructed please watch this short video, “R^2”, found in the Media Gallery on bCourses (14 minutes).</p>
-<p><br>
-</p>
-<p><a href="https://bcourses.berkeley.edu/courses/1541593/external_tools/90481"><img src="images/r2-thumbnail.png" class="img-fluid" width="400"></a></p>
-<p><br>
-</p>
+<p><span class="math inline">\(R^2\)</span> is a statistic that captures how good the predictions from your linear model are (<span class="math inline">\(\hat{y}\)</span>) by comparing them to another even simpler model: the mean of the y <span class="math inline">\(\bar{y}\)</span>. <span class="math inline">\(R^{2}\)</span> is always between 0 and 1. An <span class="math inline">\(R^{2}\)</span> of 0 means, my model is no better at fitting the data than the mean of <span class="math inline">\(y\)</span> itself <span class="math inline">\(\bar{y}\)</span>. An <span class="math inline">\(R^{2}\)</span> of 1 means my model fits the data perfectly and the residuals are all 0. It is constructed as follows.</p>
 <dl>
 <dt><strong>R-squared (<span class="math inline">\(R^2\)</span>)</strong></dt>
 <dd>
-<p>A statistic that measures the proportion of the total variability in the y-variable (total sum of squares, TSS) that is explained away using our model involving x (sum of squares due to regression, SSR).</p>
+A statistic that measures the proportion of the total variability in the y-variable (total sum of squares, TSS) that is explained away using our model involving x (sum of squares due to regression, SSR).
+</dd>
+</dl>
+<p>For a single point index <span class="math inline">\(i\)</span>, there are three values: the data point <span class="math inline">\(y_{i}\)</span>, the fit value <span class="math inline">\(\hat{y}_{i}\)</span>, and the overall mean of all the y values <span class="math inline">\(\bar{y}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/r-squared.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Residual Sum of Squares (RSS) is the sum of the distances from the data value <span class="math inline">\(y_{i}\)</span> to the fit value <span class="math inline">\(\hat{y}_{i}\)</span></p>
+<p><span class="math display">\[RSS = \sum_{i} (y_{i}-\hat{y}_{i})^{2}\]</span> Total Sum of Squares (TSS) is the distance from <span class="math inline">\(y_{i}\)</span> to it’s mean value <span class="math inline">\(\bar{y}\)</span>, also the variance (times <span class="math inline">\(n\)</span>) of the y data</p>
+<p><span class="math display">\[TSS = \sum_{i}(y_{i} - \bar{y})^{2}\]</span></p>
+<p>Finally, the Sum of Squares due to Regression (SSR, NOT RSS) is kind of a funny one. It is the distance from the fit values to the mean of the data,</p>
+<p><span class="math display">\[SSR = \sum_{i}(\hat{y}_{i} - \bar{y})^{2}\]</span> Now, there is a special property of linear regression that is not immediately obvious. It turns out, RSS+SSR = TSS.</p>
+<p><span class="math display">\[ \sum_{i}(y_{i} - \hat{y}_{i})^{2}+\sum_{i}(\hat{y}_{i} - \bar{y})^{2} = \sum_{i}(y_{i}-\bar{y})^{2}\]</span> Think of this like a “y hat sandwich”. The distance from <span class="math inline">\(y\)</span> to <span class="math inline">\(\hat{y}\)</span> plus the distance from <span class="math inline">\(\hat{y}\)</span> to <span class="math inline">\(\bar{y}\)</span> equals the distance from <span class="math inline">\(y\)</span> to <span class="math inline">\(\bar{y}\)</span>. Why is this the case? It is a special property of <span class="math inline">\(\hat{y}\)</span> being the best possible fit to <span class="math inline">\(y\)</span> (the minimizer of RSS), that the residuals are what is called <strong>orthogonal</strong> to the fit values minus the mean of <span class="math inline">\(y\)</span>. This property is what makes the above true. It is a higher dimensional form of Pythagoras theorem for a right angle (orthogonal) triangle <span class="math inline">\(a^2+b^2 = c^2\)</span>,</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rss_ssr_tss_triangle.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p><span class="math inline">\(R^{2}\)</span> is then defined as 1 minus the ratio of SSR over TSS</p>
+<p><span class="math display">\[R^2 = 1 - \frac{RSS}{TSS} = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2}\]</span> Think of this ratio as how much better does <span class="math inline">\(\hat{y}\)</span> fit the data than the basic mean estimate <span class="math inline">\(\bar{y}\)</span>, and then 1 minus this ratio. It is also equal to,</p>
 <p><span class="math display">\[R^2 = \frac{SSR}{TSS} = \frac{\sum_{i=1}^n (\hat{y}_i - \bar{y})^2}{\sum_{i=1}^n (y_i - \bar{y})^2}\]</span></p>
-<p>Because the total variablity is composed of the explained and the unexplain variability, <span class="math inline">\(R^2\)</span> can be equivalent formulated as 1 minus the proportion of total variability that is <em>unexplained</em> by the model, which uses the more familiar residual sum of squares (RSS).</p>
-<p><span class="math display">\[R^2 = 1 - \frac{RSS}{TSS} = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2}\]</span></p>
 <p><span class="math inline">\(R^2\)</span> has the following properties:</p>
 <ol type="1">
 <li>Always takes values between 0 and 1.</li>
 <li><span class="math inline">\(R^2\)</span> near 1 means predictions were more accurate.</li>
 <li><span class="math inline">\(R^2\)</span> near 0 means predictions were less accurate.</li>
 </ol>
-</dd>
-</dl>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/r-squared.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:1.8in"></p>
-</figure>
-</div>
-</div></div><section id="example-poverty-and-graduation" class="level4">
+<section id="example-poverty-and-graduation" class="level4">
 <h4 class="anchored" data-anchor-id="example-poverty-and-graduation">Example: Poverty and Graduation</h4>
 <p>To fit the least squares linear regression model to predict graduation rate using the poverty rate, we turn to the familiar <code>lm()</code> function.</p>
 <p>For this particular model, <span class="math inline">\(R^2 = .56\)</span>. This means that poverty rate is able to explain about 56% of the variability found in graduation rates. That’s a good start!</p>
