@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
     "listing": "/assignments.html",
     "items": [
       "/5-prediction/labs/07-baseball/slides.html",
@@ -37,9 +41,5 @@
       "/5-prediction/01-method-of-least-squares/ps.pdf",
       "/3-generalization/12-wrong-by-design/ws.pdf"
     ]
-  },
-  {
-    "listing": "/index.html",
-    "items": []
   }
 ]
