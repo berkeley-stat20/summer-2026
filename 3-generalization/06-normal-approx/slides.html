@@ -290,14 +290,14 @@ STAT 20: Introduction to Probability and Statistics
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">sample</span>(<span class="at">x =</span> my_vec, <span class="at">size =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -1  2  1</code></pre>
+<pre><code>[1]  0 -1  2</code></pre>
 </div>
 </div>
 <p>Sample 20 times WITH REPLACEMENT</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">sample</span>(<span class="at">x =</span> my_vec, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  2  0 -1  1  1  0  0 -1 -1 -1  0  2 -1  0  0  1  2  2  0 -1</code></pre>
+<pre><code> [1]  1 -1 -1 -1  1 -1  0 -1  1  1 -1  1  0  1 -1 -1  2 -1  1  1</code></pre>
 </div>
 </div>
 </section>
@@ -344,7 +344,7 @@ STAT 20: Introduction to Probability and Statistics
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>my_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">4</span>), <span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">4</span>), <span class="dv">2</span>)</span>
 <span id="cb9-2"><a></a><span class="fu">sample</span>(my_vec, <span class="at">size =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
+<pre><code>[1] 2</code></pre>
 </div>
 </div>
 <ol start="2" type="1">
@@ -364,7 +364,7 @@ STAT 20: Introduction to Probability and Statistics
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>my_sample <span class="ot">&lt;-</span> <span class="fu">sample</span>(my_vec, <span class="at">size =</span> <span class="dv">5</span>)</span>
 <span id="cb13-2"><a></a><span class="fu">mean</span>(my_sample)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0</code></pre>
+<pre><code>[1] -0.6</code></pre>
 </div>
 </div>
 <p>Now let’s repeat this 1000 times, so I sample 5 times, compute the mean each time, and do this 1000 times. Then let’s compute the variance of this list. Use <code>replicate</code></p>
@@ -372,13 +372,13 @@ STAT 20: Introduction to Probability and Statistics
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>many_samples <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>,<span class="fu">mean</span>(<span class="fu">sample</span>(my_vec, <span class="at">size =</span> <span class="dv">5</span>)))</span>
 <span id="cb15-2"><a></a><span class="fu">var</span>(many_samples)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.08887988</code></pre>
+<pre><code>[1] 0.08076813</code></pre>
 </div>
 </div>
 </section>
 <section id="lecture-sums-averages-and-continuous-random-variables" class="title-slide slide level1 center">
 <h1>Lecture: Sums, Averages, and Continuous Random Variables</h1>
-<div id="timer_2cc1743fd0b499ecf61fc8d00553cb43806a2d38" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_60245c1499065d778ff01205035dc1af7269b1c5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -389,7 +389,7 @@ STAT 20: Introduction to Probability and Statistics
 
 <section id="lecture-central-limit-theorem" class="title-slide slide level1 center">
 <h1>Lecture: Central Limit Theorem</h1>
-<div id="timer_2cc1743fd0b499ecf61fc8d00553cb43806a2d38" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_60245c1499065d778ff01205035dc1af7269b1c5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -400,7 +400,7 @@ STAT 20: Introduction to Probability and Statistics
 
 <section id="break" class="title-slide slide level1 center">
 <h1>Break:</h1>
-<div id="timer_2cc1743fd0b499ecf61fc8d00553cb43806a2d38" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_60245c1499065d778ff01205035dc1af7269b1c5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -411,7 +411,7 @@ STAT 20: Introduction to Probability and Statistics
 
 <section id="worksheet" class="title-slide slide level1 center">
 <h1>Worksheet:</h1>
-<div id="timer_2cc1743fd0b499ecf61fc8d00553cb43806a2d38" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_60245c1499065d778ff01205035dc1af7269b1c5" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
